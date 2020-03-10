@@ -1,0 +1,6 @@
+In this exercise you have to optimize the structure
+of an aluminum slab. The slab consists of 4 (001) planes
+and the bottom two are kept fixed at their equilibrium bulk
+geometry.
+We have bfgs and the goal is to see if there is a surface
+contraction or a surface expansion.

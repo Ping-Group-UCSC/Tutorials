@@ -1,0 +1,56 @@
+BEGIN
+BEGIN_PATH_INPUT
+&PATH
+  restart_mode  = 'from_scratch',
+  string_method = 'neb',
+  nstep_path    = 50,
+  opt_scheme    = 'broyden',
+  num_of_images = 5,
+/
+END_PATH_INPUT
+BEGIN_ENGINE_INPUT
+&CONTROL
+  prefix        = 'Al-H'
+  outdir        = './tmp/',
+  pseudo_dir    = './',
+/
+&SYSTEM
+  ibrav         = 0,
+  nat           = 5,
+  ntyp          = 2,
+  ecutwfc       = 25.0,
+  occupations   = 'smearing',
+  nosym         = .TRUE.
+  smearing      = 'mp',
+  degauss       = 0.03,
+/
+&ELECTRONS
+  mixing_beta = 0.3,
+/
+ATOMIC_SPECIES
+  Al  26.981538   al_pbe_v1.uspp.F.UPF
+  H    1.00794    h_pbe_v1.4.uspp.F.UPF
+BEGIN_POSITIONS
+FIRST_IMAGE
+ATOMIC_POSITIONS bohr
+Al       0.000000000   0.000000000   0.000000000    0   0   0
+Al       5.411138430   0.000000000   0.000000000    0   0   0
+Al       0.000000000   5.411138430   0.000000000    0   0   0
+Al       5.411138430   5.411138430   0.000000000    0   0   0
+H        2.713445919   0.000000104   2.094417920    1   1   1
+LAST_IMAGE
+ATOMIC_POSITIONS bohr
+Al       0.000000000   0.000000000   0.000000000    0   0   0
+Al       5.411138430   0.000000000   0.000000000    0   0   0
+Al       0.000000000   5.411138430   0.000000000    0   0   0
+Al       5.411138430   5.411138430   0.000000000    0   0   0
+H        2.692349893   5.411139928   2.091295594    1   1   1
+END_POSITIONS
+K_POINTS automatic
+6 6 1 1 1 0
+CELL_PARAMETERS bohr
+ 10.82227686   0.00000000   0.00000000
+  0.00000000  10.82227686   0.00000000
+  0.00000000   0.00000000  22.67672253
+END_ENGINE_INPUT
+END

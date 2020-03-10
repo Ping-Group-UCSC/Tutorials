@@ -1,0 +1,30 @@
+ &CONTROL
+   calculation = "vc-relax", 
+   etot_conv_thr = 1.0E-4, forc_conv_thr = 1.0D-3,
+   nstep = 50, dt = 100,
+   pseudo_dir='./'
+ /
+ &SYSTEM
+   ibrav = 0, A = 3.85, nat= 2, ntyp= 1, nbnd = 9, 
+   occupations = 'smearing', smearing = 'mp', degauss = 0.005,
+   ecutwfc = 30.0, /
+ &ELECTRONS
+  conv_thr = 1.0d-7,
+ /
+ &IONS
+ / 
+ &CELL
+   cell_dynamics = 'damp-w' , wmass =  0.00150000  ,
+   press = 0.0,
+ /
+CELL_PARAMETERS hexagonal
+   0.58012956  0.00000000  0.81452422
+  -0.29006459  0.50240689  0.81452422
+  -0.29006459 -0.50240689  0.81452422
+ATOMIC_SPECIES
+As   74.90000  As_ONCV_PBE-1.1.upf
+ATOMIC_POSITIONS crystal 
+As    0.2750       0.2750        0.2750 
+As   -0.2750      -0.2750       -0.2750 
+K_POINTS automatic 
+  4 4 4   1 1 1 

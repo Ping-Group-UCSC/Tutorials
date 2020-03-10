@@ -1,0 +1,8 @@
+Title
+&INPUTPH
+  outdir = './temp/',
+  prefix = "BN",
+  verbosity = "high",
+  epsil =  .true.,
+/
+0 0 0

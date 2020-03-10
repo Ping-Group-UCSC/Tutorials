@@ -1,0 +1,619 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>A tiny introduction to Q-E</TITLE>
+<META NAME="description" CONTENT="A tiny introduction to Q-E">
+<META NAME="keywords" CONTENT="intro_QE">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="intro_QE.css">
+
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<IMG WIDTH="81" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next_inactive"
+ SRC="file:/opt/local/share/lib/latex2html/icons/nx_grp_g.png"> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<H1 ALIGN="CENTER">A tiny introduction to Q-E</H1>
+<DIV>
+
+<P ALIGN="CENTER"><STRONG>Gabriele Sclauzero (SISSA)</STRONG></P>
+<P ALIGN="CENTER"><STRONG>(gently stolen from P.Giannozzi, S. de Gironcoli, and others...)</STRONG></P>
+</DIV>
+
+<P>
+
+<H1><A NAME="SECTION00010000000000000000">
+Introducing Q-E</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00011000000000000000">
+The fundamental questions (and answers)!</A>
+</H2>
+
+<P>
+<B>
+<FONT COLOR="#ff00ff">Q. What is Quantum&nbsp;ESPRESSO (Q-E)?</FONT></B>
+
+<P>
+R. <I>Quantum ESPRESSO is an integrated suite of computer codes for electronic-structure calculations and materials modeling at the nanoscale.
+It is based on density-functional theory, plane waves, and pseudopotentials (both norm-conserving, ultrasoft, and PAW).</I>
+
+<P>
+<B>
+<FONT COLOR="#ff00ff">Q. What does Quantum&nbsp;ESPRESSO stand for?</FONT></B>
+
+<P>
+R. <I>Quantum ESPRESSO stands for opEn Source Package for Research in Electronic Structure, Simulation, and Optimization. 
+It is freely available to researchers around the world under the terms of the GNU General Public License.</I>
+
+<P>
+<B>
+<FONT COLOR="#ff00ff">Q. Who are the developers?</FONT></B>
+
+<P>
+R. <I>Quantum ESPRESSO is an initiative of the DEMOCRITOS National Simulation Center (Udine - Trieste) and of its partners, in collaboration with the CINECA National Supercomputing Center in Bologna, the Ecole Polytechnique Federale de Lausanne, Princeton University, and the Massachusetts Institute of Technology.</I>
+
+<P>
+Since end 2008 the Q-E project is hosted on a new development platform called QEforge, with a feature-rich web portal (<TT><A NAME="tex2html1"
+  HREF="http://qe-forge.org">http://qe-forge.org</A></TT>) based on the Gforge engine.
+The website is also currently hosting other projects, more or less bounded to the Q-E project:
+
+<UL>
+<LI>TDDFPT (Time-Dependent Density-Functional Perturbation Theory, to be integrated in Q-E in the next future)
+</LI>
+<LI>GWW (GW method with Wannier functions)
+</LI>
+<LI>SAX (self energies and excitonic effects within GW)
+</LI>
+<LI>...
+</LI>
+</UL>
+
+<P>
+<B>
+<FONT COLOR="#ff00ff">Q. What can QE do?</FONT></B>
+
+<P>
+Check out <TT><A NAME="tex2html2"
+  HREF="http://www.quantum-espresso.org/whatcanqedo.php">http://www.quantum-espresso.org/whatcanqedo.php</A></TT> for the full list!
+
+<P>
+<B>Ground-state calculations (within density-functional theory):</B>
+
+<UL>
+<LI>Self-consistent total energies, forces, stresses; 
+</LI>
+<LI>Separable norm-conserving and ultrasoft (Vanderbilt) pseudo-potentials, PAW (Projector Augmented Waves); 
+</LI>
+<LI>Several exchange-correlation functionals (including exact exchange and hybrid functionals); 
+</LI>
+<LI>Hubbard U (LDA+U); 
+</LI>
+<LI>Berry's phase polarization; 
+</LI>
+<LI>Spin-orbit coupling and noncollinear magnetism; 
+</LI>
+<LI>Maximally-localized Wannier functions;
+</LI>
+<LI>...
+</LI>
+</UL>
+<B>Response properties (density-functional perturbation theory):</B>
+
+<UL>
+<LI>Phonon frequencies and eigenvectors at any wavevector; 
+</LI>
+<LI>Full phonon dispersions; inter-atomic force constants in real space; 
+</LI>
+<LI>Effective charges and dielectric tensors; 
+</LI>
+<LI>Electron-phonon interactions; 
+</LI>
+<LI>Third-order anharmonic phonon lifetimes; 
+</LI>
+<LI>Infrared and (non-resonant) Raman cross-sections; 
+</LI>
+<LI>EPR and NMR chemical shifts; 
+</LI>
+<LI>...
+</LI>
+</UL>
+
+<P>
+<B>Ab-initio molecular dynamics:</B>
+
+<UL>
+<LI>Car-Parrinello Molecular Dynamics; 
+</LI>
+<LI>Microcanonical (Verlet) dynamics; 
+</LI>
+<LI>Isothermal (canonical) dynamics - Nose-Hoover thermostats and 
+  chains; 
+</LI>
+<LI>Born-Oppenheimer Molecular Dynamics; 
+</LI>
+<LI>...
+</LI>
+</UL>
+
+<P>
+<B>Structural Optimization:</B>
+
+<UL>
+<LI>GDIIS with quasi-Newton BFGS preconditioning; 
+</LI>
+<LI>Damped dynamics; 
+</LI>
+<LI>Transition states and minimum energy paths: 
+</LI>
+<LI>Born-Oppenheimer nudged elastic band (NEB); 
+</LI>
+<LI>...
+</LI>
+</UL>
+
+<P>
+
+<P><P>
+<BR>
+...on many different hardware and software configurations.
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+Main structure of the Q-E suite</A>
+</H2>
+The Q-E suite is made up of a number of distinct, interoperating programs, each of them with a specific task.
+The source tree of Q-E is organized in a set of directories which contain: 
+
+<UL>
+<LI>shared subroutines, data structures, I/O methods:
+<DL>
+<DT><STRONG><TT>clib,flib</TT></STRONG></DT>
+<DD>C and Fortran general purpose libraries and functions
+	
+</DD>
+<DT><STRONG><TT>Modules</TT></STRONG></DT>
+<DD>F90 modules (data structures plus initialization and manipulation subroutines, interfaces, wrappers, ...)
+	
+</DD>
+<DT><STRONG><TT>iotk</TT></STRONG></DT>
+<DD>input/output XML based library
+</DD>
+</DL>
+</LI>
+<LI>The two principal electronic-structure packages:
+<DL>
+<DT><STRONG><TT>PW</TT></STRONG></DT>
+<DD>electronic-structure DFT plane-waves code, <code>pw.x</code>
+	
+</DD>
+<DT><STRONG><TT>CPV</TT></STRONG></DT>
+<DD>Car-Parrinello molecular dynamics code, <code>cp.x</code>
+</DD>
+</DL>
+</LI>
+<LI>Programs which need data (such as self-consistent electronic charge density or KS states) produced by <code>pw.x</code> or <code>cp.x</code> to compute basic and advanced properties:
+<DL>
+<DT><STRONG><TT>PH</TT></STRONG></DT>
+<DD>code for linear response properties (within DFPT), <code>ph.x</code>
+	
+</DD>
+<DT><STRONG><TT>PP</TT></STRONG></DT>
+<DD>many programs for post-processing and visualization (charge density and KS eigenstates, <code>pp.x</code>; bands, <code>bands.x</code>; DOS, <code>dos.x</code> and <code>projwfc.x</code>; ...) 
+	
+</DD>
+<DT><STRONG><TT>PWCOND</TT></STRONG></DT>
+<DD>code for the (Landauer-B&#252;ttiker) ballistic conductance, <code>pwcond.x</code>
+	
+</DD>
+<DT><STRONG><TT>W90</TT></STRONG></DT>
+<DD>code for Maximally-localized Wannier functions, <code>wannier90.x</code>
+  
+</DD>
+<DT><STRONG><TT>...</TT></STRONG></DT>
+<DD>
+</DD>
+</DL>
+</LI>
+</UL>
+
+<P>
+Every single executable file will be automatically linked in the <code>bin/</code> directory.
+
+<P>
+
+<H1><A NAME="SECTION00020000000000000000">
+What should I do in order to start using Q-E?</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00021000000000000000">
+First, get the executables</A>
+</H2>
+
+<P>
+Possibilities:
+
+<P>
+
+<OL>
+<LI>Compile from source (preferred solution when good performance is a must)
+</LI>
+<LI>QE-live CD (available from QEforge): gadget of this school
+</LI>
+<LI>Precompiled versions (not yet available, maybe coming soon)
+</LI>
+</OL>
+
+<P>
+To <B>
+<FONT COLOR="#ff0000">compile the source files</FONT></B> you need at least: a Unix-like working environment (Linux, OS-X, AIX, Cygwin on MS Windows, ...), a good (non-buggy) F90 compiler and a working C compiler; some free space on your hard-disk.
+To get <B>
+<FONT COLOR="#ff0000">fast</FONT></B> executables you need: a well performing compiler (e.g. <code>ifort</code> on Intel machines, <code>xlf</code> on IBM, ...), libraries optimized for your machine (e.g. MKL on Intel, ACML on AMD, ESSL on IBM,...), good hardware (of course ...) and properly set up OS and system libraries.
+
+<P>
+
+<OL>
+<LI><B>
+<FONT COLOR="#ff0000">Download</FONT></B> the latest version (presently 4.1, just released) from 
+		<TT><A NAME="tex2html3"
+  HREF="http://www.quantum-espresso.org/download.php">http://www.quantum-espresso.org/download.php</A></TT>.
+ If you need to use advanced features which are available only in the develompment version:
+ 
+<UL>
+<LI>anonymous access to the CVS tree on QEforge (see <TT><A NAME="tex2html4"
+  HREF="https://qe-forge.org/scm/?group_id=10">https://qe-forge.org/scm/?group_id=10</A></TT>)
+</LI>
+<LI>download the latest CVS tree snapshot from <TT><A NAME="tex2html5"
+  HREF="https://qe-forge.org/snapshots.php?group_id=10">https://qe-forge.org/snapshots.php?group_id=10</A></TT>
+</LI>
+</UL>
+</LI>
+<LI><B>
+<FONT COLOR="#ff0000">Unpack</FONT></B> the gzipped tar archive (e.g. <code>tar zxvf espresso-x.x.x.tar.gz</code>). Use a partition with enough space, since after compilation the size of the whole can reach several hundreds of MBytes.
+</LI>
+<LI>Run the <B>
+<FONT COLOR="#ff0000">configure</FONT></B> script (<code>cd espresso-x.x.x; ./configure</code>): lots and lots of output on the screen...
+</LI>
+<LI>If everything goes smoothly, type <code>make</code> to get a list of the targets (subsets of executables) that can be built and then <B>
+<FONT COLOR="#ff0000">build</FONT></B> them with <code>make [target1] [target2] ...</code> (be prepared to see tons of output from the compiler ...)
+</LI>
+<LI>If something fails, try to figure out why by looking at the troubleshooting section of the Q-E manual, the FAQs on the Q-E Wikipage, or by asking to the PWscf Forum (see below for reference links).
+</LI>
+</OL>
+
+<P>
+
+<H2><A NAME="SECTION00022000000000000000">
+How to learn usage/features of Q-E?</A>
+</H2>
+
+<P>
+There are several places where you can get helpful information:
+
+<UL>
+<LI><B>
+<FONT COLOR="#ff0000">This tutorial</FONT></B> (of course!)
+</LI>
+<LI>Past tutorials (which may have been covering different topics/features): many are linked on the Q-E website at <TT><A NAME="tex2html6"
+  HREF="http://www.quantum-espresso.org/wiki/index.php/Tutorials_and_Examples">http://www.quantum-espresso.org/wiki/index.php/Tutorials_and_Examples</A></TT>
+</LI>
+<LI>Main Q-E website <TT><A NAME="tex2html7"
+  HREF="www.quantum-espresso.org">www.quantum-espresso.org</A></TT> (features Wikipage, online manuals, FAQ, and much more)
+</LI>
+<LI>Plenty of examples in the <code>espresso-x.x.x/examples/</code> directory in the Q-E source tree
+</LI>
+<LI>Input file description, both in text format, under <code>espresso-x.x.x/Doc/</code>
+<PRE>
+[gabriele@macgurlo:~/SW/espresso-4.1/Doc]$ ls *.txt
+INPUT_BANDS.txt     INPUT_DOS.txt       INPUT_PH.txt        INPUT_PW.txt
+INPUT_CPPP.txt      INPUT_GIPAW.txt     INPUT_PP.txt        INPUT_PWCOND.txt
+INPUT_D3.txt        INPUT_LD1.txt       INPUT_PROJWFC.txt   INPUT_pw_export.txt
+</PRE> 
+and in html format, online at <TT><A NAME="tex2html8"
+  HREF="http://www.quantum-espresso.org/input-syntax/INPUT_PW.html">http://www.quantum-espresso.org/input-syntax/INPUT_PW.html</A></TT>
+</LI>
+<LI>PWscf Users Forum: you can subscribe at <TT><A NAME="tex2html9"
+  HREF="http://www.democritos.it/mailman/listinfo/pw_forum">http://www.democritos.it/mailman/listinfo/pw_forum</A></TT>. Before asking a question, please <B>
+<FONT COLOR="#ff0000">first</FONT></B> check out FAQ at <TT><A NAME="tex2html10"
+  HREF="http://www.quantum-espresso.org/wiki/index.php/FAQ">http://www.quantum-espresso.org/wiki/index.php/FAQ</A></TT>	and Forum Archives (<B>
+<FONT COLOR="#ff0000">Tip</FONT></B>: try searching something like <code>whatIwanttoknow pw_forum site:democritos.it</code> on Google)
+</LI>
+<LI>The forthcoming <B>
+<FONT COLOR="#ff0000">Q-E paper</FONT></B>: submitted to J.Phys.: Condens. Matter, preliminary version available on arXiv at <TT><A NAME="tex2html11"
+  HREF="http://arxiv.org/abs/0906.2569">http://arxiv.org/abs/0906.2569</A></TT>
+</LI>
+</UL>
+
+<P>
+
+<H1><A NAME="SECTION00030000000000000000">
+Basics to start the tutorials of this School</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00031000000000000000">
+Brief input description for PWscf</A>
+</H2>
+
+<P>
+It uses 
+<FONT COLOR="#0000ff">namelists</FONT> (aka list-directed I/O, a standard F90 construct) and 
+<FONT COLOR="#00ff00">input cards</FONT> (Q-E-specific construct).
+
+<P>
+
+<UL>
+<LI>
+<FONT COLOR="#0000ff">Namelists</FONT> allow to access only those variables which need to be changed, while leaving the others to the default value. 
+</LI>
+<LI>All variables included in a namelist can be accessed by their name after addressing the namelist with an ampersand before its name. After listing all variables to be changed, ``close'' the namelist using <code>&amp;end</code> or <code>/</code>.
+For instance, if you want to change only variables <code>aaa</code> (integer) and <code>zzz</code> (double precision) in a namelist called <code>nnn</code>, while leaving all the others to the default value, write:
+<PRE>
+&amp;nnn
+  aaa=1,
+  zzz=333.d-3
+/
+</PRE>
+
+<P>
+</LI>
+<LI>Inside a namelist, variables can be specified in any order, but namelists are read in a prefixed order.
+
+<P>
+</LI>
+<LI>In Q-E there are three mandatory namelists
+	
+<UL>
+<LI><code>&amp;CONTROL</code> : controls the type of calculation and its I/O flux 
+</LI>
+<LI><code>&amp;SYSTEM</code> : specifies some details of the system and the convergence cut-offs
+</LI>
+<LI><code>&amp;ELECTRONS</code> : controls the algorithms used to reach self-consistency
+	
+</LI>
+</UL>
+The other namelists are required for specific kinds of calculation, and are ignored in not needed:
+	
+<UL>
+<LI><code>&amp;IONS</code> : controls ionic movement in MD runs or structural relaxations 
+</LI>
+<LI><code>&amp;CELL</code> : controls changes in the cell parameters in variable cell runs 
+</LI>
+<LI><code>&amp;PHONON</code> : used only when preparing data for phonon calculations
+	
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>
+<FONT COLOR="#00ff00">Input cards</FONT> are read <B>
+<FONT COLOR="#ff0000">after</FONT></B> namelists and start with the input card name plus some optional arguments (usually to choose units, axis,...)
+
+<P>
+</LI>
+<LI>Input cards which do not have a logical dependence upon others can be specified in any order, otherwise a logical ordering applies.
+</LI>
+<LI>Input cards are used to specify data always needed on input (e.g. 3D vectors representing atomic positions), which cannot not be specified in a comfortable way through the usage of namelists.
+There are three mandatory input cards
+	
+<UL>
+<LI><code>ATOMIC_SPECIES</code> : name, mass and pseudopotential for each of the atomic species in the system
+</LI>
+<LI><code>ATOMIC_POSITIONS</code> : name of the species and components of the position vector for each atom 
+</LI>
+<LI><code>K_POINTS</code> : k-point sampling of the BZ
+  
+</LI>
+</UL>
+Additional input cards are
+	
+<UL>
+<LI><code>CELL PARAMETERS</code> : user supplied unit cell axis
+</LI>
+<LI><code>OCCUPATIONS</code> : user supplied occupations of KS states
+</LI>
+<LI><code>CLIMBING_IMAGES</code> : used only for NEB calculations
+  
+</LI>
+</UL>
+
+<P>
+</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION00032000000000000000">
+How to feed (your input to) pw.x</A>
+</H2>
+
+<P>
+
+<UL>
+<LI>Assuming that the <code>bin/</code> directory of Q-E is in your path, if you execute PWscf it will wait for input:
+<PRE>
+[gabriele@macgurlo:~/myworkdir]$ pw.x
+
+     Program PWSCF     v.4.0.5  starts ...
+     Today is 16Jul2009 at 17:12: 8 
+
+     Parallel version (MPI)
+
+     Number of processors in use:       1
+
+     For Norm-Conserving or Ultrasoft (Vanderbilt) Pseudopotentials or PAW
+
+     Current dimensions of program pwscf are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  3
+     Waiting for input...
+</PRE>
+You could write down row by row directly on the terminal: not much practical...
+
+<P>
+</LI>
+<LI>Usually it is preferable to edit an input file (filling it with the namelists and input cards described above) and then feed it to the program using input redirection (a standard feature of all BASH-like shells). 
+<PRE>
+[gabriele@macgurlo:~/myworkdir]$ vi myinput
+[gabriele@macgurlo:~/myworkdir]$ pw.x &lt; myinput
+</PRE>
+
+<P>
+</LI>
+<LI>You can also redirect output to a file (instead of watching it on the screen in real-time), since it contains many important information (i.e. physics) of your system!
+<PRE>
+[gabriele@macgurlo:~/myworkdir]$ pw.x &lt; myinput &gt; myoutput
+</PRE>
+Alternatively, if you want to follow the steps of a calculation on your screen, you can duplicate the standard output and send one copy to a file, the other to the screen:
+<PRE>
+[gabriele@macgurlo:~/myworkdir]$ pw.x &lt; myinput | tee myoutput
+</PRE>
+
+<P>
+</LI>
+<LI>In this way you can store the information and later process textually the file to search for some computed quantity (for instance if you search for the string <code>!</code> at the beginning of the line, you'll find...
+<PRE>
+[gabriele@macgurlo:~/myworkdir]$ grep '^!' myoutput
+!    total energy              =      -4.18281107 Ry
+</PRE>
+
+<P>
+This allows to check your input file with XCrysDEn (<TT><A NAME="tex2html12"
+  HREF="www.xcrysden.org">www.xcrysden.org</A></TT>), 
+<PRE>
+[gabriele@macgurlo:~/myworkdir]$ xcrysden --pwi myinput
+</PRE>
+(especially useful for complicated structures). You can also check the final output structure of a relaxation run or the single steps of a MD run with:
+<PRE>
+[gabriele@macgurlo:~/myworkdir]$ xcrysden --pwo myoutput
+</PRE>
+
+<P>
+Finally, a full example of a simple input file (you will recognize it in few minutes...):
+<PRE>
+ &amp;control
+    calculation = 'scf',
+    prefix = 'Si_exc1',
+ /
+ &amp;system
+    ibrav =  2, 
+    celldm(1) = 10.26, 
+    nat =  2, 
+    ntyp = 1,
+    ecutwfc = 20
+ /
+ &amp;electrons
+    mixing_beta = 0.7
+ /
+
+ATOMIC_SPECIES
+ Si 28.086  Si.pbe-rrkj.UPF
+
+ATOMIC_POSITIONS (alat)
+ Si 0.0 0.0 0.0
+ Si 0.25 0.25 0.25
+
+K_POINTS (automatic)
+  6 6 6 1 1 1
+</PRE>
+
+<P>
+</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION00033000000000000000">
+Instructions for these tutorials</A>
+</H2>
+
+<P>
+Unpack the archive with all the stuff (there is a copy of it in each PC under the <code>/tmp</code> directory):
+<PRE>
+[myname@esbtl-xx:~]$ tar zxvf /tmp/QE-school.tgz
+</PRE>
+
+<P>
+Enter the directory and <B>
+<FONT COLOR="#ff0000">source</FONT></B> the setup script
+<PRE>
+[myname@esbtl-xx:~]$ cd QE-school
+[myname@esbtl-xx:~/QE-school]$ source qe-setup.sh
+</PRE>
+
+<P>
+You're done! If everything went fine, you should now be able to run pw.x and the other Q-E executables from the command line.
+<PRE>
+[myname@esbtl-xx:~]$ pw.x
+
+     Program PWSCF     v.4.1CVS  starts ...
+     Today is 20Jul2009 at 15:12: 8 
+
+     Parallel version (MPI)
+
+     Number of processors in use:       1
+
+     For Norm-Conserving or Ultrasoft (Vanderbilt) Pseudopotentials or PAW
+
+     Current dimensions of program pwscf are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  3
+     Waiting for input...
+</PRE>
+
+<P>
+All you need for the first day exercises (input files or scripts plus instructions) is already in <code>week1/day1/</code>. For each of the next days an archive with input files and instructions will be uploaded to the Q-E wiki page (reference will be given time after time). For the next days, you will download the archive <code>Wxdx.tgz</code>, put it in your <code>QE-school</code> folder and unpack it with <code>tar zxvf Wxdx.tgz</code> (all files will go in their place).
+
+<P>
+You also have the source tree of Q-E in <code>QE-school/espresso-4.1.tar.gz</code>, packed as you can find it on the Q-E website. We have not the time to go through the compilation steps right now, but we will assist you if you would like to dedicate to it some of your spare time in the next days. Or you can even unpack it simply because you want to have a look at the source code, when you are curious ...
+
+<P>
+<B>
+<FONT COLOR="#ff0000">Have fun with Q-E!!!</FONT></B>
+<P>
+
+<!--Navigation Panel-->
+<IMG WIDTH="81" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next_inactive"
+ SRC="file:/opt/local/share/lib/latex2html/icons/nx_grp_g.png"> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Gabriele Sclauzero
+2009-07-20
+</ADDRESS>
+</BODY>
+</HTML>

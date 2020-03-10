@@ -1,0 +1,41 @@
+&control
+ calculation='scf',
+ outdir='./temp/',
+ prefix="BN",
+ pseudo_dir='/home/tjsmart/Pseudo/',
+ verbosity='high',
+ wf_collect=.true.,
+ etot_conv_thr = 1d-5,
+ forc_conv_thr = 1d-3
+/
+&system
+ ibrav=0,
+ nat=2,
+ ntyp=2,
+ ecutwfc=90,
+ tot_charge=0,
+! nbnd=8,
+! nosym=.true.,
+/
+&electrons
+ mixing_beta=0.7,
+ conv_thr=1.0D-9,
+! diago_full_acc = .true.
+/
+&ions
+/
+&cell
+ cell_dofree='2Dxy'
+/
+CELL_PARAMETERS (angstrom)
+   2.506740031   0.000000000   0.000000000
+  -1.253370015   2.170901075   0.000000000
+   0.000000000  -0.000000000  15.000000000
+ATOMIC_SPECIES
+B 10.811 B_ONCV_PBE-1.0.upf
+N 14.0067 N_ONCV_PBE-1.0.upf
+ATOMIC_POSITIONS crystal
+B        0.333333000   0.666667000   0.500000000
+N        0.666667000   0.333333000   0.500000000
+K_POINTS automatic
+12 12 1 0 0 0

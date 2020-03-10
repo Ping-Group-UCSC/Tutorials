@@ -1,0 +1,50 @@
+BEGIN
+BEGIN_PATH_INPUT
+&PATH
+  restart_mode  = 'from_scratch',
+  string_method = 'neb',
+  nstep_path    = 50,
+  opt_scheme    = 'broyden',
+  num_of_images = 5,
+/
+END_PATH_INPUT
+BEGIN_ENGINE_INPUT
+&CONTROL
+  prefix        = 'pt'
+  outdir        = './tmp/',
+  pseudo_dir    = '/home/tjsmart/WORK/Pseudopotentials/pseudo_GBRV/',
+/
+&SYSTEM
+  ibrav         = 0,
+  nat           = 3,
+  ntyp          = 1,
+  ecutwfc       = 20.0,
+  occupations   = 'smearing',
+  nosym         = .TRUE.
+  smearing      = 'mp',
+  degauss       = 0.001,
+/
+&ELECTRONS
+  mixing_beta = 0.7,
+/
+ATOMIC_SPECIES
+  H    1.00794    h_pbe_v1.4.uspp.F.UPF
+BEGIN_POSITIONS
+FIRST_IMAGE
+ATOMIC_POSITIONS crystal
+H        0.100000      0.500000000   0.500000000 0 0 0
+H	 0.196700      0.500000000   0.500000000 1 1 1
+H        0.600000      0.500000000   0.500000000 0 0 0
+LAST_IMAGE
+ATOMIC_POSITIONS crystal
+H        0.100000      0.500000000   0.500000000 0 0 0
+H	 0.503300      0.500000000   0.500000000 1 1 1
+H        0.600000      0.500000000   0.500000000 0 0 0
+END_POSITIONS
+K_POINTS gamma
+CELL_PARAMETERS bohr
+15.0000000  0.00000000  0.00000000
+0.00000000  5.00000000  0.00000000
+0.00000000  0.00000000  5.00000000
+END_ENGINE_INPUT
+END

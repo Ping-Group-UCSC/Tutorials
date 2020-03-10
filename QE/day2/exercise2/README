@@ -1,0 +1,3 @@
+We perform a cell relaxation of As bulk at 0 pressure and at
+40 GPa.
+We use variable cell relaxation and the bfgs method.

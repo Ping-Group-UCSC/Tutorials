@@ -1,0 +1,378 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.1.5  (Linux)">
+	<META NAME="CREATED" CONTENT="20090711;16054000">
+	<META NAME="CHANGED" CONTENT="20090719;17060800">
+	<STYLE>
+	<!--
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		P { margin-bottom: 0.08in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en" DIR="LTR">
+<P STYLE="margin-bottom: 0in"><FONT FACE="Electron"><U><B>I<FONT FACE="Nimbus Sans L">NSTRUCTIONS
+FOR DAY 1, EXERCISE 3</FONT></B></U></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Note
+that the following color code has been used in this instruction
+sheet:</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Broad
+headings are in red.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#ff00ff"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>File
+names are in magenta.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#0000ff"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Phrases
+to be typed into the command line are in blue.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#008000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Input
+parameters are in dark green.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>A
+very brief reminder of useful linux commands:</U></FONT></FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">cp
+	A B</FONT></FONT> <FONT FACE="Nimbus Sans L">copies file</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">A</FONT></FONT>
+	<FONT FACE="Nimbus Sans L">to file</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">B</FONT></FONT>.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">mv
+	A B</FONT></FONT> <FONT FACE="Nimbus Sans L">moves file</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">A</FONT></FONT>
+	<FONT FACE="Nimbus Sans L">to file</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">B</FONT></FONT>.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">mkdir
+	C</FONT></FONT> <FONT FACE="Nimbus Sans L">creates a directory named</FONT>
+	<FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">C</FONT></FONT>.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">ls
+	C</FONT></FONT> <FONT FACE="Nimbus Sans L">lists the names of the
+	files and sub-directories contained in directory </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">C</FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">vi
+	A</FONT></FONT> <FONT FACE="Nimbus Sans L">or </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">gedit
+	A</FONT></FONT> <FONT FACE="Nimbus Sans L">are some of the many ways
+	in which you can open the file</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">A</FONT></FONT>
+	f<FONT FACE="Nimbus Sans L">or reading and/or editing.</FONT></FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Nimbus Sans L">Adding
+	an ampersand</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">&amp;</FONT></FONT>
+	<FONT FACE="Nimbus Sans L">at the end of your command will make it
+	run in the background, so that you can continue to issue other
+	commands while the original one is still running.</FONT></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>In
+this exercise, you will perform simple scf (self-consistent field)
+calculations on alumin(i)um.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>There
+are 2 main ways in which Al differs from Si:</FONT></FONT></P>
+<OL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>It
+	has the FCC crystal structure, instead of the diamond structure.</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>It
+	is a metal, and therefore has to be treated differently.</FONT></FONT></FONT></P>
+</OL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U><FONT COLOR="#ff0000">Go
+	to the directory </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">day1/exercise3</FONT></FONT></U>
+	(if you are not already there!)</FONT></FONT></P>
+</UL>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>You
+will see the following files:</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">day1_exercise3_instructions.html</FONT></FONT>
+this file!</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">Al.sample.in</FONT></FONT>
+this is a sample input file.</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">Al.sample.sh</FONT></FONT>
+this is a sample shell script that you can use (optionally) .</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>For
+each calculation that you will run, you can use <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">Al.sample.in</FONT></FONT>
+as a template that you can copy to another file and then edit.
+Alternatively, you can use shell scripts to automate this process. </FONT></FONT>
+</P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><U><FONT FACE="Nimbus Sans L"><FONT COLOR="#ff0000">Open
+	and read the sample file </FONT></FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">Al.sample.in</FONT></FONT></U></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Compared
+	to your input files for Si (exercise 1) there are two main
+	differences:</FONT></FONT></P>
+	<P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>(i)
+	Now <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">nat</FONT></FONT>
+	<FONT FACE="Courier 10 Pitch">= 1</FONT> instead of <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">nat</FONT></FONT>
+	<FONT FACE="Courier 10 Pitch">= 2</FONT>, and accordingly there is
+	only one Al atom at 0.0 0.0 0.0</FONT></FONT></P>
+	<P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>(ii)
+	There are additional lines, saying that the occupation should be
+	smeared, which type of smearing to use, and what value of <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">degauss</FONT></FONT>
+	(smearing width) to use.</FONT></FONT></P>
+	<P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Note
+	that now we have set <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">verbosity
+	= 'high' </FONT></FONT>in the <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">&amp;control</FONT></FONT>
+	namelist ; so that the code wll print out occupation numbers, etc.</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>Use
+	Xcrysden to view the structure in the sample file:</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<P STYLE="margin-bottom: 0in"><FONT COLOR="#0000ff"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3>xcrysden
+	-- pwi Al.sample.in &amp;</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>How
+	many atoms are contained in the conventional cubic cell?</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>What
+	is the coordination number of each atom?</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>What
+	is the nearest-neighbor distance? </FONT></FONT>
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>Run
+	an scf calculation:</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<P STYLE="margin-bottom: 0in"><FONT COLOR="#0000ff"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3>pw.x
+	&lt; Al.sample.in &gt; Al.sample.out</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>Read
+	the output, and answer the following questions:</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>How
+	many bands were computed? How does this compare with the number of
+	electrons?</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>What
+	is the Fermi energy?</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>Now
+	do convergence tests with respect to plane-wave cut-off:</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>In
+	principle, you should now run a series of calcuations with different
+	values of <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ecutwfc</FONT></FONT>
+	(as you did for Si) and see at what value of <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ecutwfc
+	</FONT></FONT>your total energy has converged. However, to save
+	time, let us assume that this has been done. Keep working with
+	<FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ecutwfc=12</FONT></FONT>.</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>Now
+	do convergence tests with respect to Brillouin zone sampling and
+	smearing width:</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>We
+	will simultaneously decide what k-point mesh (values of <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">nk1,
+	nk2, nk3</FONT></FONT>) and the value of the smearing width
+	(<FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">degauss</FONT></FONT>)
+	to use. For simplicity, let us assume now that we will only use the
+	Marzari-Vanderbilt smearing.</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L">Loop
+	over values of <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">nk1,
+	nk2, nk3</FONT></FONT> = 6 6 6, 8 8 8, 12 12 12, 16 16 16</FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L">For
+	each of these k-point meshes, loop over <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">degauss</FONT></FONT>
+	ranging from 0.02 to 0.10 (at intervals chosen by you).</FONT></P>
+</UL>
+<P STYLE="margin-left: 0.98in; margin-bottom: 0in"><FONT FACE="Nimbus Sans L">Make
+<FONT COLOR="#ff00ff">input files</FONT> of the form
+<FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">al_degauss_nk_scf.in</FONT></FONT>
+(inserting the appropriate values of <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">degauss</FONT></FONT>
+and <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">nk</FONT></FONT>).<SPAN STYLE="text-decoration: none">
+</SPAN></FONT>
+</P>
+<P STYLE="margin-left: 0.98in; margin-bottom: 0in; font-style: normal; text-decoration: none">
+<FONT FACE="Nimbus Sans L"><FONT SIZE=3>In order to do this, you can
+either edit your input files manually, or use the shell script
+<FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">Al.sample.sh</FONT></FONT></FONT></FONT></P>
+<P STYLE="margin-left: 0.98in; margin-bottom: 0in; font-style: normal; text-decoration: none">
+<FONT FACE="Nimbus Sans L"><FONT SIZE=3>(If doing the latter, read
+the shell script carefully and see whether you need to insert
+additional values or lines).</FONT></FONT></P>
+<P STYLE="margin-left: 1.58in; margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; text-decoration: none">
+	<FONT FACE="Nimbus Sans L"><FONT SIZE=3>Run pw.x for each value of
+	nk and degauss, either using the shell script or a command of the
+	form </FONT></FONT>
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<P STYLE="margin-bottom: 0in; font-style: normal; text-decoration: none">
+	<FONT COLOR="#0000ff"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3>pw.x
+	&lt; al_degauss.&lt;val&gt;_nk.&lt;val&gt;_scf.in &gt;
+	al_degauss.&lt;val&gt;_nk.&lt;val&gt;_scf.out </FONT></FONT></FONT>
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; font-style: normal; text-decoration: none">
+<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>(of
+course, you should substitute the appropriate values).</FONT></FONT></FONT></P>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>For
+	each value of <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">degauss</FONT></FONT>
+	used, assemble data files of the form <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">al-m-v.degauss</FONT></FONT>
+	(e.g., <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">al-m-v.02</FONT></FONT>)
+	which contain two columns, the first consisting of the number of BZ
+	divisions <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">nk</FONT></FONT>,
+	and the second containing the total energy.</FONT></FONT></FONT></P>
+	<P STYLE="margin-bottom: 0in; font-style: normal; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>(You
+	could do this using <FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">grep
+	</FONT></FONT>commands, etc., or you can do it by hand).</FONT></FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Plot a
+	graph showing how the total energy varies with the number of
+	k-points and the smearing width, using a plotting program of your
+	choice. For example, if using <FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">xmgrace</FONT></FONT>,
+	type:</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.98in; margin-bottom: 0in; font-style: normal; text-decoration: none">
+<FONT COLOR="#0000ff"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3>xmgrace
+al.m-v* &amp;</FONT></FONT></FONT></P>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in; font-style: normal; text-decoration: none">
+<FONT FACE="Nimbus Sans L"><FONT SIZE=3>The 'true' converged result
+is obtained in the limit of zero smearing and an infinite number of
+k-points. </FONT></FONT>
+</P>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in; font-style: normal; text-decoration: none">
+<FONT FACE="Nimbus Sans L"><FONT SIZE=3>Based upon this, decide what
+values of <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">nk1=nk2=nk3</FONT></FONT>
+and <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">degauss</FONT></FONT>
+you consider satisfactory.</FONT></FONT></P>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in; font-style: normal; text-decoration: none">
+<FONT FACE="Nimbus Sans L"><FONT SIZE=3>(Note: you will have to
+achieve some sort of compromise between accuracy and computational
+time!)</FONT></FONT></P>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.2in; margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><I>(Optional
+extra assignment: repeat this whole section using Gaussian smearing
+instead of Marzari-Vanderbilt smearing. <FONT COLOR="#000000">Which
+smearing works better?</FONT>)</I></FONT></FONT></P>
+<P STYLE="margin-left: 0.2in; margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>Now
+	obtain the equilibrium lattice constant of Al:</U></FONT></FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Fix
+	<FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ecutwfc </FONT></FONT>and
+	<FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">nk1=nk2=nk3</FONT></FONT>
+	at the values you decided (above) were the best ones to use.</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Vary
+	the lattice constant, i.e., <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">celldm(1)</FONT></FONT>
+	from 7.0 to 8.0 bohr, in intervals of 0.1 bohr, and run <FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">pw.x</FONT></FONT>
+	for each value of <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">celldm(1)</FONT></FONT>.
+	You can do this manually or by writing a shell script.</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Assemble
+	the results for the dependence of total energy on lattice constant
+	in a data file (2 columns, the first containing the lattice constant
+	in bohr, and the second containing total energy in Ry).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Plot
+	this data. Do you obtain a smooth curve?</FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Fit
+	this data to an equation of state by running <FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">ev.x</FONT></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in; text-decoration: none">
+<FONT FACE="Nimbus Sans L"><FONT SIZE=3><FONT COLOR="#000000">When
+you run this, yo</FONT>u will be prompted to supply:</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>the
+	type of Bravais lattice (note: using the name and not the <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ibrav</FONT></FONT>
+	number)</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>which
+	particular equation of state you want to use</FONT></FONT></P>
+	<P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>(I
+	usually use the 2<SUP>nd</SUP> Order Birch eq., but you can
+	experiment with other choices too.)</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>the
+	name of the <FONT COLOR="#ff00ff">input file</FONT> containing the
+	data of lattice constant and total energy</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>the
+	name of the <FONT COLOR="#ff00ff">output file</FONT> where you want
+	the results of the fitting procedure</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Look
+	at the <FONT COLOR="#ff00ff">output file</FONT> (whose name you
+	supplied in the previous step):</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>From
+	the fit, what are the values of the equilibrium lattice constant a0
+	and bulk modulus k0? </FONT></FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>If
+	there is a discrepancy between experimental and theoretical values,
+	can you understand where this arises from?</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Can
+	you tell whether the quality of fit is good or poor?</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>Optional
+extra assignments:</U></FONT></FONT></FONT></P>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Plot
+	the band structure of Al along high-symmetry directions.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Plot
+	the electronic density of states of Al. In what ways does the DOS
+	for Al differ from that of Si?</FONT></FONT></FONT></P>
+</UL>
+</BODY>
+</HTML>

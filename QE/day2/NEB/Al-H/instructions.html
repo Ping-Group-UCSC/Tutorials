@@ -1,0 +1,151 @@
+ <!DOCTYPE html>
+<html>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.1.5  (Linux)">
+	<META NAME="CREATED" CONTENT="20090711;16054000">
+	<META NAME="CHANGED" CONTENT="20090719;17152600">
+	<STYLE>
+	<!--
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		P { margin-bottom: 0.08in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en" DIR="LTR">
+<P STYLE="margin-bottom: 0in"><FONT FACE="Electron"><U><B>INSTRUCTIONS
+NEB EXERCISE</B></U></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Note
+that the following color code has been used in this instruction
+sheet:</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Broad
+headings are in red.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#ff00ff"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>File
+names are in magenta.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#0000ff"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Phrases
+to be typed into the command line are in blue.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#008000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Input
+parameters are in dark green.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>A
+very brief reminder of useful linux commands:</U></FONT></FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">cp
+	A B</FONT></FONT> <FONT FACE="Nimbus Sans L">copies file</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">A</FONT></FONT>
+	<FONT FACE="Nimbus Sans L">to file</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">B</FONT></FONT>.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">mv
+	A B</FONT></FONT> <FONT FACE="Nimbus Sans L">moves file</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">A</FONT></FONT>
+	<FONT FACE="Nimbus Sans L">to file</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">B</FONT></FONT>.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">mkdir
+	C</FONT></FONT> <FONT FACE="Nimbus Sans L">creates a directory named</FONT>
+	<FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">C</FONT></FONT>.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">ls
+	C</FONT></FONT> <FONT FACE="Nimbus Sans L">lists the names of the
+	files and sub-directories contained in directory </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">C</FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">vi
+	A</FONT></FONT> <FONT FACE="Nimbus Sans L">or </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">gedit
+	A</FONT></FONT> <FONT FACE="Nimbus Sans L">are some of the many ways
+	in which you can open the file</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">A</FONT></FONT>
+	f<FONT FACE="Nimbus Sans L">or reading and/or editing.</FONT></FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Nimbus Sans L">Adding
+	an ampersand</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">&amp;</FONT></FONT>
+	<FONT FACE="Nimbus Sans L">at the end of your command will make it
+	run in the background, so that you can continue to issue other
+	commands while the original one is still running.</FONT></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-left: 0.28in; margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>In
+this exercise, you will compute the reaction of a hydrogen molecule
+transferring across an aluminum surface.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+<P STYLE="margin-left: 0.in; margin-bottom: 0in"><FONT SIZE=3><FONT FACE="Nimbus Sans L">Realistically
+a slab of Al should be used, but to reduce the computational cost
+here we only consider a single layer of Al.</FONT></FONT>
+</P>
+<P STYLE="margin-left: 0.in; margin-bottom: 0in"><FONT SIZE=3><FONT FACE="Nimbus Sans L">For full details of the neb.x input refer to the link below:</FONT></FONT>
+</P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><FONT SIZE=3><FONT FACE="Nimbus Sans L">http://web.mit.edu/espresso_v6.1/i386_linux26/qe-6.1/Doc/INPUT_NEB.html</FONT></FONT>
+</P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>Run
+	the NEB calculation by executing:</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<P STYLE="margin-bottom: 0in"><FONT COLOR="#2323dc"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3>neb.x
+	-i neb.in > neb.out</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+        <LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>This
+        calculation consists of several geometry optimization calculations and may
+        take a while (~5 minutes).</FONT></FONT></P>
+        <LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>So
+        feel free to take a break or work on something else while it runs.</FONT></FONT></P>
+        <LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>After
+        it is done, you can look through the output (<FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">neb.out</FONT></FONT>) 
+	to see the convergence of 
+        optimizing 3 intermediate images which yield a barrier from image 1 to image 5</FONT></FONT></P>
+        <LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Look
+        at the activation energy to see the amount of energy it takes to undergo the reaction</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+        <P STYLE="margin-bottom: 0in"><FONT COLOR="#2323dc"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3>grep
+        "\->" neb.out</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+        <LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Be
+        careful to type the above line correctly! You may accidentally write over 
+        your output file.</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>How
+        does the activation energy compare with kT at room temperature?</FONT></FONT></P>
+        <LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Use
+        xcrysden to visualize the transfer of H across the Al surface.</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<P STYLE="margin-bottom: 0in"><FONT COLOR="#2323dc"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3>xcrysden
+	--axsf Al-H.axsf</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>The
+        data file <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">Al-H.int
+        </FONT></FONT> contains the reaction barrier data. Use 
+        <FONT COLOR="#2323dc"><FONT FACE="Courier 10 Pitch">gnuplot </FONT></FONT>or 
+        <FONT COLOR="#2323dc"><FONT FACE="Courier 10 Pitch">xmgrace </FONT></FONT>
+        to plot this file and see the reaction barrier as a function of reaction coordinate. </FONT></FONT></P>
+</BODY>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<head>
+<title>video</title>
+</head>
+<body>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<video loop width="320" autoplay="autoplay" height="240" controls>
+<source src="mp4/al-h.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<img src="mp4/barrier.png" alt="barrier" width="337" height="292">
+</body>
+</html>
+

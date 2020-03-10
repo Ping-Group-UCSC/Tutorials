@@ -1,0 +1,7 @@
+ &dos
+    prefix  = 'Si_exc2'
+    outdir  = 'temp'
+    Emin = -6.00, Emax = 10.00
+    DeltaE = 0.01,
+    fildos = 'dos.dat'
+/

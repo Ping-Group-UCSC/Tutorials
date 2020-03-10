@@ -1,0 +1,429 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Linux)">
+	<META NAME="CREATED" CONTENT="20090711;16054000">
+	<META NAME="CHANGED" CONTENT="20090715;21574200">
+	<STYLE>
+	<!--
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		P { margin-bottom: 0.08in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en" DIR="LTR">
+<P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L, sans-serif"><U><B>INSTRUCTIONS
+FOR DAY 1, EXERCISE 2</B></U></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Note
+that the following color code has been used in this instruction
+sheet:</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Broad
+headings are in red.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#ff00ff"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>File
+names are in magenta,</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#0000ff"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Phrases
+to be typed into the command line are in blue.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#008000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Input
+parameters are in dark green.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>In
+this exercise, we will examine some of the 'post-processing' that you
+can do once you have run your scf calculations. </FONT></FONT></FONT>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>In
+the previous exercise, there was only one output quantity that we
+cared about ...the total energy. Here we will see some other things
+that we can extract from the files produced when one does a PW
+calculation...e.g., charge densities, and eigenvalues (which we will
+use to get band structure plots and densities of states). We will
+continue to work with Si,</FONT></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>which
+was the subject of exercise1.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><U><FONT COLOR="#ff0000">Go
+	to the directory day1/exercise2</FONT></U> (if you are not already
+	there!)</FONT></FONT></P>
+</UL>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>You
+will see the following files:</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><FONT COLOR="#ff00ff">day1_exercise2_instructions.html
+	</FONT>this file!</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><FONT COLOR="#ff00ff">Si.scf.in
+	</FONT>this is an input file for scf calculations.</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><FONT COLOR="#ff00ff">bands.in</FONT>
+	this is an input file for collecting bands.</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><FONT COLOR="#ff00ff">k-point-path
+	</FONT>this is a file containing list of k-points along symmetry
+	directions in Brillouin zone.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><FONT COLOR="#ff00ff">Si.plotband.in</FONT>
+	this is an input file for putting band structure data into a
+	plottable format.</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><FONT COLOR="#ff00ff">Si.pp_rho.in
+	</FONT>this is an input file to extract charge density using
+	post-processing.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><FONT COLOR="#ff00ff">Si.plotrho.in
+	<FONT COLOR="#000000">this</FONT> <FONT COLOR="#000000">is</FONT> </FONT>an
+	input file to plot charge density.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><FONT COLOR="#ff00ff">dos.in</FONT>
+	this is an input file to calculate density of states.</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><U>Self-consistent
+	(scf) calculations for Si</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Open
+	and read the sample file <FONT COLOR="#ff00ff">Si.scf.in</FONT></FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>We
+	chose values of <FONT COLOR="#008000">celldm(1)</FONT> , <FONT COLOR="#008000">ecutwfc</FONT>,
+	<FONT COLOR="#008000">nk1</FONT>, <FONT COLOR="#008000">nk2</FONT>
+	and <FONT COLOR="#008000">nk3</FONT> based upon our results for
+	exercise1. You may choose the same values as these, or substitute
+	your values.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Run
+	the scf calculation:</FONT></FONT></FONT></P>
+	<P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#0000ff"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>pw.x
+	&lt; Si.scf.in &gt; Si.scf.out</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L, sans-serif"><SPAN STYLE="text-decoration: none">A)
+</SPAN><U>Band structure of Si</U><SPAN STYLE="text-decoration: none">
+- </SPAN></FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L, sans-serif"><U>Calculations
+	for bands</U></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><FONT COLOR="#000000">Copy
+	</FONT><FONT COLOR="#ff0000"><FONT COLOR="#ff00ff">Si.scf.in</FONT>
+	<FONT COLOR="#000000">to</FONT> <FONT COLOR="#ff00ff">Si.band.in</FONT><FONT COLOR="#000000">
+	</FONT></FONT></FONT></FONT>
+	</P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Edit
+	<FONT COLOR="#ff00ff">Si.band.in</FONT> to perform non-self
+	consistent calculations that will be used to obtain band structure,
+	by setting <FONT COLOR="#008000">calculation='bands'</FONT>.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Add
+	the parameter in <FONT COLOR="#008000">&amp;SYSTEM</FONT> namelist
+	called <FONT COLOR="#008000">nbnd = 8</FONT> to specify the number
+	of bands computed. Note that for a 2-atom Si cell, we have 8
+	electrons and therefore only 4 occupied bands, but we are going to
+	compute some extra (empty) bands.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Define
+	the <FONT COLOR="#008000">K_POINTS</FONT> card to specify the path
+	along symmetry directions in Brillouin zone. In order to this, first change the line 
+	'<FONT COLOR="#008000">K_POINTS (automatic)</FONT>' so it simply reads '<FONT COLOR="#008000">K_POINTS </FONT>'.
+	Then remove the line '<FONT COLOR="#008000">6 6 6 1 1 1 </FONT>' and replace it 
+	with the contents of the file called <FONT COLOR="#ff00ff">k-point-path<FONT COLOR="#000000">,</FONT>
+	</FONT>which contains a list of k-points along high symmetry
+	directions in the BZ, i.e., L (&frac12;, &frac12;, &frac12;) to
+	Gamma <FONT FACE="Standard Symbols L"><FONT FACE="Nimbus Sans L, sans-serif">(0,
+	0, 0)</FONT> <FONT FACE="Nimbus Sans L, sans-serif">to</FONT> <FONT FACE="Nimbus Sans L, sans-serif">X
+	(0, 0, 1)</FONT> <FONT FACE="Nimbus Sans L, sans-serif">to</FONT> <FONT FACE="Nimbus Sans L, sans-serif">W
+	(0, &frac12;, 1) to X (0, 1, 1) to Gamma (0, 0, 0). </FONT></FONT>You
+	should have now updated the file <FONT COLOR="#ff00ff">Si.band.in</FONT> to 
+	not use an automatic kpoint mesh but instead a particular kpoint path in the Brillouin Zone.
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>More
+        details about K_POINT options can be found in the input file description for pw.x:  </FONT></FONT></FONT></P>
+	<P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>http://web.mit.edu/espresso_v6.1/i386_linux26/qe-6.1/Doc/INPUT_PW.html</FONT></FONT></FONT></P>
+
+
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Run
+	a 'bands' calculation:</FONT></FONT></FONT></P>
+	<P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#0000ff"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>pw.x
+	&lt; Si.band.in &gt; Si.band.out</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><B>What
+	differences do you see between the output file you obtain here, and
+	the output file that you obtained from your scf calculation?</B></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><U>Collect
+	band results for plotting</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L, sans-serif">Open
+	<FONT COLOR="#ff00ff">bands.in</FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Note
+	that you have to use the same <FONT COLOR="#008000">prefix</FONT> in
+	this calculation as was used in scf AND bands calculations.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>The
+	flag <FONT COLOR="#008000">filband</FONT> defines the name of the
+	file in which bands data is stored.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Run:</FONT></FONT></FONT></P>
+	<P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#0000ff"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>bands.x
+	&lt; bands.in &gt; bands.out</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Have
+	a look at <FONT COLOR="#ff00ff">bands.out</FONT> and <FONT COLOR="#ff00ff">bands.dat</FONT>
+	and note the minimum and maximum energy eigenvalues at different
+	k-points.</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><U>Get
+	the data in a format to plot</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Open
+	<FONT COLOR="#ff00ff">Si.plotband.in</FONT></FONT></FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>The
+	first line contains (a) input file (= <FONT COLOR="#ff00ff">bands.dat</FONT>
+	obtained in the earlier step).</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Then
+	(b) <FONT COLOR="#008000">Emin</FONT> and <FONT COLOR="#008000">Emax</FONT>
+	(= -6.00 and 10.00).</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>(c)
+	output file in xmgrace format (<FONT COLOR="#ff00ff">bands.xmgr</FONT>)</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>(d)
+	output file in ps format (<FONT COLOR="#ff00ff">bands.ps</FONT>)</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>(e)
+	<FONT COLOR="#008000">Fermi energy</FONT> (= 6.337 eV)</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>(f)
+	deltaE and reference energy (= 1.00 6.337)</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Run
+	the plotting program:</FONT></FONT></FONT></P>
+	<P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#0000ff"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>plotband.x
+	&lt; Si.plotband.in &gt; Si.plotband.out</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>You
+	can view the plotted band structure written in ps format (<FONT COLOR="#ff00ff">bands.ps</FONT>)
+	using a postscript viewer (e.g., <FONT COLOR="#0000ff">okular <FONT COLOR="#000000">).</FONT></FONT></FONT></P>
+<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>If
+        you do not have okular installed you can install it on your computer via apt</FONT></FONT></P>
+        <P STYLE="margin-bottom: 0in"><FONT COLOR="#2323dc"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3>sudo
+        apt install okular</FONT></FONT></FONT></P>
+<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>You
+        should then be able to open the band plot you created</FONT></FONT></P>
+        <P STYLE="margin-bottom: 0in"><FONT COLOR="#2323dc"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3>okular
+        bands.ps</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+<FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>B)
+<U>Charge density for Si</U> - </FONT></FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><U>Post-processing
+	to extract charge density</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Open
+	<FONT COLOR="#ff00ff">Si.pp_rho.in</FONT></FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Make
+	sure that the value of <FONT COLOR="#008000">prefix</FONT> is the
+	same as the values as were used in scf calculations.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><FONT COLOR="#008000">filplot
+	= 'Si.charge'</FONT> saves the extracted charge density and is used
+	for plotting by defining <FONT COLOR="#008000">filepp(1) =
+	'Si.charge' </FONT>and the data to be plotted in written in
+	<FONT COLOR="#008000">fileout='Si.rho.dat'</FONT>.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><FONT COLOR="#008000">plot_num
+	= 0</FONT> indicatesthat the quantity to be extracted is the charge
+	denisty (for other possible options, see http://web.mit.edu/espresso_v6.1/i386_linux26/qe-6.1/Doc/INPUT_PP.html).</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><FONT COLOR="#008000">iflag</FONT>
+	and <FONT COLOR="#008000">output_format</FONT> specify the
+	dimensionality for the plot.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><FONT COLOR="#008000">e1(i)</FONT>
+	and <FONT COLOR="#008000">e2(i)</FONT> (i = x, y and z) are 3D
+	vectors that determine the plotting plane and must be orthogonal to
+	eact other.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><FONT COLOR="#008000">nx</FONT>
+	and <FONT COLOR="#008000">ny</FONT> are number of points in the
+	plane. </FONT></FONT></FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Run
+	post-processing code:</FONT></FONT></FONT></P>
+	<P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#0000ff"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>pp.x
+	&lt; Si.pp_rho.in &gt; Si.pp_rho.out</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><U>Plot
+	the extracted charge density</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Open
+	<FONT COLOR="#ff00ff">Si.plotrho.in</FONT></FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>The
+	first line contains the name of the output file from the earlier
+	step (<FONT COLOR="#ff00ff">Si.rho.dat</FONT>)</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>The
+	second line contains the name of the file to which output is to be
+	written, that is <FONT COLOR="#ff00ff">Si.rho.ps</FONT> (in ps
+	format).</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Run
+	the plotting code:</FONT></FONT></FONT></P>
+	<P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#0000ff"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>plotrho.x
+	&lt; Si.plotrho.in &gt; Si.plotrho.out</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Use
+	<FONT COLOR="#0000ff">okular</FONT> to view the charge density of Si (<FONT COLOR="#ff00ff">Si.rho.ps</FONT>).</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+<FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><U>C)
+Density of states plot for Si</U> - </FONT></FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><U>nscf
+	calculations for DOS</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Copy
+	<FONT COLOR="#ff00ff">Si.scf.in</FONT> to <FONT COLOR="#ff00ff">Si.nscf.in</FONT></FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Change
+	the flag <FONT COLOR="#008000">calculation='nscf'</FONT></FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Change
+	the number of bands to add a few empty states in the namelist
+	<FONT COLOR="#008000">&amp;SYSTEM </FONT>(<FONT COLOR="#008000">nbnd
+	= 8</FONT>).</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+        <FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Define
+        <FONT COLOR="#008000">occupations='tetrahedra'</FONT> in the
+        namelist <FONT COLOR="#008000">&amp;SYSTEM</FONT>.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Modify
+	the <FONT COLOR="#008000">K_POINTS</FONT> card from “<FONT COLOR="#008000">6
+	6 6 1 1 1</FONT>” to “<FONT COLOR="#008000">12 12 12 1 1 1</FONT>”,
+	this is because we now want to compute eigenvalues on a finer mesh
+	in k-space.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Remember
+	that the same wavefunctions (as obtained from scf calculations) have
+	to be used, so do NOT change <FONT COLOR="#008000">prefix.</FONT></FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Run
+	the nscf calculations:</FONT></FONT></FONT></P>
+	<P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#0000ff"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>pw.x
+	&lt; Si.nscf.in &gt; Si.nscf.out</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3><U>DOS
+	calculations</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L, sans-serif">Open
+	<FONT COLOR="#ff00ff">dos.in</FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Make
+	sure that it has the same <FONT COLOR="#008000">prefix</FONT> as
+	used in the scf calculations.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>The
+	DOS results are written in <FONT COLOR="#008000">fildos</FONT> =
+	(<FONT COLOR="#ff00ff">dos.dat</FONT>)</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Run
+	density of states calculations:</FONT></FONT></FONT></P>
+	<P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#0000ff"><FONT FACE="Nimbus Sans L, sans-serif">dos.x
+	&lt; dos.in &gt; dos.out </FONT></FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Have
+	a look at <FONT COLOR="#ff00ff">dos.out</FONT> and the data file
+	<FONT COLOR="#ff00ff">dos.dat</FONT>.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>Plot
+	<FONT COLOR="#ff00ff">dos.dat</FONT> to see the DOS plot (you can
+	use <FONT COLOR="#0000ff">gnuplot</FONT> or <FONT COLOR="#0000ff">xmgrace</FONT>
+	programs).</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+</BODY>
+</HTML>

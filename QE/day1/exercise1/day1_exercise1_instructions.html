@@ -1,0 +1,530 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.1.5  (Linux)">
+	<META NAME="CREATED" CONTENT="20090711;16054000">
+	<META NAME="CHANGED" CONTENT="20090719;17152600">
+	<STYLE>
+	<!--
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		P { margin-bottom: 0.08in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en" DIR="LTR">
+<P STYLE="margin-bottom: 0in"><FONT FACE="Electron"><U><B>INSTRUCTIONS
+FOR DAY 1, EXERCISE 1</B></U></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Note
+that the following color code has been used in this instruction
+sheet:</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Broad
+headings are in red.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#ff00ff"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>File
+names are in magenta.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#0000ff"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Phrases
+to be typed into the command line are in blue.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#008000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Input
+parameters are in dark green.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>A
+very brief reminder of useful linux commands:</U></FONT></FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">cp
+	A B</FONT></FONT> <FONT FACE="Nimbus Sans L">copies file</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">A</FONT></FONT>
+	<FONT FACE="Nimbus Sans L">to file</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">B</FONT></FONT>.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">mv
+	A B</FONT></FONT> <FONT FACE="Nimbus Sans L">moves file</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">A</FONT></FONT>
+	<FONT FACE="Nimbus Sans L">to file</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">B</FONT></FONT>.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">mkdir
+	C</FONT></FONT> <FONT FACE="Nimbus Sans L">creates a directory named</FONT>
+	<FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">C</FONT></FONT>.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">ls
+	C</FONT></FONT> <FONT FACE="Nimbus Sans L">lists the names of the
+	files and sub-directories contained in directory </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">C</FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">vi
+	A</FONT></FONT> <FONT FACE="Nimbus Sans L">or </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">gedit
+	A</FONT></FONT> <FONT FACE="Nimbus Sans L">are some of the many ways
+	in which you can open the file</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">A</FONT></FONT>
+	f<FONT FACE="Nimbus Sans L">or reading and/or editing.</FONT></FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; font-weight: medium"><FONT COLOR="#000000"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Nimbus Sans L">Adding
+	an ampersand</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">&amp;</FONT></FONT>
+	<FONT FACE="Nimbus Sans L">at the end of your command will make it
+	run in the background, so that you can continue to issue other
+	commands while the original one is still running.</FONT></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-left: 0.28in; margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>In
+this exercise, you will first perform simple scf (self-consistent
+field) calculations on silicon.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT SIZE=3><U><FONT FACE="Nimbus Sans L"><FONT COLOR="#ff0000">Go
+	to the directory </FONT></FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">week1/day1/exercise1</FONT></FONT></U>
+	<FONT FACE="Nimbus Sans L">(if you are not already there!)</FONT></FONT></P>
+</UL>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>You
+will see the following files:</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3><FONT COLOR="#ff00ff">day1_exercise1_instructions.html
+</FONT><FONT FACE="Nimbus Sans L">this file!</FONT></FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">Si.sample.in
+</FONT></FONT><FONT FACE="Nimbus Sans L">this is a sample input file,
+for a primitive Si cell containing 2 atoms.</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">Si.sample.sh</FONT></FONT>
+<FONT FACE="Nimbus Sans L">this is a sample shell script that you can
+use (optionally) .</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">Si.supcell1.in</FONT></FONT>
+<FONT FACE="Nimbus Sans L">this is an input file for an Si supercell
+containing 8 atoms.</FONT></FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><FONT FACE="Electron"><FONT SIZE=3><FONT COLOR="#ff00ff"><FONT FACE="Courier 10 Pitch">Si.supcell2.in</FONT>
+</FONT><FONT FACE="Nimbus Sans L">this is an input file for an Si
+supercell containing 16 atoms.</FONT></FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><FONT SIZE=3><FONT FACE="Nimbus Sans L">For
+each calculation that you will run, you can use</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">Si.sample.in</FONT></FONT>
+<FONT FACE="Nimbus Sans L">as a template that you can copy to another
+file and then edit. Alternatively, you can use shell scripts to
+automate this process. </FONT></FONT>
+</P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT SIZE=3><U><FONT FACE="Nimbus Sans L">Open
+	and read the sample file</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">Si.sample.in</FONT></FONT></U></FONT></FONT></P>
+</UL>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Nimbus Sans L">You
+	can find all details about the input for pw.x calculations calculation under the input data description:</FONT></FONT></FONT></P>
+	<P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L, sans-serif"><FONT SIZE=3>http://web.mit.edu/espresso_v6.1/i386_linux26/qe-6.1/Doc/INPUT_PW.html</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Nimbus Sans L">Note
+	that in the</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">&amp;control</FONT></FONT><FONT COLOR="#ff00ff">
+	</FONT><FONT FACE="Nimbus Sans L">namelist, we have specified that
+	we want to run an</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">scf</FONT></FONT>
+	<FONT FACE="Nimbus Sans L">calculation.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Nimbus Sans L">Silicon
+	has the diamond structure. Note that we are using a (primitive) unit
+	cell that corresponds to an fcc lattice, with 2 Si atoms in the
+	atomic basis. Notice the values given for </FONT><FONT COLOR="#008000"><FONT FACE="Courier 10 Pitch">ibrav</FONT><FONT FACE="Nimbus Mono L">,
+	</FONT><FONT FACE="Courier 10 Pitch">nat</FONT><FONT FACE="Nimbus Mono L">,
+	</FONT><FONT FACE="Courier 10 Pitch">ntyp</FONT></FONT> <FONT FACE="Nimbus Sans L">and</FONT>
+	<FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ATOMIC_POSITIONS</FONT>.</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT SIZE=3><FONT FACE="Nimbus Sans L">In
+	this file, the lattice constant </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">celldm(1)
+	</FONT></FONT><FONT FACE="Nimbus Sans L">has been set equal to 10.26
+	bohr = 5.43 &Aring;, which is the experimental value. </FONT></FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>A
+	6&times;6&times;6 shifted Monkhorst-Pack k-point mesh has been used.</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Nimbus Sans L">The
+	plane-wave cut-off for wavefunctions,</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ecutwfc</FONT></FONT><FONT FACE="Nimbus Sans L">,
+	has been set to 20 Ry. Since we are not using an ultrasoft
+	pseudopotential, we are leaving</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ecutrho
+	</FONT></FONT><FONT FACE="Nimbus Sans L">at the default value.</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>Use
+	Xcrysden to view the structure in the sample input file:</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<P STYLE="margin-bottom: 0in"><FONT COLOR="#2323dc"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3>xcrysden
+	--pwi Si.sample.in</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>If
+        you do not have xcrysden installed you can install it on your computer via apt</FONT></FONT></P>
+	<P STYLE="margin-bottom: 0in"><FONT COLOR="#2323dc"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3>sudo
+        apt install xcrsyden</FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Play
+	around with xcrysden! Rotate the view, display the boundaries of the
+	conventional cubic cell, etc.</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>How
+	many atoms are contained in the conventional cubic cell?</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>What
+	is the coordination number of each atom?</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>What
+	is the nearest-neighbor distance?</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>Run
+	an scf calculation:</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in; text-decoration: none">
+<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>The way
+to do this is:</FONT></FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in; text-decoration: none">
+<FONT COLOR="#0000ff"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3>pw.x
+&lt; input_filename &gt; output_filename</FONT></FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in; text-decoration: none">
+<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>So in
+this particular case, you will type:</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in"><FONT COLOR="#0000ff"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3>pw.x
+&lt; Si.sample.in &gt; Si.sample.out</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>Read
+	the output, and answer the following questions:</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Was
+	symmetry used to reduce the number of k-points from 6&times;6&times;6=216?</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>How
+	many scf iterations were performed before convergence was achieved?</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>What
+	is the final (converged) value for the total energy? (Note: you can
+	find this by looking for an exclamation mark in the output file).
+	For example, you can type:</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<P STYLE="margin-bottom: 0in"><FONT COLOR="#0000ff"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3>grep
+	! Si.sample.out</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT COLOR="#000000"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3><FONT FACE="Nimbus Sans L, sans-serif">Note:
+	If you set</FONT> <FONT COLOR="#008000">verbosity = 'high'</FONT> <FONT FACE="Nimbus Sans L, sans-serif">in
+	the</FONT><FONT COLOR="#008000"> &amp;control</FONT> <FONT FACE="Nimbus Sans L, sans-serif">namelist,
+	you will get additional information in your output file, e.g., about
+	symmetries and occupation numbers.</FONT></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>Now
+	do convergence tests with respect to plane-wave cut-off:</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT SIZE=3><FONT FACE="Nimbus Sans L">Find
+	out how the total energy changes when you vary the plane wave
+	cut-off</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ecutwfc</FONT></FONT>
+	<FONT FACE="Electron">b</FONT><FONT FACE="Nimbus Sans L">etween 10
+	and 30 Ry, in steps of 5 Ry. You can either do this by copying the
+	sample file </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">Si.sample.in
+	</FONT></FONT><FONT FACE="Nimbus Sans L, sans-serif">t</FONT><FONT FACE="Nimbus Sans L">o
+	other input files and editing them, and running </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">pw.x</FONT></FONT>
+	<FONT FACE="Nimbus Sans L">using each of these input files in turn,
+	or by running the sample shell script</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">Si.sample.sh</FONT></FONT>
+	</FONT>
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<P STYLE="margin-bottom: 0in"><FONT COLOR="#0000ff"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3>./Si.sample.sh</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Nimbus Sans L">Now
+	make a data file (e.g., you can call it </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">etotvsecut.dat</FONT></FONT><FONT FACE="Nimbus Sans L">)
+	that contains the value of</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ecutwfc</FONT></FONT>
+	i<FONT FACE="Nimbus Sans L">n the first column, and total energy in
+	the second column. Remember that you can easily find the values of
+	the total energy by searching for an exclamation mark, e.g., using
+	the </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">grep</FONT></FONT><FONT COLOR="#000000">
+	</FONT><FONT FACE="Nimbus Sans L">command. </FONT></FONT></FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Nimbus Sans L">Plot
+	a graph of this data using your favorite plotting program (e.g.,
+	</FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">xmgrace</FONT></FONT>
+	<FONT FACE="Nimbus Sans L">or</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">gnuplot</FONT></FONT><FONT FACE="Nimbus Sans L">).</FONT></FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT SIZE=3><FONT FACE="Nimbus Sans L">Does
+	the total energy decrease monotonically as </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ecutwfc</FONT></FONT>
+	<FONT FACE="Nimbus Sans L">is increased? </FONT></FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT SIZE=3><FONT FACE="Nimbus Sans L">What
+	value of</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ecutwfc</FONT></FONT>
+	<FONT FACE="Nimbus Sans L">are you 'happy' with? </FONT></FONT>
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>Now
+	examine convergence with respect to Brillouin zone sampling:</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Fix
+	the value of <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ecutwfc</FONT></FONT>
+	at whatever value you have decided is good enough. (Remember:
+	differences in energy will converge at lower values of <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ecutwfc</FONT></FONT>
+	than the absolute value of the total energy!) I chose <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ecutwfc</FONT></FONT>
+	to be 20 Ry, but you can make whatever choice you want! </FONT></FONT>
+	</P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Let
+	the lattice constant <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">celldm(1)
+	</FONT></FONT>remain at the experimental value.</FONT></FONT></P>
+</UL>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in; text-decoration: none">
+<FONT FACE="Nimbus Sans L"><FONT SIZE=3>Vary the Monkhorst-Pack grid
+parameters <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">nk1</FONT></FONT>,
+<FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">nk2</FONT></FONT>
+and <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">nk3</FONT></FONT>.
+</FONT></FONT>
+</P>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in; text-decoration: none">
+<FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Nimbus Sans L">You can
+do this either by manually editing <FONT COLOR="#ff00ff">input files</FONT>,
+or by modifying the script </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">Si.sample.sh
+</FONT></FONT></FONT></FONT>
+</P>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in; text-decoration: none">
+<FONT SIZE=3><FONT FACE="Nimbus Sans L">Use</FONT> <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">nk1</FONT>=<FONT COLOR="#008000">nk2</FONT>=<FONT COLOR="#008000">nk3</FONT></FONT><FONT FACE="Electron">=</FONT>
+<FONT FACE="Nimbus Sans L">1, 2, 3, 4, 5, 6.</FONT> </FONT>
+</P>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in; text-decoration: none">
+<FONT SIZE=3><FONT FACE="Nimbus Sans L">Leave the offset at</FONT>
+<FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">k1</FONT>=<FONT COLOR="#008000">k2</FONT>=<FONT COLOR="#008000">k3</FONT></FONT>
+<FONT FACE="Nimbus Sans L">= 1.</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Electron"><FONT SIZE=3><FONT FACE="Nimbus Sans L">Run</FONT>
+	<FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">pw.x</FONT></FONT>
+	<FONT FACE="Nimbus Sans L">for each of the six <FONT COLOR="#ff00ff">input
+	files</FONT></FONT> <FONT FACE="Nimbus Sans L">you have made (either
+	one by one, or using the shellscript).</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in; text-decoration: none">
+<FONT FACE="Nimbus Sans L"><FONT SIZE=3>Remember: don't overwrite
+<FONT COLOR="#ff00ff">output files</FONT> before you extract data
+from them!</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT SIZE=3><FONT FACE="Nimbus Sans L">Assemble
+	a <FONT COLOR="#ff00ff">data file</FONT></FONT> <FONT FACE="Nimbus Sans L">that
+	contains how the total energy varies with </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">nk1</FONT>=<FONT COLOR="#008000">nk2</FONT>=<FONT COLOR="#008000">nk3</FONT></FONT><FONT FACE="Electron">.
+	</FONT><FONT FACE="Nimbus Sans L">The first column should contain
+	the value of </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">nk1</FONT></FONT>
+	<FONT FACE="Nimbus Sans L">(or, if you prefer, the number of
+	k-points generated and used), and the second column should contain
+	the value of the total energy.</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Plot
+	a graph of this data. Do you think that the total energy is
+	converging as you increase the number of k-points?</FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT SIZE=3><FONT FACE="Nimbus Sans L">Do
+	you think it was a good choice to take </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">nk1</FONT>=<FONT COLOR="#008000">nk2</FONT>=<FONT COLOR="#008000">nk3</FONT></FONT><FONT FACE="Electron">?</FONT>
+	<FONT FACE="Nimbus Sans L">Why?</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Is
+	the convergence wrt the number of k-points monotonic? (Note that it
+	need not necessarily be so!)</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>Now
+	obtain the equilibrium lattice constant of Si:</U></FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Fix
+	values of ecutwfc and nk1=nk2=nk3. I chose <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ecutwfc</FONT></FONT>
+	= 20 and <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">nk1</FONT>=<FONT COLOR="#008000">nk2</FONT>=<FONT COLOR="#008000">nk3</FONT></FONT>=6,
+	but you can choose other values if you feel that they are more
+	appropriate.</FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Make
+	input files in which you vary the lattice constant, i.e., <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">celldm(1)</FONT></FONT>,
+	from 9.8 to 11.0 bohr, in steps of 0.2 bohr. (Again, you can do this
+	by hand or modify the <FONT COLOR="#ff00ff">shell script</FONT><FONT COLOR="#000000">).</FONT></FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Run
+	these seven scf calculations.</FONT></FONT></P>
+</UL>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0in; text-decoration: none">
+<FONT FACE="Nimbus Sans L"><FONT SIZE=3>Assemble the results for the
+dependence of total energy on lattice constant in a data file, e.g.,
+one called <FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">etotvsalat.dat</FONT></FONT>
+(2 columns, the first containing the lattice constant in bohr, and
+the second containing total energy in Ry).</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Plot
+	this data. </FONT></FONT>
+	</P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>By
+	looking at this data, do you think that your result for the
+	equilibrium lattice constant is larger or smaller than experiment?
+	Why is there a discrepancy between the theoretical and experimental
+	values?</FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Is
+	the energy symmetric about the minimum value? Would you expect it to
+	be so?</FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Fit
+	this data to an equation of state by running </FONT></FONT>
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in; text-decoration: none">
+<FONT COLOR="#0000ff"><FONT FACE="Courier 10 Pitch"><FONT SIZE=3>ev.x</FONT></FONT></FONT></P>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in; text-decoration: none">
+<FONT FACE="Nimbus Sans L"><FONT SIZE=3><FONT COLOR="#000000">When
+you run this, yo</FONT>u will be prompted to supply:</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>the
+	type of Bravais lattice (note: using the name and not the <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ibrav</FONT></FONT>
+	number)</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>which
+	particular equation of state you want to use</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>(I
+	usually use the 2<SUP>nd</SUP> Order Birch eq., but you can
+	experiment with other choices too.)</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>the
+	name of the <FONT COLOR="#ff00ff">input file</FONT> containing the
+	data of lattice constant and total energy</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>the
+	name of the <FONT COLOR="#ff00ff">output file</FONT> where you want
+	the results of the fitting procedure</FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Look
+	at the <FONT COLOR="#ff00ff">output file</FONT> (whose name you
+	supplied in the previous step):</FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>From
+	the fit, what are the values of the equilibrium lattice constant a0
+	and bulk modulus k0? (The experimental value for the bulk modulus is
+	101.97 GPa = 1019.7 kbar ).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>If
+	there is a discrepancy between experimental and theoretical values,
+	can you understand where this arises from?</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Can
+	you tell whether the quality of fit is good or poor?</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><U>The
+equivalence between supercell size and BZ sampling;</U></FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Let us
+now do a couple of calculations using supercells, i.e., unit cells
+that are larger than the primitive one.</FONT></FONT></FONT></P>
+<UL>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>We
+	will now use two <FONT COLOR="#ff00ff">input files:</FONT></FONT></FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">Si.supcell1.in
+	</FONT></FONT>makes use of the conventional cubic cell, containing 8
+	atoms. Read this file, and notice the ways in which it differs from
+	the input files you have been using up to now. Especially note the
+	values used for <FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ibrav</FONT></FONT>,
+	<FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">nat</FONT></FONT>
+	and the atomic coordinates.</FONT></FONT></FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>The
+	lattice constant has been set equal to the computed value of 10.348
+	Bohr</FONT></FONT></FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>It
+	uses an unshifted k-point mesh of 6&times;6&times;6.</FONT></FONT></FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3><FONT FACE="Courier 10 Pitch"><FONT COLOR="#ff00ff">Si.supcell2.in</FONT></FONT>
+	makes use of a tetragonal unit cell, which is twice as long in the
+	z-direction as it is in the other two directions. It contains 16
+	atoms. Read it carefully!</FONT></FONT></FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Since
+	it is twice as long along <I>z</I>, we will halve the number of
+	k-points along <I>k<SUB>z</SUB></I>. </FONT></FONT></FONT>
+	</P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>So we
+	will use an unshifted k-point mesh of 6&times;6&times;3</FONT></FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Run
+	<FONT FACE="Courier 10 Pitch"><FONT COLOR="#0000ff">pw.x</FONT></FONT>
+	using both <FONT COLOR="#ff00ff">input files </FONT>(remember to use
+	different names for the <FONT COLOR="#ff00ff">output files</FONT> in
+	the two cases!)</FONT></FONT></FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Is the
+	total energy per atom the same in the two cases or different? What
+	is the expected answer?</FONT></FONT></FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-style: normal; font-weight: medium; text-decoration: none">
+	<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Which
+	calculation took longer? Note that in the first case we had fewer
+	atoms but more k-points, while in the second case, we had more atoms
+	but fewer k-points. The cells and k-points were chosen such that the
+	second calculation 'folds' exactly into the first one.</FONT></FONT></FONT></P>
+</UL>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#ff0000"><FONT FACE="Electron"><FONT SIZE=3><U>(<FONT FACE="Nimbus Sans L">D)
+Some optional extra stuff :</FONT></U></FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in; text-decoration: none">
+<FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>If you
+finished all of the above stuff, and the instructor still hasn't
+moved on to the next exercise, you can (if you choose) do other
+things, e.g.:</FONT></FONT></FONT></P>
+<P STYLE="margin-left: 0.79in; margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#ff0000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Obtain
+	graphs of total energy vs. lattice constant at some very low values
+	of<FONT COLOR="#000000"> </FONT><FONT FACE="Courier 10 Pitch"><FONT COLOR="#008000">ecutwfc</FONT></FONT>.
+	</FONT></FONT></FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0in; text-decoration: none"><FONT COLOR="#000000"><FONT FACE="Nimbus Sans L"><FONT SIZE=3>Do
+	you notice any change in the shape or nature of the curve? If yes,
+	do you understand why?</FONT></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+</BODY>
+</HTML>

@@ -1,0 +1,3 @@
+We want to find the equilibrium geoometry of a C2H2
+molecule. We use both bfgs and damped dynamics to relax the structure.
+At the end we check the importance of an accurate scf calculation.

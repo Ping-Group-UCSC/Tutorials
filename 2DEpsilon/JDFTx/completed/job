@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH -J seps
+#SBATCH -o x.%j.out
+#SBATCH -t 8:00:00
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=4
+
+module purge
+module load gnu openmpi mkl gsl
+jdir=/export/data/share/yuanping/JDFTXDIR/build
+
+mpirun --mca btl openib,sm,self --bind-to none -n 1 $jdir/jdftx -i minus.in > minus.out 
+mpirun --mca btl openib,sm,self --bind-to none -n 1 $jdir/jdftx -i plus.in > plus.out 

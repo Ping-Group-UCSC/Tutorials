@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH -J tibn
+#SBATCH -o qe.%j.out
+#SBATCH --nodes=10
+#SBATCH --ntasks-per-node=36
+#SBATCH -t 4:00:00
+#SBATCH -p pbatch
+# SBATCH --dependency=afterany:11446
+
+module load intel impi mkl
+pwdir="/g/g13/smart8/Programs/qe-6.1-default/bin"
+MPICMD="srun -n $SLURM_NTASKS"
+
+$MPICMD $pwdir/pw.x -nk 10 -nd 1024 -inp relax.in > relax.out

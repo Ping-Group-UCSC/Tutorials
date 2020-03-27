@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --job-name=eps
+#SBATCH --output=qe.%j.out
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=16
+#SBATCH --time=4:00:00
+
+pwdir=/export/data/share/wufeng/programs-intel2017.5/qe-6.1-scal-fixsym/bin/
+module add intel/17.0.5.239 impi/2017 QE/intel-qe.6.0
+MPICMD="mpirun -genv I_MPI_FABRICS shm:ofa -n $SLURM_NTASKS"
+
+$MPICMD $pwdir/pw.x -nk 4 -inp pw.in > pw.out
+$MPICMD $pwdir/ph.x -nk 4 -inp ph.in > ph.out
+$MPICMD $pwdir/dynmat.x -inp dynmat.in > dynmat.out

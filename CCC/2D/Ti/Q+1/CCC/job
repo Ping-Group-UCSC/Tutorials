@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH -J jTi
+#SBATCH -o x.%j.out
+#SBATCH -t 8:00:00
+#SBATCH -N 3
+#SBATCH --ntasks-per-node=3
+#SBATCH --dependency=afterany:55023
+
+module purge
+module load gnu openmpi mkl gsl
+jdir=/export/data/share/wufeng/share/programs/JDFTX-fix20180209/build/
+MPICMD="mpirun --mca btl openib,sm,self --bind-to none -n $SLURM_NTASKS"
+
+$MPICMD $jdir/jdftx -i main.in > main.out 

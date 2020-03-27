@@ -1,0 +1,35 @@
+#
+
+lattice \
+        33.234600000     -16.617300000       0.000000000 \
+         0.000000000      28.781994465       0.000000000 \
+         0.000000000       0.000000000      28.345890044
+
+ion-species SG15/$ID_ONCV_PBE-1.1.upf
+ion-species SG15/$ID_ONCV_PBE-1.0.upf
+
+elec-cutoff 22.5
+fftbox 150 150 128
+
+include atom.pos
+
+spintype z-spin
+
+initial-state charge.$VAR
+dump-name charge.$VAR
+
+#electronic-SCF  energyDiffThreshold 1e-7 nIterations 200
+fix-electron-density bnjdftx.$VAR
+
+dump End State Dtot EigStats
+
+kpoint 0 0 0 1
+kpoint-folding 3 3 1
+
+# coulomb-interaction Slab 001
+coulomb-interaction periodic
+coulomb-truncation-embed 0 0 0.5
+
+elec-initial-charge -2 # -2 electrons -> q= +2 
+charged-defect 0.490470496 0.509445064 0.579405106 -2 1
+charged-defect-correction Slab 001 /export/data/share/tjsmart/h-BN/2019-Various/TiBN/QE/S07/Prist/JDFTx/prist.d_tot epsilon_z.dat  8. 1.

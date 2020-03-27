@@ -1,0 +1,31 @@
+#
+
+lattice \
+        33.234600000     -16.617300000       0.000000000 \
+         0.000000000      28.781994465       0.000000000 \
+         0.000000000       0.000000000      28.345890044
+
+ion-species SG15/$ID_ONCV_PBE-1.1.upf
+ion-species SG15/$ID_ONCV_PBE-1.0.upf
+
+elec-cutoff 22.5
+fftbox 150 150 128
+
+include atom.pos
+
+# spintype z-spin
+
+initial-state prist.$VAR
+dump-name prist.$VAR
+
+electronic-SCF  energyDiffThreshold 1e-7 nIterations 200
+# fix-electron-density bnjdftx.$VAR
+
+dump End State Dtot EigStats
+
+kpoint 0 0 0 1
+kpoint-folding 3 3 1
+
+coulomb-interaction Slab 001
+coulomb-truncation-embed 0 0 0.5
+

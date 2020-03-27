@@ -7,6 +7,8 @@ This repository provides a tutorial for calculating the charged cell correction 
 This involves first computing the dielectric profile `eps(z)` for the two-dimensional system.
 Note! This tutorial assumes a user already has confidence in running QE calculations, as such all QE calculations (besides the calculation of the dielectric tensor) are already completed. Feel free to rerun the QE calculations with the given files if desired, but the focus here is on the steps needed to calculate CCC after one has calculated a few charged defect calculations in QE.
 
+---
+
 Prerequisites:
 ------------------------------------
 * [QE](https://www.quantum-espresso.org/)
@@ -16,6 +18,17 @@ Prerequisites:
 * [scipy](https://www.scipy.org/)
 * [matplotlib](https://matplotlib.org/)
 
+---
+
+Outline:
+------------------------------------
+**Steps 1-6** Calculate the dielectric function eps(z) due to perpendicular and parallel fields: `epsilon_z.dat`.
+
+**Steps 7-9** Calculate the total electrostatic potential of the pristine system: `prist.d_tot`.
+
+**Steps 10-13** Calculate the charged cell correction (CCC) for the Ti defect in h-BN. 
+
+---
 
 Instructions:
 ------------------------------------
@@ -30,20 +43,19 @@ cd SlabEpsilon
 
 *Calculating the dielectric tensor (QE)*
 
-1. We will begin with computing the dielectric tensor within Quantum ESPRESSO using `ph.x` and `dynmat.x`. Enter the `QE` directory.
+1. We will begin by computing the dielectric tensor within Quantum ESPRESSO using `ph.x` and `dynmat.x`. Enter the `QE` directory.
 
 ```bash
 cd QE
 ```
 
-2. This folder contains input for `pw.x`, `ph.x`, and `dynmat.x`: `pw.in`, `ph.in`, and `dynmat.in`, respectively. The job script can be used to run the calculation on kairay. However you choose, run each of the calculations in the appropriate order (1. `pw.x`, 2. `ph.x`, 3. `dynmat.x`).
+2. This folder contains input for `pw.x`, `ph.x`, and `dynmat.x`: `pw.in`, `ph.in`, and `dynmat.in`, respectively. The script `job` can be used to run each calculation on Kairay. However you choose, run each of the calculations in the appropriate order (1. `pw.x`, 2. `ph.x`, 3. `dynmat.x`).
 
 ```bash
 sbatch job
 ```
 
 3. Open the file `dynmat.out`. Under the line `Electronic dielectric permittivity tensor (F/m units)` is the dielectric tensor from electron contributions only (eps_inf). Follwoing this, under the line ` ... with zone-center polar mode contributions`, is the dielectric tensor with both electron and ion contribution (eps_0).
-
 
 ```bash
 Electronic dielectric permittivity tensor (F/m units)
@@ -57,7 +69,6 @@ Electronic dielectric permittivity tensor (F/m units)
          0.000000   -0.000000    1.172014
 ```
 
-
 *Calculating the perpendicular dielectric function (JDFTx)*
 
 4. We will now compute the dielectric function. Exit the directory `QE` and enter the directory `JDFTx`
@@ -66,18 +77,21 @@ Electronic dielectric permittivity tensor (F/m units)
 cd ../JDFTx
 ```
 
-4. This folder contains two input files `minus.in` and `plus.in`. Will run both calculations and the `JDFTx` code will use their response to an external electric field to calculate the dielectric function. However you choose, run both calculations.
+4. This folder contains two input files `minus.in` and `plus.in`. We will run both calculations with the `JDFTx` code (1. `minus.in`, 2. `plus.in`). However you choose, run both calculations.
 
 ```bash
 sbatch job
 ```
 
-5. Open the file `plus_dump.slabEpsilon`, this contains the dielectric function due to a field perpendicular to our slab (eps_perp(z)).
+5. Open the file `plus_dump.slabEpsilon`, this contains the dielectric function due to a field perpendicular to our slab (eps_perp(z)). After you are done, exit the `JDFTx` directory.
 
+```bash
+cd ..
+```
 
 *Calculating the parallel dielectric function (python)*
 
-6. We will now calculate the parallel component of the dielectric function. Implementing the methods detailed in [Phys. Rev. Materials 1, 071001(R)](https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.1.071001), the python script `slab_eps.py` can be used to calculate the parallel compoenent of the dielectric function from the perpendicular component and the dielectric matrix which we computed above. Run the python script to generate the file `epsilon_z.dat`. It will also plot the data and save to the file `epsilon_z.eps`.
+6. We will now calculate the parallel component of the dielectric function. The python script `slab_eps.py` can be used to calculate the parallel component of the dielectric function from the perpendicular component and the dielectric matrix which we computed above. See methods detailed in [Phys. Rev. Materials 1, 071001(R)](https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.1.071001). Run the python script to generate the file `epsilon_z.dat`. It will also plot the data and save to the file `epsilon_z.eps`.
 
 ```bash
 ./slab_eps.py
@@ -92,6 +106,7 @@ sbatch job
 ```bash
 cd ../Prist/JDFTx
 ```
+
 8. Before we calculate the charge cell correction it is necessary to complete a calculation of the pristine system. Within this directory we have the basic set up of a JDFTx calculation for pristine h-BN. Note that we need the cell dimensions of this calculation to match for our later calculations so we cannot simply do a unit cell calculation.  However you choose, run the jdftx calculation.
 
 ```bash
@@ -133,11 +148,9 @@ for d in $(find . -name 'CCC'); do
 done
 ```
 
-
 ***Post Processing and Plotting***
 
-
-
+14. *Coming soon!*
 
 
 Author(s)

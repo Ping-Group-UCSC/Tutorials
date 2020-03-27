@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH -J laj
+#SBATCH -o x.%j.out
+#SBATCH -e x.%j.err
+#SBATCH -t 12:00:00
+#SBATCH -N 2
+#SBATCH --ntasks-per-node=2
+# SBATCH --dependency=afterany:13647
+# SBATCH --partition=debug
+
+module purge
+module load gnu openmpi mkl gsl
+jdir=/export/data/share/wufeng/share/programs/JDFTX-201712-share/build
+NCORES=$(($SLURM_NTASKS_PER_NODE * $SLURM_JOB_NUM_NODES))
+
+mpirun --mca btl openib,sm,self --bind-to none -n $NCORES $jdir/jdftx -i main.in > main.out 
+

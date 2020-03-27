@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH -J laj
+#SBATCH -o x.%j.out
+#SBATCH -e x.%j.err
+#SBATCH -t 12:00:00
+#SBATCH -N 2
+#SBATCH --ntasks-per-node=2
+#SBATCH --dependency=afterany:30433
+#SBATCH --partition=debug
+
+module purge
+module load gnu openmpi mkl gsl
+jdir=/data/share/wufeng/share/programs/JDFTX-201712-share/build/
+
+mpirun --mca btl openib,sm,self --bind-to none -n 4 $jdir/jdftx -i main.in > main.out 

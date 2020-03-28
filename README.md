@@ -7,6 +7,7 @@ This repository includes general tutorials. To download a tutorial, enter the di
 
 * [CCC](CCC/) - How to compute charge cell correction in JDFTx
 * [QE](QE/) - A general QE tutorial
+* [Supercomputers](Supercomputers/) - How to run calculations on supercomputers
 
 Author(s)
 ------------------------------------

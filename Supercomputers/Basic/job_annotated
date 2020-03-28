@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH --job-name=firstjob         # name of job to be displayed in the queue
+#SBATCH --output=qe.%j.out          # name of ouput file created by job scheduler (errors are printed here)
+#SBATCH --nodes=2		            # number of nodes requested
+#SBATCH --ntasks-per-node=16	    # number of cores per node requested (16 is the maximum)
+#SBATCH --time=0:30:00		        # maximum time requesting, job is killed if this time limit is reached
+# SBATCH --partition=debug	        # delete space between '#' and 'S' to set the partition debug (if desired) 
+
+##################################################################
+# the following lines are for mpi setup of QE. Do not change!
+module add intel/17.0.5.239 impi/2017
+MPICMD="mprun -genv I_MPI_FABRICS shm:ofa -n $SLURM_NTASKS"
+pwdir="/export/data/share/wufeng/programs-intel2017.5/qe-6.1-scal/bin"
+###################################################################
+
+###################################################################
+# place any commands below this point
+# here we run pw.x with nk parallelization of 2
+
+$MPICMD $pwdir/pw.x -nk 2 -inp scf.in > scf.out

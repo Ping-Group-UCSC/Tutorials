@@ -2,7 +2,9 @@ Running your first supercomputer calculation
 ------------------
 
 `scf.in` : example QE scf calculation (for the curious this is NBVN defect in h-BN)
+
 `job` : example job script for running the QE calculation
+
 `Reference/` : you can refer to the output files here to make sure your calculation ran correctly
 
 ---
@@ -51,7 +53,7 @@ squeue -u $USER -o '%.18i %.9P %.8j %.8u %.2t %.10M %.6D  %Z'
 								# more advanced usage just showing the different options available!
 ```
 
-5. As you can tell from above the command `squeue -u $USER` is incredibly important as often you will only want to look at your jobs when executing the `squeue` command. Open your `~/.bashrc` and the line `alias sque='squeue -u $USER'` to the file so that you can simply type `sque` to execute this command.
+5. As you can tell from the above commands, `squeue -u $USER` is incredibly important. Often you will only want to see your jobs when executing the `squeue` command. Open your `~/.bashrc` and add the line `alias sque='squeue -u $USER'` to the file so that you can simply type `sque` to execute this command.
 
 ```bash
 vim ~/.bashrc
@@ -64,9 +66,10 @@ alias sque='squeue -u $USER'		# add this line then close the file
 ```bash
 source ~/.bashrc
 sque					# if this works then you're all set!
+type sque               # this will show you that sque is indeed an alias of squeue -u $USER
 ```
 
-6. You can also check the progress of a runnning calculation with by opening it `vim scf.out` or with a `tail` command:
+6. You can also check the progress of a runnning calculation by opening it (`vim scf.out`) or in real time by using the following command:
 
 ```bash
 tail -f scf.out
@@ -78,7 +81,7 @@ tail -f scf.out
 
 ***Extra***
 
-If you'd like, you can add the following line to your `~/.bashrc` and avoid the need to specify `pseudo_dir` altogether
+If you'd like, you can add the following line to your `~/.bashrc` and avoid the need to specify `pseudo_dir` altogether!
 
 ```
 export ESPRESSO_PSEUDO="/export/data/share/wufeng/programs/pseudo-ONCV-proj"

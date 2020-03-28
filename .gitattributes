@@ -1,0 +1,3 @@
+*.in linguist-language=Text
+*.out linguist-language=Text
+*.n_* linguist-language=Text

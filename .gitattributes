@@ -1,3 +1,5 @@
-*.in linguist-language=Text
-*.out linguist-language=Text
-*.n_* linguist-language=Text
+*.py linguist-language=Python
+*.html linguist-language=html
+*.sh linguist-language=Shell
+*.gnu linguist-language=Gnuplot
+* linguist-language=Text

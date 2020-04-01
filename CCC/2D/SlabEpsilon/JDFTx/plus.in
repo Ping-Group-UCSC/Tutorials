@@ -8,7 +8,7 @@ lattice \
 ion-species SG15/$ID_ONCV_PBE.upf
 
 elec-cutoff 25
-# fftbox 25 25 128
+fftbox 25 25 128
 
 include atom.pos
 

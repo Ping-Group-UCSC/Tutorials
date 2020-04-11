@@ -1,0 +1,518 @@
+
+*************** JDFTx 1.4.0 (git hash 3b98305) ***************
+
+Start date and time: Fri Apr 10 19:02:12 2020
+Executable /export/data/share/wufeng/share/programs/JDFTX-fix20180209/build//jdftx with command-line: -i main.in
+Running on hosts (process indices):  krnode15.krhpc (0-1)  krnode16.krhpc (2-3)  krnode17.krhpc (4-5)  krnode18.krhpc (6-7)
+Divided in process groups (process indices):  0 (0)  1 (1)  2 (2)  3 (3)  4 (4)  5 (5)  6 (6)  7 (7)
+Resource initialization completed at t[s]:      0.07
+Run totals: 8 processes, 64 threads, 0 GPUs
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+charged-defect 0.61379 0.72719 0.39056  -1 1
+charged-defect-correction /export/data/share/tjsmart/Hematite/2019-Cluster-Defects/Prist/Q0/JDFTx/FixFFT/pristine.d_tot 22.9 8 1
+coords-type Lattice
+core-overlap-check vector
+coulomb-interaction Periodic
+davidson-band-ratio 1.1
+dump End State Dtot Ecomponents ChargedDefect
+dump-name charge.$VAR
+elec-cutoff 20 120
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBE
+elec-initial-charge -1.000000
+elec-n-bands 720
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-08 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+exchange-regularization WignerSeitzTruncated
+fftbox 96 96 135
+fix-electron-density conv_charge.$VAR
+fluid None
+fluid-ex-corr lda-TF lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42
+forces-output-coords Positions
+ion Fe1   0.165186639000000   0.331624529000000   0.020672723000000 0
+ion Fe1   0.333100908000000   0.166435216000000   0.978471120000000 0
+ion Fe1  -0.000962597000000  -0.002929712000000   0.353536119000000 0
+ion Fe1   0.157832019000000   0.328229942000000   0.311155798000000 0
+ion Fe1   0.333471772000000   0.167018655000000   0.689025516000000 0
+ion Fe1   0.002820311000000   0.003465874000000   0.648173091000000 0
+ion Fe1   0.666870708000000   0.333552911000000   0.020854810000000 0
+ion Fe1   0.832889157000000   0.166596967000000   0.978234413000000 0
+ion Fe1   0.499168711000000  -0.000323773000000   0.353931991000000 0
+ion Fe1   0.669496314000000   0.328181690000000   0.311202419000000 0
+ion Fe1   0.834279276000000   0.168156456000000   0.690309472000000 0
+ion Fe1   0.496138185000000   0.000240444000000   0.648383876000000 0
+ion Fe1   0.167356342000000   0.833368254000000   0.020996177000000 0
+ion Fe1   0.333042511000000   0.666217697000000   0.978186351000000 0
+ion Fe1   0.000975208000000   0.502020831000000   0.352301654000000 0
+ion Fe1   0.167315360000000   0.834260452000000   0.311414964000000 0
+ion Fe1   0.332139561000000   0.666265266000000   0.690416517000000 0
+ion Fe1   0.000514401000000   0.500108720000000   0.646851028000000 0
+ion Fe1   0.666673578000000   0.833814492000000   0.021468316000000 0
+ion Fe1   0.833762935000000   0.666879594000000   0.978148806000000 0
+ion Fe1   0.674459176000000   0.844648889000000   0.302308282000000 0
+ion Fe1   0.833483788000000   0.665677656000000   0.690407483000000 0
+ion Fe1   0.500512798000000   0.496856608000000   0.648012082000000 0
+ion Fe2   0.000249692000000  -0.001424125000000   0.144761131000000 0
+ion Fe2  -0.000262311000000  -0.000398398000000   0.855807806000000 0
+ion Fe2   0.329211686000000   0.163261203000000   0.479896733000000 0
+ion Fe2   0.333054445000000   0.165171123000000   0.186886467000000 0
+ion Fe2   0.166969894000000   0.333652965000000   0.812814178000000 0
+ion Fe2   0.166180674000000   0.331213823000000   0.522898778000000 0
+ion Fe2   0.500370484000000   0.000372805000000   0.144596617000000 0
+ion Fe2   0.500217295000000   0.000161230000000   0.855900118000000 0
+ion Fe2   0.837654389000000   0.176320260000000   0.479116877000000 0
+ion Fe2   0.832478397000000   0.166649266000000   0.185773062000000 0
+ion Fe2   0.666654834000000   0.333105308000000   0.812953554000000 0
+ion Fe2   0.665656660000000   0.331932895000000   0.523055889000000 0
+ion Fe2  -0.000108146000000   0.499546756000000   0.143876743000000 0
+ion Fe2  -0.000031229000000   0.499923149000000   0.855493242000000 0
+ion Fe2   0.324371708000000   0.665661657000000   0.480999224000000 0
+ion Fe2   0.331167091000000   0.666048202000000   0.186921397000000 0
+ion Fe2   0.166283467000000   0.833305115000000   0.812849296000000 0
+ion Fe2   0.167768664000000   0.835669556000000   0.521763797000000 0
+ion Fe2   0.499120209000000   0.500736912000000   0.138572067000000 0
+ion Fe2   0.499859444000000   0.500109535000000   0.855780490000000 0
+ion Fe2   0.841862018000000   0.662570382000000   0.480720549000000 0
+ion Fe2   0.836251751000000   0.667506378000000   0.186722158000000 0
+ion Fe2   0.666601531000000   0.833300818000000   0.812927906000000 0
+ion O   0.319042714000000   0.332931514000000   0.916426234000000 0
+ion O   0.166520608000000   0.485532286000000   0.916169465000000 0
+ion O   0.485678094000000   0.318925251000000   0.082424555000000 0
+ion O   0.333310350000000   0.014151076000000   0.083027400000000 0
+ion O   0.180818681000000   0.166514136000000   0.083152766000000 0
+ion O   0.013781641000000   0.180459175000000   0.916556148000000 0
+ion O   0.155767782000000   0.001344532000000   0.250401458000000 0
+ion O  -0.003473249000000   0.149620714000000   0.249735395000000 0
+ion O   0.314258527000000   0.485772393000000   0.417021902000000 0
+ion O   0.166118835000000   0.180991602000000   0.416824490000000 0
+ion O   0.015747799000000   0.336307143000000   0.416267766000000 0
+ion O   0.342154034000000   0.344872314000000   0.249931167000000 0
+ion O   0.484864435000000   0.166567879000000   0.584302635000000 0
+ion O   0.333703186000000   0.319086278000000   0.583701345000000 0
+ion O   0.152697137000000   0.152714170000000   0.750595405000000 0
+ion O   0.000341342000000   0.348038992000000   0.750732454000000 0
+ion O   0.347153857000000   0.000196867000000   0.750659086000000 0
+ion O   0.180990789000000   0.014979864000000   0.584190626000000 0
+ion O   0.818958302000000   0.333345940000000   0.916487124000000 0
+ion O   0.666651613000000   0.486052186000000   0.916518463000000 0
+ion O   0.985426956000000   0.318818263000000   0.082400552000000 0
+ion O   0.832835640000000   0.013530294000000   0.083405461000000 0
+ion O   0.680585983000000   0.167021848000000   0.081745164000000 0
+ion O   0.513895292000000   0.180924286000000   0.916403418000000 0
+ion O   0.649582786000000   0.009324920000000   0.248539041000000 0
+ion O   0.498216765000000   0.153430542000000   0.250378339000000 0
+ion O   0.819484709000000   0.483452716000000   0.416389865000000 0
+ion O   0.666258883000000   0.181116919000000   0.417150903000000 0
+ion O   0.513653385000000   0.330040659000000   0.417249830000000 0
+ion O   0.849131800000000   0.347986986000000   0.248855694000000 0
+ion O   0.986369135000000   0.168392282000000   0.585302296000000 0
+ion O   0.833835359000000   0.320563168000000   0.584069145000000 0
+ion O   0.652300661000000   0.152691340000000   0.750739977000000 0
+ion O   0.500155194000000   0.347504618000000   0.750424385000000 0
+ion O   0.847064822000000  -0.000209531000000   0.749981431000000 0
+ion O   0.680554676000000   0.019868570000000   0.584439300000000 0
+ion O   0.319329089000000   0.833295183000000   0.916584289000000 0
+ion O   0.166726464000000   0.985788069000000   0.916540421000000 0
+ion O   0.485584073000000   0.818475265000000   0.083418389000000 0
+ion O   0.331615248000000   0.513263354000000   0.080969316000000 0
+ion O   0.180910705000000   0.666446821000000   0.082889775000000 0
+ion O   0.014381546000000   0.680798415000000   0.916441487000000 0
+ion O   0.151545742000000   0.498805080000000   0.249108288000000 0
+ion O   0.001596907000000   0.652344707000000   0.249405916000000 0
+ion O   0.319113361000000   0.985525080000000   0.417521968000000 0
+ion O   0.163907619000000   0.681013690000000   0.416863913000000 0
+ion O   0.015591486000000   0.833400282000000   0.417631140000000 0
+ion O   0.347255693000000   0.846480176000000   0.250507687000000 0
+ion O   0.482694911000000   0.662348235000000   0.583323429000000 0
+ion O   0.331927119000000   0.818580586000000   0.585065527000000 0
+ion O   0.152208738000000   0.652466521000000   0.750666757000000 0
+ion O   0.000138771000000   0.847638723000000   0.750478414000000 0
+ion O   0.347548681000000   0.499685039000000   0.750352787000000 0
+ion O   0.180099801000000   0.513435378000000   0.584181164000000 0
+ion O   0.818899712000000   0.833179234000000   0.916399959000000 0
+ion O   0.666573685000000   0.985436029000000   0.916687728000000 0
+ion O   0.986655664000000   0.818581962000000   0.081870911000000 0
+ion O   0.833274537000000   0.513912729000000   0.082910208000000 0
+ion O   0.681917429000000   0.667048537000000   0.082174912000000 0
+ion O   0.514051416000000   0.680778075000000   0.916583416000000 0
+ion O   0.652605433000000   0.496251848000000   0.249993011000000 0
+ion O   0.497412222000000   0.645742476000000   0.245298990000000 0
+ion O   0.825281980000000   0.994358136000000   0.420331346000000 0
+ion O   0.674631898000000   0.683062313000000   0.417737809000000 0
+ion O   0.507359475000000   0.829792236000000   0.419204703000000 0
+ion O   0.859218028000000   0.847771346000000   0.248572817000000 0
+ion O   0.987149073000000   0.666802276000000   0.584277634000000 0
+ion O   0.837633776000000   0.819409351000000   0.583888287000000 0
+ion O   0.652693580000000   0.652769366000000   0.750018573000000 0
+ion O   0.500112139000000   0.847322826000000   0.750056001000000 0
+ion O   0.847425678000000   0.499633490000000   0.750577459000000 0
+ion O   0.681478465000000   0.513811597000000   0.583962182000000 0
+ion Sn   0.499411665000000   0.501023136000000   0.351296249000000 0
+ion Sn   0.667489965000000   0.835895769000000   0.518055366000000 0
+ion-species /home/tjsmart/Pseudo/JDFTx/Fe1_pbe_v1.5.uspp
+ion-species /home/tjsmart/Pseudo/JDFTx/Fe2_pbe_v1.5.uspp
+ion-species /home/tjsmart/Pseudo/JDFTx/O_pbe_v1.2.uspp
+ion-species /home/tjsmart/Pseudo/JDFTx/sn_pbe_v1.4.uspp
+ion-width 0
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0.0001 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+kpoint   0.000000000000   0.000000000000   0.000000000000  1.00000000000000
+kpoint-folding 2 2 2 
+latt-move-scale 1 1 1
+latt-scale 1 1 1 
+lattice  \
+	  19.398399999999999   -9.699199999999999    0.000000000000000  \
+	   0.000000000000000   16.799510000000001    0.000000000000000  \
+	   0.000000000000000    0.000000000000000   26.439599999999999 
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+lcao-params -1 1e-06 0.001
+pcm-variant GLSSA13
+spintype z-spin
+subspace-rotation-factor 1 yes
+symmetries automatic
+symmetry-threshold 0.0001
+
+
+
+---------- Setting up symmetries ----------
+
+Found 24 point-group symmetries of the bravais lattice
+Found 1 space-group symmetries with basis
+Applied RMS atom displacement 0 bohrs to make symmetries exact.
+
+---------- Initializing the Grid ----------
+R = 
+[    19.3984    -9.6992          0  ]
+[          0    16.7995          0  ]
+[          0          0    26.4396  ]
+unit cell volume = 8616.23
+G =
+[   0.323902   0.187005         -0  ]
+[          0    0.37401          0  ]
+[          0         -0   0.237643  ]
+Minimum fftbox size, Smin = [  96  96  132  ]
+Chosen fftbox size, S = [  96  96  135  ]
+
+---------- Initializing tighter grid for wavefunction operations ----------
+R = 
+[    19.3984    -9.6992          0  ]
+[          0    16.7995          0  ]
+[          0          0    26.4396  ]
+unit cell volume = 8616.23
+G =
+[   0.323902   0.187005         -0  ]
+[          0    0.37401          0  ]
+[          0         -0   0.237643  ]
+Minimum fftbox size, Smin = [  80  80  108  ]
+Chosen fftbox size, S = [  80  80  108  ]
+
+---------- Exchange Correlation functional ----------
+Initalized PBE GGA exchange.
+Initalized PBE GGA correlation.
+
+---------- Setting up pseudopotentials ----------
+Width of ionic core gaussian charges (only for fluid interactions / plotting) set to 0
+
+Reading pseudopotential file '/home/tjsmart/Pseudo/JDFTx/Fe1_pbe_v1.5.uspp':
+  Title: Fe.  Created by USPP 7.3.6 on 15-6-15
+  Reference state energy: -124.316937.  16 valence electrons in orbitals:
+    |300>  occupation: 2  eigenvalue: -4.008817
+    |310>  occupation: 6  eigenvalue: -2.753096
+    |320>  occupation: 5  eigenvalue: -0.791264
+    |400>  occupation: 2  eigenvalue: -0.516384
+    |410>  occupation: 0  eigenvalue: -0.312222
+  lMax: 2  lLocal: 3  QijEcut: 6
+  6 projectors sampled on a log grid with 607 points:
+    l: 0  eig: -4.008819  rCut: 1.55
+    l: 0  eig: -0.516386  rCut: 1.55
+    l: 1  eig: -2.753096  rCut: 1.55
+    l: 1  eig: -0.312226  rCut: 1.55
+    l: 2  eig: -0.791264  rCut: 1.65
+    l: 2  eig: -0.450000  rCut: 1.65
+  Partial core density with radius 0.65
+  Transforming core density to a uniform radial grid of dG=0.02 with 1752 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1752 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1752 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 1.65 bohrs.
+
+Reading pseudopotential file '/home/tjsmart/Pseudo/JDFTx/Fe2_pbe_v1.5.uspp':
+  Title: Fe.  Created by USPP 7.3.6 on 15-6-15
+  Reference state energy: -124.316937.  16 valence electrons in orbitals:
+    |300>  occupation: 2  eigenvalue: -4.008817
+    |310>  occupation: 6  eigenvalue: -2.753096
+    |320>  occupation: 5  eigenvalue: -0.791264
+    |400>  occupation: 2  eigenvalue: -0.516384
+    |410>  occupation: 0  eigenvalue: -0.312222
+  lMax: 2  lLocal: 3  QijEcut: 6
+  6 projectors sampled on a log grid with 607 points:
+    l: 0  eig: -4.008819  rCut: 1.55
+    l: 0  eig: -0.516386  rCut: 1.55
+    l: 1  eig: -2.753096  rCut: 1.55
+    l: 1  eig: -0.312226  rCut: 1.55
+    l: 2  eig: -0.791264  rCut: 1.65
+    l: 2  eig: -0.450000  rCut: 1.65
+  Partial core density with radius 0.65
+  Transforming core density to a uniform radial grid of dG=0.02 with 1752 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1752 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1752 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 1.65 bohrs.
+
+Reading pseudopotential file '/home/tjsmart/Pseudo/JDFTx/O_pbe_v1.2.uspp':
+  Title: O.  Created by USPP 7.3.6 on 3-2-2014
+  Reference state energy: -15.894388.  6 valence electrons in orbitals:
+    |200>  occupation: 2  eigenvalue: -0.878823
+    |210>  occupation: 4  eigenvalue: -0.332131
+  lMax: 2  lLocal: 2  QijEcut: 6
+  5 projectors sampled on a log grid with 511 points:
+    l: 0  eig: -0.878823  rCut: 1.25
+    l: 0  eig: 0.000000  rCut: 1.25
+    l: 1  eig: -0.332132  rCut: 1.25
+    l: 1  eig: 0.000000  rCut: 1.25
+    l: 2  eig: 1.000000  rCut: 1.25
+  Partial core density with radius 0.7
+  Transforming core density to a uniform radial grid of dG=0.02 with 1752 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1752 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1752 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 1.25 bohrs.
+
+Reading pseudopotential file '/home/tjsmart/Pseudo/JDFTx/sn_pbe_v1.4.uspp':
+  Title: Sn.  Created by USPP 7.3.6 on 1-4-15
+  Reference state energy: -79.232243.  14 valence electrons in orbitals:
+    |420>  occupation: 10  eigenvalue: -1.242350
+    |500>  occupation: 2  eigenvalue: -0.654572
+    |510>  occupation: 1  eigenvalue: -0.376886
+  lMax: 2  lLocal: 3  QijEcut: 6
+  6 projectors sampled on a log grid with 721 points:
+    l: 0  eig: -0.654569  rCut: 1.7
+    l: 0  eig: 0.000000  rCut: 1.7
+    l: 1  eig: -0.376886  rCut: 1.8
+    l: 1  eig: 1.000000  rCut: 1.8
+    l: 2  eig: -1.242350  rCut: 2
+    l: 2  eig: 0.000000  rCut: 2
+  Partial core density with radius 1.1
+  Transforming core density to a uniform radial grid of dG=0.02 with 1752 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1752 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1752 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 2.10 bohrs.
+
+Folded 1 k-points by 2x2x2 to 8 k-points.
+
+---------- Setting up k-points, bands, fillings ----------
+No reducable k-points. 
+Computing the number of bands and number of electrons
+Calculating initial fillings.
+nElectrons: 1195.000000   nBands: 720   nStates: 16
+
+----- Setting up reduced wavefunction bases (one per k-point) -----
+average nbasis = 36803.875 , ideal nbasis = 36809.202
+
+---------- Setting up ewald sum ----------
+Optimum gaussian width for ewald sums = 3.682581 bohr.
+Real space sum over 567 unit cells with max indices [  4  4  3  ]
+Reciprocal space sum over 9025 terms with max indices [  9  9  12  ]
+
+---------- Allocating electronic variables ----------
+Reading "n" "_up" from file 'conv_charge.n_up' ... done
+Reading "n" "_dn" from file 'conv_charge.n_dn' ... done
+Initializing wave functions:  linear combination of atomic orbitals
+
+
+---- Citations for features of the code used in this run ----
+
+   Software package:
+      R. Sundararaman, K. Letchworth-Weaver, K.A. Schwarz, D. Gunceler, Y. Ozhabes and T.A. Arias, 'JDFTx: software for joint density-functional theory', SoftwareX 6, 278 (2017)
+
+   Correction scheme for charged bulk defects:
+      C Freysoldt, J Neugebauer and C. van de Walle, Phys. Rev. Lett. 102, 016402 (2009)
+
+   gga-PBE exchange-correlation functional:
+      J.P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996)
+
+   Total energy minimization:
+      T.A. Arias, M.C. Payne and J.D. Joannopoulos, Phys. Rev. Lett. 69, 1077 (1992)
+
+   Smooth electrostatic potentials by atom-potential subtraction:
+      R. Sundararaman and Y. Ping, J. Chem. Phys. 146, 104109 (2017)
+
+This list may not be complete. Please suggest additional citations or
+report any other bugs at https://github.com/shankar1729/jdftx/issues
+
+Initialization completed successfully at t[s]:     84.65
+
+
+----------- Band structure minimization -------------
+Minimization will be done independently for each quantum number.
+
+---- Minimization of quantum number:     0  [ +0.0000000 +0.0000000 +0.0000000 ]  0.125000000  spin +1 ----
+BandDavidson: Iter:   0  Eband: -30.588615526284769
+BandDavidson: Iter:   1  Eband: -30.882427805111643  dEband: -2.938123e-01
+BandDavidson: Iter:   2  Eband: -30.899032566687598  dEband: -1.660476e-02
+BandDavidson: Iter:   3  Eband: -30.900954648118436  dEband: -1.922081e-03
+BandDavidson: Iter:   4  Eband: -30.901424270955953  dEband: -4.696228e-04
+BandDavidson: Iter:   5  Eband: -30.901600218550776  dEband: -1.759476e-04
+BandDavidson: Iter:   6  Eband: -30.901693597940731  dEband: -9.337939e-05
+BandDavidson: Iter:   7  Eband: -30.901795702417385  dEband: -1.021045e-04
+BandDavidson: Iter:   8  Eband: -30.901998922487962  dEband: -2.032201e-04
+BandDavidson: Iter:   9  Eband: -30.902146859619048  dEband: -1.479371e-04
+BandDavidson: Iter:  10  Eband: -30.902207119770065  dEband: -6.026015e-05
+BandDavidson: Iter:  11  Eband: -30.902233809031376  dEband: -2.668926e-05
+BandDavidson: Iter:  12  Eband: -30.902245729730236  dEband: -1.192070e-05
+BandDavidson: Iter:  13  Eband: -30.902250906977823  dEband: -5.177248e-06
+BandDavidson: Iter:  14  Eband: -30.902253078666199  dEband: -2.171688e-06
+BandDavidson: Iter:  15  Eband: -30.902254005870084  dEband: -9.272039e-07
+BandDavidson: Iter:  16  Eband: -30.902254399897494  dEband: -3.940274e-07
+BandDavidson: Iter:  17  Eband: -30.902254567946716  dEband: -1.680492e-07
+BandDavidson: Iter:  18  Eband: -30.902254640226559  dEband: -7.227984e-08
+BandDavidson: Iter:  19  Eband: -30.902254671720307  dEband: -3.149375e-08
+BandDavidson: Iter:  20  Eband: -30.902254683572920  dEband: -1.185261e-08
+BandDavidson: Iter:  21  Eband: -30.902254690769183  dEband: -7.196263e-09
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:     1  [ +0.0000000 +0.0000000 +0.5000000 ]  0.125000000  spin +1 ----
+BandDavidson: Iter:   0  Eband: -30.588124807145022
+BandDavidson: Iter:   1  Eband: -30.882420143116128  dEband: -2.942953e-01
+BandDavidson: Iter:   2  Eband: -30.899105459490904  dEband: -1.668532e-02
+BandDavidson: Iter:   3  Eband: -30.901049570404570  dEband: -1.944111e-03
+BandDavidson: Iter:   4  Eband: -30.901529234615115  dEband: -4.796642e-04
+BandDavidson: Iter:   5  Eband: -30.901714172217829  dEband: -1.849376e-04
+BandDavidson: Iter:   6  Eband: -30.901799995438648  dEband: -8.582322e-05
+BandDavidson: Iter:   7  Eband: -30.901846549616227  dEband: -4.655418e-05
+BandDavidson: Iter:   8  Eband: -30.901874000677559  dEband: -2.745106e-05
+BandDavidson: Iter:   9  Eband: -30.901890408415763  dEband: -1.640774e-05
+BandDavidson: Iter:  10  Eband: -30.901899502056342  dEband: -9.093641e-06
+BandDavidson: Iter:  11  Eband: -30.901904469013395  dEband: -4.966957e-06
+BandDavidson: Iter:  12  Eband: -30.901907038854777  dEband: -2.569841e-06
+BandDavidson: Iter:  13  Eband: -30.901908339739464  dEband: -1.300885e-06
+BandDavidson: Iter:  14  Eband: -30.901908960682199  dEband: -6.209427e-07
+BandDavidson: Iter:  15  Eband: -30.901909246447353  dEband: -2.857652e-07
+BandDavidson: Iter:  16  Eband: -30.901909373733034  dEband: -1.272857e-07
+BandDavidson: Iter:  17  Eband: -30.901909429312422  dEband: -5.557939e-08
+BandDavidson: Iter:  18  Eband: -30.901909452910651  dEband: -2.359823e-08
+BandDavidson: Iter:  19  Eband: -30.901909462873032  dEband: -9.962381e-09
+BandDavidson: Converged (dEband<1.000000e-08)
+Setting wave functions to eigenvectors of Hamiltonian
+
+Dumping 'charge.wfns' ... done
+Dumping 'charge.d_tot' ... done
+Calculating charged defect correction:
+	EmodelIsolated: 0.01231855
+	EmodelPeriodic: 0.00946367
+	DeltaV:         -0.00370990 (average over 926664 grid points)
+	Net correction: 0.00656478 (= EmodelIsolated - EmodelPeriodic + q deltaV)
+	Writing charge.chargedDefectDeltaV (spherically-averaged; plot to check DeltaV manually) ... done.
+	Writing charge.chargedDefectDeltaVx (planarly-averaged normal to lattice direction# 0) ... done.
+	Writing charge.chargedDefectDeltaVy (planarly-averaged normal to lattice direction# 1) ... done.
+	Writing charge.chargedDefectDeltaVz (planarly-averaged normal to lattice direction# 2) ... done.
+Dumping 'charge.Ecomponents' ... done
+End date and time: Fri Apr 10 19:24:02 2020  (Duration: 0-0:21:49.93)
+Done!
+
+PROFILER:         augmentDensityGridGrad     3.202228 +/-     2.717554 s,    8 calls,     25.617825 s total
+PROFILER:    augmentDensitySphericalGrad     0.081306 +/-     0.064423 s,  176 calls,     14.309899 s total
+PROFILER:                 augmentOverlap     0.931282 +/-     0.622728 s,  336 calls,    312.910807 s total
+PROFILER:                     changeGrid     0.004549 +/-     0.000511 s,   88 calls,      0.400313 s total
+PROFILER:        ColumnBundle::randomize     0.005357 +/-     0.000326 s,    2 calls,      0.010714 s total
+PROFILER:              EdensityAndVscloc     1.528284 +/-     1.039095 s,    2 calls,      3.056569 s total
+PROFILER:                     EnlAndGrad     0.167504 +/-     0.138087 s,  176 calls,     29.480729 s total
+PROFILER:            ExCorrCommunication     0.185028 +/-     0.537439 s,   14 calls,      2.590392 s total
+PROFILER:               ExCorrFunctional     0.038398 +/-     0.019099 s,    3 calls,      0.115193 s total
+PROFILER:                    ExCorrTotal     0.965205 +/-     1.063020 s,    3 calls,      2.895616 s total
+PROFILER:                   Idag_DiagV_I     3.601897 +/-     0.315722 s,   44 calls,    158.483486 s total
+PROFILER:            matrix::diagonalize     0.522548 +/-     0.997775 s,  289 calls,    151.016329 s total
+PROFILER:     RadialFunctionR::transform     0.002284 +/-     0.004085 s,  193 calls,      0.440855 s total
+PROFILER:                    reduceKmesh     0.000042 +/-     0.000000 s,    1 calls,      0.000042 s total
+PROFILER:                            Y*M     0.493815 +/-     0.283059 s,  692 calls,    341.719807 s total
+PROFILER:                          Y1^Y2     0.539057 +/-     0.269796 s,  516 calls,    278.153286 s total
+
+MEMUSAGE:                   ColumnBundle     4.985712 GB
+MEMUSAGE:        complexScalarFieldTilde     0.082397 GB
+MEMUSAGE:                    IndexArrays     0.008775 GB
+MEMUSAGE:                         matrix     0.475670 GB
+MEMUSAGE:                           misc     0.039468 GB
+MEMUSAGE:                    ScalarField     0.166855 GB
+MEMUSAGE:               ScalarFieldTilde     0.074707 GB
+MEMUSAGE:                          Total     5.256252 GB

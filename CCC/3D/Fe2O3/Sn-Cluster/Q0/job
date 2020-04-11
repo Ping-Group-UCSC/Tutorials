@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH --job-name=fe2o3-clust
+#SBATCH --output=qe.%j.out
+#SBATCH --nodes=4
+#SBATCH --ntasks-per-node=16
+#SBATCH --time=8:00:00
+#SBATCH --dependency=afterany:45711
+
+module add intel/17.0.5.239 impi/2017 QE/intel-qe.6.0
+NCORES=$(($SLURM_NTASKS_PER_NODE * $SLURM_JOB_NUM_NODES))
+MPICMD="mpiexec.hydra -genv I_MPI_FABRICS shm:ofa -n $NCORES"
+pwdir=/export/data/share/wufeng/programs-intel2017.5/qe-6.1-scal/bin
+
+pre=relax
+
+$MPICMD $pwdir/pw.x -nk 8 -inp "$pre".in > "$pre".out

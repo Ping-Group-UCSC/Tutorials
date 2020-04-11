@@ -1,0 +1,45 @@
+# Continuation
+# initial-state pristine.$VAR
+
+# Set up the unit cell - each column is a bravais lattice vector in bohrs
+lattice \
+   19.39840   -9.69920    0.00000 \
+    0.00000   16.79951    0.00000 \
+    0.00000    0.00000   26.43960
+
+# Specify the pseudopotentials:
+ion-species /home/tjsmart/Pseudo/Fe1_pbe_v1.5.uspp.F.UPF.UPF 
+ion-species /home/tjsmart/Pseudo/Fe2_pbe_v1.5.uspp.F.UPF.UPF
+ion-species /home/tjsmart/Pseudo/O_pbe_v1.2.uspp.F.UPF.UPF
+
+# Specify coordinate system and atom positions:
+coords-type Lattice  #crystal coordinate
+include atom.pos
+elec-initial-magnetization 0 yes  # total magnetization = 0
+spintype z-spin
+initial-magnetic-moments Fe1 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 \
+Fe2 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+add-U Fe1 d 0.158 Fe2 d 0.158              # adds hubbard correction to Fe d orbitals (0.158 Hartree = 4.3 eV)
+
+elec-ex-corr gga-PBE
+elec-cutoff 20 120
+
+elec-n-bands 720
+elec-smearing cold 0.001   #0.001 Ha smearing
+
+#coulomb-interaction Spherical 20 
+#coulomb-truncation-embed 0 0 0
+
+lcao-params 30
+
+electronic-minimize nIterations 100 energyDiffThreshold 1e-7
+kpoint-folding 2 2 2
+
+#ionic-minimize nIterations 20 energyDiffThreshold 1e-5
+
+dump-interval Electronic 10  #dump electronic state every 10 scf cycles
+dump Electronic State
+dump End State Ecomponents Dtot
+dump-name pristine.$VAR  #Filename pattern for outputs
+dump End Ecomponents  #Output energy components at the end
+dump End EigStats

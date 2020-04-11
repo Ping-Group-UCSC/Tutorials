@@ -1,0 +1,36 @@
+#
+
+# Set up the unit cell - each column is a bravais lattice vector in bohrs
+lattice \
+   19.39840   -9.69920    0.00000 \
+    0.00000   16.79951    0.00000 \
+    0.00000    0.00000   26.43960
+
+# Specify the pseudopotentials:
+ion-species /home/tjsmart/Pseudo/JDFTx/Fe1_pbe_v1.5.uspp 
+ion-species /home/tjsmart/Pseudo/JDFTx/Fe2_pbe_v1.5.uspp
+ion-species /home/tjsmart/Pseudo/JDFTx/O_pbe_v1.2.uspp
+ion-species /home/tjsmart/Pseudo/JDFTx/sn_pbe_v1.4.uspp
+
+# Specify coordinate system and atom positions:
+coords-type Lattice  #crystal coordinate
+include atom.pos
+spintype z-spin
+
+elec-ex-corr gga-PBE
+elec-cutoff 20 120
+
+elec-n-bands 720
+
+#charged defect correction
+elec-initial-charge -1  # we take 1 e out
+charged-defect 0.61379 0.72719 0.39056 -1 1 # average charge position (two sn and remaining polaron)
+charged-defect-correction /export/data/share/tjsmart/Hematite/2019-Cluster-Defects/Prist/Q0/JDFTx/FixFFT/pristine.d_tot 22.9 8 1
+
+fftbox 96 96 135
+fix-electron-density conv_charge.$VAR
+
+kpoint-folding 2 2 2
+
+dump End State Ecomponents Dtot
+dump-name charge.$VAR  #Filename pattern for outputs

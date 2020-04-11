@@ -1,0 +1,51 @@
+# Continuation
+initial-state fe2o3.$VAR
+
+# Set up the unit cell - each column is a bravais lattice vector in bohrs
+lattice \
+   19.39840   -9.69920    0.00000 \
+    0.00000   16.79951    0.00000 \
+    0.00000    0.00000   26.43960
+
+# Specify the pseudopotentials:
+ion-species /home/tjsmart/Pseudo/JDFTx/Fe1_pbe_v1.5.uspp 
+ion-species /home/tjsmart/Pseudo/JDFTx/Fe2_pbe_v1.5.uspp
+ion-species /home/tjsmart/Pseudo/JDFTx/O_pbe_v1.2.uspp
+ion-species /home/tjsmart/Pseudo/JDFTx/sn_pbe_v1.4.uspp
+
+# Specify coordinate system and atom positions:
+coords-type Lattice  #crystal coordinate
+include atom.pos
+elec-initial-magnetization 1 yes  # total magnetization = 1
+spintype z-spin
+initial-magnetic-moments Fe1 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 \
+Fe2 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5  # Removed one -5 and 5 since Sn replaced Fe113 and Fe120
+add-U Fe1 d 0.158 Fe2 d 0.158              # adds hubbard correction to Fe d orbitals (0.158 Hartree = 4.3 eV)
+elec-initial-charge -1  # we take 1 e out
+
+elec-ex-corr gga-PBE
+elec-cutoff 20 120
+
+elec-n-bands 720
+elec-smearing cold 0.001   #0.001 Ha smearing
+
+#charged defect correction
+charged-defect 0.61379 0.72719 0.39056 -1 1 # average charge position (two sn and remaining polaron)
+charged-defect-correction /export/data/share/tjsmart/Hematite/Tin/2Tin/Fe120/JDFTx/Pristine/pristine.d_tot 22.9 8 1
+
+#coulomb-interaction Spherical 20 
+#coulomb-truncation-embed 0 0 0
+
+lcao-params 30
+
+electronic-minimize nIterations 100 energyDiffThreshold 1e-7
+kpoint-folding 2 2 2
+
+#ionic-minimize nIterations 20 energyDiffThreshold 1e-5
+
+dump-interval Electronic 10  #dump electronic state every 10 scf cycles
+dump Electronic State
+dump End State Ecomponents Dtot
+dump-name neutral.$VAR  #Filename pattern for outputs
+dump End Ecomponents  #Output energy components at the end
+dump End EigStats

@@ -9,7 +9,7 @@
 ##################################################################
 # the following lines are for mpi setup of QE. Do not change!
 module add intel/17.0.5.239 impi/2017
-MPICMD="mprun -genv I_MPI_FABRICS shm:ofa -n $SLURM_NTASKS"
+MPICMD="mpirun -genv I_MPI_FABRICS shm:ofa -n $SLURM_NTASKS"
 pwdir="/export/data/share/wufeng/programs-intel2017.5/qe-6.1-scal/bin"
 ###################################################################
 

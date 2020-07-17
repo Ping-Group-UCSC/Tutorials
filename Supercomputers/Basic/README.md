@@ -38,19 +38,19 @@ sbatch job
 4. Check that your job is in the queue with `squeue`. Also check alternative slurm commands below to become familiar with some neat options. See the online [slurm user guide](https://slurm.schedmd.com/quickstart.html) for more slurm commands and options.
 
 ```bash
-squeue							# prints all current running jobs.
-squeue -u $USER					# prints only your jobs
-squeue -u $USER --start			# gives a time estimate for when your jobs will begin
-squeue -u $USER -t R			# print jobs you have which have status `R` which corresponds to running.
-sinfo							# prints information about the current status of supercomputer nodes
-scontrol show job				# prints detailed information about all queued jobs
-scontrol show job <id number>	# detailed information about a specific job with id = <id number>
-scancel <id number>				# cancel job with id = <id number>
-scancel -u $USER				# cancel all your jobs
-scancel -u $USER -t PD			# cancel all your jobs which have status pending
-scancel -u $USER -n <name>		# cancel all your jobs with a given name
+squeue                          # prints all current running jobs.
+squeue -u $USER                 # prints only your jobs
+squeue -u $USER --start         # gives a time estimate for when your jobs will begin
+squeue -u $USER -t R            # print jobs you have which have status `R` which corresponds to running.
+sinfo                           # prints information about the current status of supercomputer nodes
+scontrol show job               # prints detailed information about all queued jobs
+scontrol show job <id number>   # detailed information about a specific job with id = <id number>
+scancel <id number>             # cancel job with id = <id number>
+scancel -u $USER                # cancel all your jobs
+scancel -u $USER -t PD          # cancel all your jobs which have status pending
+scancel -u $USER -n <name>      # cancel all your jobs with a given name
 squeue -u $USER -o '%.18i %.9P %.8j %.8u %.2t %.10M %.6D  %Z'
-								# more advanced usage just showing the different options available!
+                                # more advanced usage just showing the different options available!
 ```
 
 5. As you can tell from the above commands, `squeue -u $USER` is incredibly important. Often you will only want to see your jobs when executing the `squeue` command. Open your `~/.bashrc` and add the line `alias sque='squeue -u $USER'` to the file so that you can simply type `sque` to execute this command.

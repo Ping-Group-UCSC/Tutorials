@@ -1,0 +1,11 @@
+need to add rpa
+need to add convergence tests
+need to add explanation
+
+From prof:
+    -> optic chi preforms linear response which you can use to do IP (IP kernel), RPA (Hartree kernel), and TDDFT (XC kernel)
+        -> cheap, no diagonalization
+        -> just eps_1 and eps_2
+    -> optic bse can preform diagonalization, again you can use it to do IP (IP kernel), RPA (Hartree kernel), TDDFT (XC kernel), in addition to BSE (Screened Coulomb kernel)
+        -> diagonalization is expensive
+        -> can do transition analysis, exciton analysis, lifetime

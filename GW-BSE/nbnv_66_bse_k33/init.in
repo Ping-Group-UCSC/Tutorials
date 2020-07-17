@@ -1,0 +1,2 @@
+setup                        # [R INI] Initialization
+MaxGvecs=    31678     RL    # [INI] Max number of G-vectors planned to use

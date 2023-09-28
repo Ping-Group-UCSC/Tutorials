@@ -1,0 +1,5 @@
+excitons                     # [R] Excitons
+amplitude                    # [R] Amplitude
+States= "1 - 20"              # Index of the BS state(s)
+#DipWeight                   #  Weight the contribution to the exciton WFs with the dipoles
+Degen_Step=   0.00001   eV    # Maximum energy separation of two degenerate states

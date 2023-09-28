@@ -1,0 +1,49 @@
+#                                                           
+#   __   __     _        __  __       ____      U  ___  u   
+#   \ \ / / U  /"\  U u |" \/ "| u U | __") u    \/"_ \/    
+#    \ V /   \/ _ \/   \| |\/| |/   \|  _ \/     | | | |    
+#   U_|"|_u  / ___ \    | |  | |     | |_) | .-,_| |_| |    
+#     |_|   /_/   \_\   |_|  |_|     |____/   \_)-\___/     
+# .-,//|(_   \\    >>  <<,-,,-.     _|| \\_        \\       
+#  \_) (__) (__)  (__)  (./  \.)   (__) (__)      (__)      
+#                                                           
+#                                                           
+#              GPL Version 4.1.4 Revision 76                
+#                        MPI Build                          
+#                http://www.yambo-code.org                  
+#
+# BSK|Identifier              :9599
+#    |Dimension               :5098
+#    |Bands                   :524 - 624
+#    |Exchange           [res]: yes
+#    |Correlation        [res]: no
+#    |Kernel`s coupling       : no
+#    |Exchange           [cpl]: no
+#    |Correlation        [cpl]: no
+#    |W interaction is bare   : no
+#    |ALDA kernel in R-space  : no
+#    |RL vectors    [exchange]:55207
+#    |E/h energy range    [ev]:-1.000000 - -1.000000
+#    |Coupling range     [o/o]: 100.0000 -  100.0000
+#
+# Electron-Hole pairs that contributes to Excitonic State 10 more than 5%
+#
+#             K-point [iku]         Weight
+#   0.000000   0.000000   0.000000   1.000000
+#  
+#  Band_V     Band_C     K  ibz     Symm.      Spin       Weight     Energy
+#  
+  575.0000   583.0000     1.0000     1.0000     1.0000     0.9955     2.9543
+# 
+# 06/20/2019 at 00:18 YPP @ br018.pvt.bridges.psc.edu [start]
+# 06/20/2019 at 00:19                                 [end]
+#  
+# Timing   [Min/Max/Average]: 02s/02s/02s
+#
+# .-Input file : amp.in
+# | excitons                     # [R] Excitons
+# | amplitude                    # [R] Amplitude
+# | BoseTemp=  0.02585     eV    # Bosonic Temperature
+# | States= "1 - 20"             # Index of the BS state(s)
+# | #DipWeight                   #  Weight the contribution to the exciton WFs with the dipoles
+# | Degen_Step=0.1000E-4   eV    # Maximum energy separation of two degenerate states

@@ -1,0 +1,72 @@
+#                                                           
+#  ____  ____     _       ____    ____  ______      ___     
+# |_  _||_  _|   / \     |_   \  /   _||_   _ \   ."   `.   
+#   \ \  / /    / _ \      |   \/   |    | |_) | /  .-.  \  
+#    \ \/ /    / ___ \     | |\  /| |    |  __". | |   | |  
+#    _|  |_  _/ /   \ \_  _| |_\/_| |_  _| |__) |\  `-"  /  
+#   |______||____| |____||_____||_____||_______/  `.___."   
+#                                                           
+#                                                           
+#                                                           
+#              GPL Version 4.1.4 Revision 76                
+#                        MPI Build                          
+#                http://www.yambo-code.org                  
+#
+# BSK|Identifier              :5641
+#    |Dimension               :11943
+#    |Bands                   :121 - 172
+#    |Exchange           [res]: yes
+#    |Correlation        [res]: yes
+#    |Kernel`s coupling       : no
+#    |Exchange           [cpl]: no
+#    |Correlation        [cpl]: no
+#    |W interaction is bare   : no
+#    |ALDA kernel in R-space  : no
+#    |RL vectors    [exchange]:31669
+#    |RL vectors [correlation]:387
+#    |E/h energy range    [ev]:-1.000000 - -1.000000
+#    |Coupling range     [o/o]: 100.0000 -  100.0000
+#  W |Interaction is diagonal : no
+#    |Matrix size             :2845
+#    |Bands                   :1 - 570
+#    |e/h energy range    [ev]:-1.000000 - -1.000000
+#    |Poles              [o/o]: 100.0000
+#    |RL vectors in the sum   :31669
+#    |[r,Vnl] included        : yes
+#    |Field direction         :-.8660E-5 0.5000E-5  0.000000
+#    |Coulomb Cutoff          :box z
+#    |xc-Kernel               :none
+# RIM|RL components      [col]:0
+#    |Random points      [col]:0
+#
+# Electron-Hole pairs that contributes to Excitonic State 6 more than 5%
+#
+#             K-point [iku]         Weight
+#   0.000000   0.000000   0.000000   0.385377
+#   0.000000   0.333333   0.000000   0.896380
+#   0.333333   0.500000   0.000000   1.000000
+#  -0.333333   0.166667   0.000000   0.497808
+#   0.333333   0.166667   0.000000   0.718275
+#  
+#  Band_V     Band_C     K  ibz     Symm.      Spin       Weight     Energy
+#  
+  142.0      144.0      3.000      1.000      1.000     0.1186      3.216   
+  142.0      144.0      3.000      3.000      1.000     0.1186      3.216   
+  142.0      144.0      2.000      1.000      1.000     0.1045      3.212   
+  142.0      144.0      2.000      3.000      1.000     0.1044      3.212   
+  142.0      144.0      1.000      1.000      1.000     0.8414E-1   3.197   
+  142.0      144.0      5.000      3.000      1.000     0.7677E-1   3.212   
+  142.0      144.0      5.000      1.000      1.000     0.7676E-1   3.212   
+# 
+# 05/03/2019 at 12:55 YPP @ login2.stampede2.tacc.utexas.edu [start]
+# 05/03/2019 at 12:55                                        [end]
+#  
+# Timing   [Min/Max/Average]: 03s/03s/03s
+#
+# .-Input file : amp.in
+# | excitons                     # [R] Excitons
+# | amplitude                    # [R] Amplitude
+# | BoseTemp=  0.02585     eV    # Bosonic Temperature
+# | States= "1 - 10"             # Index of the BS state(s)
+# | #DipWeight                   #  Weight the contribution to the exciton WFs with the dipoles
+# | Degen_Step=0.1000E-4   eV    # Maximum energy separation of two degenerate states

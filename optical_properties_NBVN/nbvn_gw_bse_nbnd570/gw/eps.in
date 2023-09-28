@@ -1,0 +1,25 @@
+X_all_q_CPU= "1 1 24 8"              # [PARALLEL] CPUs for each role
+X_all_q_ROLEs= "q k c v"            # [PARALLEL] CPUs roles (q,k,c,v)
+
+em1d                         # [R Xd] Dynamical Inverse Dielectric Matrix
+ppa                          # [R Xp] Plasmon Pole Approximation
+Chimod= "Hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+
+% BndsRnXp
+   1 | 570 |                 # [Xp] Polarization function bands
+%
+NGsBlkXp= 4            Ry    # [Xp] Response block size
+% LongDrXp
+ 1.000000 | 0.000000 | 0.000000 | # [Xp] [cc] Electric Field
+%
+PPAPntXp= 27.21138     eV    # [Xp] PPA imaginary energy
+
+rim_cut                      # [R RIM CUT] Coulomb potential
+RandQpts= 1000000            # [RIM] Number of random q-points in the BZ
+RandGvec= 100          RL    # [RIM] Coulomb interaction RS components
+CUTGeo= "box z"              # [CUT] Coulomb Cutoff geometry: box/cylinder/sphere X/Y/Z/XY..
+% CUTBox
+ 0.0 | 0.0 | 30.0 |          # [CUT] [au] Box sides
+%
+CUTRadius= 0.000000          # [CUT] [au] Sphere/Cylinder radius
+CUTCylLen= 0.000000          # [CUT] [au] Cylinder length

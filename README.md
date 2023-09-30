@@ -13,6 +13,8 @@ This repository includes general tutorials. To download a tutorial, enter the di
 Author(s)
 ------------------------------------
 Tyler J. Smart  
+
 Kejun Li
+
 Rafi Ullah
 

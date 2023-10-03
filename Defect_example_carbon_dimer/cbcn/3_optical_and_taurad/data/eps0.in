@@ -1,0 +1,39 @@
+#  __      __   ______   __       __  _______    ______     
+# |  \    /  \ /      \ |  \     /  \|       \  /      \    
+#  \$$\  /  $$|  $$$$$$\| $$\   /  $$| $$$$$$$\|  $$$$$$\   
+#   \$$\/  $$ | $$__| $$| $$$\ /  $$$| $$__/ $$| $$  | $$   
+#    \$$  $$  | $$    $$| $$$$\  $$$$| $$    $$| $$  | $$   
+#     \$$$$   | $$$$$$$$| $$\$$ $$ $$| $$$$$$$\| $$  | $$   
+#     | $$    | $$  | $$| $$ \$$$| $$| $$__/ $$| $$__/ $$   
+#     | $$    | $$  | $$| $$  \$ | $$| $$    $$ \$$    $$   
+#      \$$     \$$   \$$ \$$      \$$ \$$$$$$$   \$$$$$$    
+#                                                           
+#              GPL Version 4.1.4 Revision 76                
+#                        MPI Build                          
+#                http://www.yambo-code.org                  
+#
+em1s                         # [R Xs] Static Inverse Dielectric Matrix
+rim_cut                      # [R RIM CUT] Coulomb potential
+NLogCPUs=0                   # [PARALLEL] Live-timing CPU`s (0 for all)
+X_all_q_CPU= "1 5 8 8"              # [PARALLEL] CPUs for each role
+X_all_q_ROLEs= "q k c v"            # [PARALLEL] CPUs roles (q,k,c,v)
+X_all_q_nCPU_LinAlg_INV= 1   # [PARALLEL] CPUs for Linear Algebra
+RandQpts=1000000                   # [RIM] Number of random q-points in the BZ
+RandGvec= 100            RL    # [RIM] Coulomb interaction RS components
+CUTGeo= "box z"               # [CUT] Coulomb Cutoff geometry: box/cylinder/sphere X/Y/Z/XY..
+% CUTBox
+ 0.00     | 0.00     | 29.00     |        # [CUT] [au] Box sides
+%
+CUTRadius= 0.000000          # [CUT] [au] Sphere/Cylinder radius
+CUTCylLen= 0.000000          # [CUT] [au] Cylinder length
+Chimod= "hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+% BndsRnXs
+    1 | 1800 |               # [Xs] Polarization function bands
+%
+NGsBlkXs= 8            Ry    # [Xs] Response block size
+% DmRngeXs
+  0.10000 |  0.10000 | eV    # [Xs] Damping range
+%
+% LongDrXs
+ 1.000000 | 0.000000 | 0.000000 |        # [Xs] [cc] Electric Field
+%

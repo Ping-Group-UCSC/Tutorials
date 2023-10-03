@@ -1,0 +1,51 @@
+#!/bin/bash
+#SBATCH --job-name=ppx
+#SBATCH --output=qe.%j
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=16
+#SBATCH --time=04:00:00
+#SBATCH --partition=normal
+# SBATCH --dependency=afterany:38812
+# SBATCH --account=windfall
+# SBATCH --account=cfn307395
+
+ module add intel/17.0.5.239 impi/2017
+ NCORES=$(($SLURM_NTASKS_PER_NODE * $SLURM_JOB_NUM_NODES))
+ export FORT_BUFFERED=true
+ MPICMD="mpirun -genv I_MPI_FABRICS shm:ofa -n $SLURM_NTASKS"
+ PWDIR="/export/data/share/tjsmart/Programs/QE/qe-6.1-cDFT-PHok/bin"
+
+
+echo "Start: "; date
+
+mkdir ../wfc
+for band in $(seq 141 150)		# This is data taht need to input, select the bands to analyze 
+do
+# spin up
+    fname="spinup$band";		# file name, parameters are specified for function ppxable
+    in="$fname.in";
+    out="$fname.out";
+    kpoint=1;
+    source ./ppx.in			# refresh file ppx.in
+    ppxable				# call function ppxtable in file ppx.in
+    
+    $MPICMD $PWDIR/pp.x -inp $in > $out
+
+# spin down
+    fname="spindown$band"
+    in="$fname.in"
+    out="$fname.out"
+    kpoint=2
+    source ./ppx.in
+    ppxable
+    
+    $MPICMD $PWDIR/pp.x -inp $in > $out
+done
+
+mv spin* ../wfc
+cd ../wfc
+rm *in *out *dat
+
+echo "End: "; date
+echo "Done"
+

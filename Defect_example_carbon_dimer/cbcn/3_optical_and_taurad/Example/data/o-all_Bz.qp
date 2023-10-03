@@ -1,0 +1,138 @@
+#                                                           
+# ooooo   oooo ..     ooo        ooo ooooooooo.    .oooo.   
+#  `88.   .8" .88.    `88.       .88 `88"   `Y8b  dP"  `Yb  
+#   `88. .8" .8"88.    888b     d"88  88     888 88      88 
+#    `88.8" .8" `88.   8 Y88. .P  88  88oooo888" 88      88 
+#     `88" .88ooo888.  8  `888"   88  88    `88b 88      88 
+#      88 .8"     `88. 8    Y     88  88    .88P `8b    d8" 
+#     o88o88o      888o8          88 o88bood8P"   `Ybod8P"  
+#                                                           
+#                                                           
+#               GPL Version 4.1.4 Revision 76               
+#                         MPI Build                         
+#                 http://www.yambo-code.org                 
+#
+# GW [Newton Solver]
+#
+#  PPA imaginary pt   [ev]: 27.21138
+#  RIM G`s                : 109
+#  RIM random pts         : 1000000
+#  GW SC iterations       :0
+#  dS/dw steps            : 2
+#  dS/dw step         [ev]:  0.10000
+#  X G`s            [used]:  8049
+#  X G`s            [disk]:  8049
+#  X bands                :    1  1800
+#  X poles           [o/o]: 100.0000
+#  X e/h E range      [ev]:-1.000000 -1.000000
+#  X xc-Kernel            : none
+#  X BZ energy Double Grid: no
+#  X BZ Double Grid points:0
+#  Sc/G bands             :    1  1800
+#  Sc/G damping       [ev]:  0.10000
+#  Sc bands terminator    : no
+#  Sx RL components       : 27983
+#  QP @ K 001 - 005 : b 138 - 148
+#
+#  K-point    Band       Eo         E-Eo       Sc|Eo
+#
+    1.0000   138.0000    -1.4236    -0.7587     3.0242
+    1.0000   139.0000    -1.4143    -0.6831     2.3863
+    1.0000   140.0000    -1.3650    -0.6633     2.3993
+    1.0000   141.0000    -1.3151    -0.6567     2.4086
+    1.0000   142.0000    -0.7969    -0.5709     2.1353
+    1.0000   143.0000    -0.4944    -0.3804     2.3439
+    1.0000   144.0000     0.0000    -0.4910     1.5938
+    1.0000   145.0000     3.5531     2.2853    -2.2527
+    1.0000   146.0000     4.2145     2.0602    -2.9356
+    1.0000   147.0000     4.2534     1.4918    -1.4861
+    1.0000   148.0000     4.2840     2.0950    -2.8372
+    2.0000   138.0000    -1.2751    -0.6149     2.3579
+    2.0000   139.0000    -1.1451    -0.5822     2.3512
+    2.0000   140.0000    -1.0521    -0.5799     2.3292
+    2.0000   141.0000    -0.9949    -0.5648     2.3347
+    2.0000   142.0000    -0.7832    -0.5163     2.2623
+    2.0000   143.0000    -0.6384    -0.4351     2.3297
+  2.000      144.0     -.4016E-1  -.5374      1.502   
+    2.0000   145.0000     3.5640     2.3080    -2.2133
+    2.0000   146.0000     4.3052     2.1016    -2.9030
+    2.0000   147.0000     4.3544     1.4948    -1.4834
+    2.0000   148.0000     4.3641     2.1191    -2.8649
+    3.0000   138.0000    -1.3352    -0.6641     2.3988
+    3.0000   139.0000    -1.1026    -0.5712     2.3550
+    3.0000   140.0000    -1.0545    -0.5792     2.3280
+    3.0000   141.0000    -1.0215    -0.5594     2.3326
+    3.0000   142.0000    -0.7837    -0.5128     2.2685
+    3.0000   143.0000    -0.6327    -0.4345     2.3303
+  3.000      144.0     -.3206E-1  -.5341      1.506   
+    3.0000   145.0000     3.5573     2.3027    -2.2200
+    3.0000   146.0000     4.3049     2.0992    -2.9043
+    3.0000   147.0000     4.3529     1.4954    -1.4847
+    3.0000   148.0000     4.3698     2.1203    -2.8596
+    4.0000   138.0000    -1.1385    -0.6027     2.3463
+    4.0000   139.0000    -1.0241    -0.5547     2.3201
+    4.0000   140.0000    -0.9946    -0.5618     2.3104
+    4.0000   141.0000    -0.9221    -0.5179     2.3258
+    4.0000   142.0000    -0.7998    -0.4971     2.3305
+    4.0000   143.0000    -0.7576    -0.4945     2.3324
+  4.000      144.0     -.4943E-1  -.5541      1.471   
+    4.0000   145.0000     3.5537     2.3023    -2.2146
+    4.0000   146.0000     4.2974     2.1125    -2.8535
+    4.0000   147.0000     4.3435     2.1105    -2.8599
+    4.0000   148.0000     4.3648     2.1204    -2.7950
+    5.0000   138.0000    -1.2751    -0.6157     2.3578
+    5.0000   139.0000    -1.1451    -0.5817     2.3512
+    5.0000   140.0000    -1.0521    -0.5799     2.3292
+    5.0000   141.0000    -0.9949    -0.5646     2.3346
+    5.0000   142.0000    -0.7832    -0.5159     2.2623
+    5.0000   143.0000    -0.6384    -0.4348     2.3297
+  5.000      144.0     -.4016E-1  -.5372      1.502   
+    5.0000   145.0000     3.5640     2.3079    -2.2133
+    5.0000   146.0000     4.3052     2.1016    -2.9030
+    5.0000   147.0000     4.3544     1.4947    -1.4834
+    5.0000   148.0000     4.3641     2.1191    -2.8649
+# 
+# 12/12/2021 at 00:41 YAMBO @ gpu011 [start]
+# 12/12/2021 at 11:05                [end]
+#  
+# Timing   [Min/Max/Average]: 10h-07m-51s/10h-22m-19s/10h-21m-24s
+#
+# .-Input file : gw_ff.in
+# | em1d                         # [R Xd] Dynamical Inverse Dielectric Matrix
+# | ppa                          # [R Xp] Plasmon Pole Approximation
+# | HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
+# | gw0                          # [R GW] GoWo Quasiparticle energy levels
+# | rim_cut                      # [R RIM CUT] Coulomb potential
+# | BoseTemp= 0.000000     eV    # Bosonic Temperature
+# | FFTGvecs= 27983        RL    # [FFT] Plane-waves
+# | X_all_q_CPU= "1 5 8 8"       # [PARALLEL] CPUs for each role
+# | X_all_q_ROLEs= "q k c v"     # [PARALLEL] CPUs roles (q,k,c,v)
+# | SE_CPU= "5 8 8"              # [PARALLEL] CPUs for each role
+# | SE_ROLEs= "q qp b"           # [PARALLEL] CPUs roles (q,qp,b)
+# | RandQpts= 1000000            # [RIM] Number of random q-points in the BZ
+# | RandGvec= 109          RL    # [RIM] Coulomb interaction RS components
+# | CUTGeo= "box z"              # [CUT] Coulomb Cutoff geometry: box/cylinder/sphere X/Y/Z/XY..
+# | % CUTBox
+# |   0.00000 |  0.00000 | 29.00000 |        # [CUT] [au] Box sides
+# | %
+# | CUTRadius= 0.000000          # [CUT] [au] Sphere/Cylinder radius
+# | CUTCylLen= 0.000000          # [CUT] [au] Cylinder length
+# | EXXRLvcs= 18           Ry    # [XX] Exchange RL components
+# | Chimod= "Hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+# | % BndsRnXp
+# |     1 | 1800 |               # [Xp] Polarization function bands
+# | %
+# | NGsBlkXp=  8           Ry    # [Xp] Response block size
+# | % LongDrXp
+# | 0.1000E-4 | 0.000    | 0.000    |        # [Xp] [cc] Electric Field
+# | %
+# | PPAPntXp= 27.21138     eV    # [Xp] PPA imaginary energy
+# | % GbndRnge
+# |     1 | 1800 |               # [GW] G[W] bands range
+# | %
+# | GDamping=  0.10000     eV    # [GW] G[W] damping
+# | dScStep=  0.10000      eV    # [GW] Energy step to evaluate Z factors
+# | DysSolver= "n"               # [GW] Dyson Equation solver ("n","s","g")
+# | %QPkrange                    # [GW] QP generalized Kpoint/Band indices
+# |   1|  5|138|148|
+# | %

@@ -1,0 +1,15 @@
+Instructions:
+
+    0. Run an scf calculation make sure pp.in matches your scf calculation so it can read '.save' folder
+    1. pp.x < pp_pot.in > pp_pot.in (or submit job)
+    2. average.x < avg.in > avg.out
+
+
+
+1                ! the number of 3D-FFT files
+bn.pot           ! the name of 3D-FFT file
+1.0              ! the weight of the quantity in this file
+3000             ! the number of points of the thick mesh
+3                ! 3 means along z direction, which defines the plane of the planer average
+0.1              ! the size of the window for macroscopic averages
+average.dat   

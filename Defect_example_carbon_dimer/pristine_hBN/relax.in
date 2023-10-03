@@ -1,0 +1,42 @@
+&control
+ calculation='relax',
+ outdir='./temp',
+ prefix="BN",
+ verbosity='high',
+ wf_collect=.true.,
+ etot_conv_thr=1d-5,
+ forc_conv_thr=1d-3,
+ nstep=1000,
+ pseudo_dir='~/pseudo-ONCV-proj'
+ !restart_mode="restart",
+ !max_seconds=28500
+/
+&system
+ ibrav=0,
+ nat=2,
+ ntyp=2,
+ ecutwfc=90,
+ tot_charge=0,
+ nbnd=10
+/
+&electrons
+ electron_maxstep=600,
+ mixing_beta=0.7,
+ conv_thr=1.0D-8,
+/
+&ions
+/
+&cell
+/
+ATOMIC_SPECIES
+B  0.0  B_ONCV_PBE-1.0.upf
+N  0.0  N_ONCV_PBE-1.0.upf
+K_POINTS automatic
+18 18 1 0 0 0
+CELL_PARAMETERS angstrom
+ 2.50730023 -0.          0.        
+-1.25364886  2.17138608  0.        
+ 0.          0.         15.87531958
+ATOMIC_POSITIONS crystal
+B    0.333332960         0.666666976         0.500000000
+N    0.666666997         0.333332995         0.500000000

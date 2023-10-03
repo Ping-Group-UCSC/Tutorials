@@ -1,0 +1,45 @@
+&control
+ calculation='scf',
+ outdir='./',
+ prefix="BN",
+ verbosity='high',
+ wf_collect=.true.,
+ etot_conv_thr=1d-5,
+ forc_conv_thr=1d-3
+ pseudo_dir="~/pseudo-ONCV-proj",
+/
+&system
+ ibrav=0,
+ nat=72,
+ ntyp=3,
+ nbnd=168,
+ ecutwfc=55,
+ ecutfock=110,
+ nspin=2,
+ tot_magnetization=0,
+ starting_magnetization(1)=1,
+ tot_charge=0
+ occupations='from_input'
+!input_dft = 'pbe0'
+!exx_fraction = 0.409
+/
+&electrons
+ electron_maxstep=600,
+ mixing_beta=0.7,
+ conv_thr=1.0D-8,
+/
+&cell
+/
+&ions
+/
+ATOMIC_SPECIES
+B  0.0  B_ONCV_PBE-1.0.upf
+N  0.0  N_ONCV_PBE-1.0.upf
+C  0.0  C_ONCV_PBE-1.0.upf
+K_POINTS automatic
+1 1 1 0 0 0
+CELL_PARAMETERS angstrom
+15.04380218  0.          0.        
+-7.52188605 13.02832383  0.        
+ 0.          0.         15.87532077
+ATOMIC_POSITIONS crystal

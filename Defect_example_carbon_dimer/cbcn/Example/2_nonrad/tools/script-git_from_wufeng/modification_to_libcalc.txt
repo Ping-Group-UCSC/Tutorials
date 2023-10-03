@@ -1,0 +1,21 @@
+*** libcalc.py	2020-10-11 22:17:56.000000000 -0700
+--- libcalc_python3_compatible.py	2020-10-11 23:26:19.000000000 -0700
+***************
+*** 8,15 ****
+  from constant import *
+  import glob
+  
+! from chem_utils import f_Element_Symbol_to_Mass
+! from libreadqe import read_pos_and_etot_ratio, read_wave, get_ratio_folder, read_eig, get_save_folder
+  from libmath import overlap_x_quantum_harmonic, report_cache_gauss_miss, overlap_x_quantum_harmonic_num, \
+          overlap_x_quantum_harmonic_ladder_hr
+  
+--- 8,15 ----
+  from constant import *
+  import glob
+  
+! from chem_utils_python3_compatible import f_Element_Symbol_to_Mass
+! from libreadqe_python3_compatible import read_pos_and_etot_ratio, read_wave, get_ratio_folder, read_eig, get_save_folder
+  from libmath import overlap_x_quantum_harmonic, report_cache_gauss_miss, overlap_x_quantum_harmonic_num, \
+          overlap_x_quantum_harmonic_ladder_hr
+  

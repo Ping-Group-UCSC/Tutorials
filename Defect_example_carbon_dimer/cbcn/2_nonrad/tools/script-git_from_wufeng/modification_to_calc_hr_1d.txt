@@ -1,0 +1,21 @@
+*** calc_hr_1d.py	2020-10-12 14:06:44.000000000 -0700
+--- calc_hr_1d_python3_compatible.py	2020-10-12 14:18:04.000000000 -0700
+***************
+*** 16,23 ****
+  from math import sqrt
+  from numpy.linalg import norm
+  from libphonon import plot_phonon_mode_multi, plot_phonon_mode
+! from io_package import read_cell_and_pos_auto
+! from chem_utils import f_Element_Symbol_to_Mass
+  np.seterr(all="log")
+  
+  def read_yaml(filename):
+--- 16,23 ----
+  from math import sqrt
+  from numpy.linalg import norm
+  from libphonon import plot_phonon_mode_multi, plot_phonon_mode
+! from io_package_python3_compatible import read_cell_and_pos_auto
+! from chem_utils_python3_compatible import f_Element_Symbol_to_Mass
+  np.seterr(all="log")
+  
+  def read_yaml(filename):

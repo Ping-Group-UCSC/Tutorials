@@ -1,0 +1,449 @@
+Compute dQ ...
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Plot Q-etot ...
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Found: 4 points in folder ../lin-cdftup1/ in range 0.85 ~ 1.00
+Found: 4 points in folder ../lin-gs/ in range 0.00 ~ 0.15
+Found: 5 points in folder ../lin-cdftup1/ in range 0.80 ~ 1.00
+Found: 5 points in folder ../lin-gs/ in range 0.00 ~ 0.20
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file
+Compute overlap for band 144 ratio 0.0000
+Compute overlap for band 144 ratio 0.0500
+Compute overlap for band 144 ratio 0.1000
+Compute overlap for band 144 ratio 0.1500
+Compute overlap for band 144 ratio 0.2000
+Compute overlap for band 144 ratio 0.2500
+Compute overlap for band 144 ratio 0.5000
+Compute overlap for band 144 ratio 0.7500
+Compute overlap for band 144 ratio 0.8000
+Compute overlap for band 144 ratio 0.8500
+Compute overlap for band 144 ratio 0.9000
+Compute overlap for band 144 ratio 0.9500
+Compute overlap for band 144 ratio 1.0000
+[[0.00000000e+00 2.63769254e-16]
+ [5.00000000e-02 9.37785032e-04]
+ [1.00000000e-01 1.87078166e-03]
+ [1.50000000e-01 2.79625871e-03]
+ [2.00000000e-01 3.71790075e-03]
+ [2.50000000e-01 4.63503764e-03]
+ [5.00000000e-01 9.14526578e-03]
+ [7.50000000e-01 1.35190257e-02]
+ [8.00000000e-01 1.43789186e-02]
+ [8.50000000e-01 1.52339710e-02]
+ [9.00000000e-01 1.60838804e-02]
+ [9.50000000e-01 1.69292796e-02]
+ [1.00000000e+00 1.77699836e-02]]
+atomic unit dQ :          20.642673397039
+atomic unit freqi/f:       0.0043415615638269       0.0049386082732018
+Temperature :  600 K ; Maximum initial state oscillator quantum number    6
+Contribution: n m occupation deltacoef overlap   6  34    9.98619e-07   0.0003033018   5.841949e-11
+Contribution: n m occupation deltacoef overlap   6  33    9.98619e-07     0.07589928   3.531697e-10
+Contribution: n m occupation deltacoef overlap   6  32    9.98619e-07       3.981211   2.089577e-09
+Contribution: n m occupation deltacoef overlap   6  31    9.98619e-07       43.77314   1.208301e-08
+Contribution: n m occupation deltacoef overlap   6  30    9.98619e-07       100.8823   6.818026e-08
+Contribution: n m occupation deltacoef overlap   6  29    9.98619e-07       48.73457   3.747634e-07
+Contribution: n m occupation deltacoef overlap   6  28    9.98619e-07       4.934853   2.002756e-06
+Contribution: n m occupation deltacoef overlap   6  27    9.98619e-07      0.1047433   1.038299e-05
+Contribution: n m occupation deltacoef overlap   6  26    9.98619e-07   0.0004660076    5.20914e-05
+Contribution: n m occupation deltacoef overlap   6  25    9.98619e-07   4.345849e-07   0.0002521933
+Contribution: n m occupation deltacoef overlap   5  34   9.811382e-06   6.500852e-07   1.867829e-12
+Contribution: n m occupation deltacoef overlap   5  33   9.811382e-06   0.0006425122   1.190066e-11
+Contribution: n m occupation deltacoef overlap   5  32   9.811382e-06       0.133109   7.438339e-11
+Contribution: n m occupation deltacoef overlap   5  31   9.811382e-06       5.780273   4.555495e-10
+Contribution: n m occupation deltacoef overlap   5  30   9.811382e-06       52.61433   2.730109e-09
+Contribution: n m occupation deltacoef overlap   5  29   9.811382e-06       100.3864   1.598738e-08
+Contribution: n m occupation deltacoef overlap   5  28   9.811382e-06       40.14766   9.133204e-08
+Contribution: n m occupation deltacoef overlap   5  27   9.811382e-06       3.365585   5.080771e-07
+Contribution: n m occupation deltacoef overlap   5  26   9.811382e-06     0.05913926   2.746692e-06
+Contribution: n m occupation deltacoef overlap   5  25   9.811382e-06   0.0002178241   1.439665e-05
+Contribution: n m occupation deltacoef overlap   4  33   9.639633e-05   1.625907e-06   3.157713e-13
+Contribution: n m occupation deltacoef overlap   4  32   9.639633e-05    0.001330363   2.079539e-12
+Contribution: n m occupation deltacoef overlap   4  31   9.639633e-05      0.2281705   1.345006e-11
+Contribution: n m occupation deltacoef overlap   4  30   9.639633e-05        8.20283   8.534227e-11
+Contribution: n m occupation deltacoef overlap   4  29   9.639633e-05       61.81342   5.305866e-10
+Contribution: n m occupation deltacoef overlap   4  28   9.639633e-05       97.63752   3.227852e-09
+Contribution: n m occupation deltacoef overlap   4  27   9.639633e-05       32.32701    1.91859e-08
+Contribution: n m occupation deltacoef overlap   4  26   9.639633e-05       2.243517   1.112324e-07
+Contribution: n m occupation deltacoef overlap   4  25   9.639633e-05     0.03263682   6.278259e-07
+Contribution: n m occupation deltacoef overlap   4  24   9.639633e-05   9.951793e-05   3.442533e-06
+Contribution: n m occupation deltacoef overlap   3  32   0.0009470891   3.974691e-06   4.396334e-14
+Contribution: n m occupation deltacoef overlap   3  31   0.0009470891     0.00269241   2.995164e-13
+Contribution: n m occupation deltacoef overlap   3  30   0.0009470891      0.3822908   2.006452e-12
+Contribution: n m occupation deltacoef overlap   3  29   0.0009470891       11.37788     1.3203e-11
+Contribution: n m occupation deltacoef overlap   3  28   0.0009470891       70.98127   8.524397e-11
+Contribution: n m occupation deltacoef overlap   3  27   0.0009470891       92.81989   5.393394e-10
+Contribution: n m occupation deltacoef overlap   3  26   0.0009470891       25.44212   3.339393e-09
+Contribution: n m occupation deltacoef overlap   3  25   0.0009470891       1.461774    2.02027e-08
+Contribution: n m occupation deltacoef overlap   3  24   0.0009470891     0.01760444   1.192162e-07
+Contribution: n m occupation deltacoef overlap   3  23   0.0009470891    4.44405e-05   6.848504e-07
+Contribution: n m occupation deltacoef overlap   2  31    0.009305104   9.497151e-06   4.729988e-15
+Contribution: n m occupation deltacoef overlap   2  30    0.009305104    0.005325918   3.336792e-14
+Contribution: n m occupation deltacoef overlap   2  29    0.009305104      0.6260521   2.317483e-13
+Contribution: n m occupation deltacoef overlap   2  28    0.009305104       15.42557   1.583142e-12
+Contribution: n m occupation deltacoef overlap   2  27    0.009305104       79.66858   1.062664e-11
+Contribution: n m occupation deltacoef overlap   2  26    0.009305104       86.24773   7.000923e-11
+Contribution: n m occupation deltacoef overlap   2  25    0.009305104       19.57146   4.521207e-10
+Contribution: n m occupation deltacoef overlap   2  24    0.009305104      0.9309224   2.858164e-09
+Contribution: n m occupation deltacoef overlap   2  23    0.009305104    0.009281511   1.765935e-08
+Contribution: n m occupation deltacoef overlap   2  22    0.009305104   1.939719e-05   1.064517e-07
+Contribution: n m occupation deltacoef overlap   1  30     0.09142218   2.218021e-05   3.499121e-16
+Contribution: n m occupation deltacoef overlap   1  29     0.09142218     0.01029746   2.558571e-15
+Contribution: n m occupation deltacoef overlap   1  28     0.09142218       1.002096   1.844262e-14
+Contribution: n m occupation deltacoef overlap   1  27     0.09142218       20.44107   1.309409e-13
+Contribution: n m occupation deltacoef overlap   1  26     0.09142218       87.40023   9.148723e-13
+Contribution: n m occupation deltacoef overlap   1  25     0.09142218       78.33151   6.284098e-12
+Contribution: n m occupation deltacoef overlap   1  24     0.09142218       14.71551   4.238775e-11
+Contribution: n m occupation deltacoef overlap   1  23     0.09142218      0.5794674   2.804245e-10
+Contribution: n m occupation deltacoef overlap   1  22     0.09142218    0.004782969   1.817064e-09
+Contribution: n m occupation deltacoef overlap   1  21     0.09142218   8.275247e-06   1.151408e-08
+Contribution: n m occupation deltacoef overlap   0  29      0.8982183   5.063143e-05   1.336302e-17
+Contribution: n m occupation deltacoef overlap   0  28      0.8982183     0.01946023    1.01385e-16
+Contribution: n m occupation deltacoef overlap   0  27      0.8982183         1.5678   7.593278e-16
+Contribution: n m occupation deltacoef overlap   0  26      0.8982183       26.47574   5.609912e-15
+Contribution: n m occupation deltacoef overlap   0  25      0.8982183       93.71744   4.085262e-14
+Contribution: n m occupation deltacoef overlap   0  24      0.8982183       69.53568   2.929782e-13
+Contribution: n m occupation deltacoef overlap   0  23      0.8982183       10.81458   2.067232e-12
+Contribution: n m occupation deltacoef overlap   0  22      0.8982183      0.3525549   1.433574e-11
+Contribution: n m occupation deltacoef overlap   0  21      0.8982183    0.002409121   9.759203e-11
+Contribution: n m occupation deltacoef overlap   0  20      0.8982183   3.450686e-06   6.513245e-10
+<\chi|Q-Q0|\chi> @ T =                      600        7.362631602184e-10
+Temperature :  300 K ; Maximum initial state oscillator quantum number    3
+Contribution: n m occupation deltacoef overlap   3  32    1.10026e-06   3.974691e-06   4.396334e-14
+Contribution: n m occupation deltacoef overlap   3  31    1.10026e-06     0.00269241   2.995164e-13
+Contribution: n m occupation deltacoef overlap   3  30    1.10026e-06      0.3822908   2.006452e-12
+Contribution: n m occupation deltacoef overlap   3  29    1.10026e-06       11.37788     1.3203e-11
+Contribution: n m occupation deltacoef overlap   3  28    1.10026e-06       70.98127   8.524397e-11
+Contribution: n m occupation deltacoef overlap   3  27    1.10026e-06       92.81989   5.393394e-10
+Contribution: n m occupation deltacoef overlap   3  26    1.10026e-06       25.44212   3.339393e-09
+Contribution: n m occupation deltacoef overlap   3  25    1.10026e-06       1.461774    2.02027e-08
+Contribution: n m occupation deltacoef overlap   3  24    1.10026e-06     0.01760444   1.192162e-07
+Contribution: n m occupation deltacoef overlap   3  23    1.10026e-06    4.44405e-05   6.848504e-07
+Contribution: n m occupation deltacoef overlap   2  31   0.0001062077   9.497151e-06   4.729988e-15
+Contribution: n m occupation deltacoef overlap   2  30   0.0001062077    0.005325918   3.336792e-14
+Contribution: n m occupation deltacoef overlap   2  29   0.0001062077      0.6260521   2.317483e-13
+Contribution: n m occupation deltacoef overlap   2  28   0.0001062077       15.42557   1.583142e-12
+Contribution: n m occupation deltacoef overlap   2  27   0.0001062077       79.66858   1.062664e-11
+Contribution: n m occupation deltacoef overlap   2  26   0.0001062077       86.24773   7.000923e-11
+Contribution: n m occupation deltacoef overlap   2  25   0.0001062077       19.57146   4.521207e-10
+Contribution: n m occupation deltacoef overlap   2  24   0.0001062077      0.9309224   2.858164e-09
+Contribution: n m occupation deltacoef overlap   2  23   0.0001062077    0.009281511   1.765935e-08
+Contribution: n m occupation deltacoef overlap   2  22   0.0001062077   1.939719e-05   1.064517e-07
+Contribution: n m occupation deltacoef overlap   1  30     0.01025219   2.218021e-05   3.499121e-16
+Contribution: n m occupation deltacoef overlap   1  29     0.01025219     0.01029746   2.558571e-15
+Contribution: n m occupation deltacoef overlap   1  28     0.01025219       1.002096   1.844262e-14
+Contribution: n m occupation deltacoef overlap   1  27     0.01025219       20.44107   1.309409e-13
+Contribution: n m occupation deltacoef overlap   1  26     0.01025219       87.40023   9.148723e-13
+Contribution: n m occupation deltacoef overlap   1  25     0.01025219       78.33151   6.284098e-12
+Contribution: n m occupation deltacoef overlap   1  24     0.01025219       14.71551   4.238775e-11
+Contribution: n m occupation deltacoef overlap   1  23     0.01025219      0.5794674   2.804245e-10
+Contribution: n m occupation deltacoef overlap   1  22     0.01025219    0.004782969   1.817064e-09
+Contribution: n m occupation deltacoef overlap   1  21     0.01025219   8.275247e-06   1.151408e-08
+Contribution: n m occupation deltacoef overlap   0  29      0.9896405   5.063143e-05   1.336302e-17
+Contribution: n m occupation deltacoef overlap   0  28      0.9896405     0.01946023    1.01385e-16
+Contribution: n m occupation deltacoef overlap   0  27      0.9896405         1.5678   7.593278e-16
+Contribution: n m occupation deltacoef overlap   0  26      0.9896405       26.47574   5.609912e-15
+Contribution: n m occupation deltacoef overlap   0  25      0.9896405       93.71744   4.085262e-14
+Contribution: n m occupation deltacoef overlap   0  24      0.9896405       69.53568   2.929782e-13
+Contribution: n m occupation deltacoef overlap   0  23      0.9896405       10.81458   2.067232e-12
+Contribution: n m occupation deltacoef overlap   0  22      0.9896405      0.3525549   1.433574e-11
+Contribution: n m occupation deltacoef overlap   0  21      0.9896405    0.002409121   9.759203e-11
+Contribution: n m occupation deltacoef overlap   0  20      0.9896405   3.450686e-06   6.513245e-10
+<\chi|Q-Q0|\chi> @ T =                      300       6.7668754236235e-11
+Temperature :  100 K ; Maximum initial state oscillator quantum number    1
+Contribution: n m occupation deltacoef overlap   1  30   1.111776e-06   2.218021e-05   3.499121e-16
+Contribution: n m occupation deltacoef overlap   1  29   1.111776e-06     0.01029746   2.558571e-15
+Contribution: n m occupation deltacoef overlap   1  28   1.111776e-06       1.002096   1.844262e-14
+Contribution: n m occupation deltacoef overlap   1  27   1.111776e-06       20.44107   1.309409e-13
+Contribution: n m occupation deltacoef overlap   1  26   1.111776e-06       87.40023   9.148723e-13
+Contribution: n m occupation deltacoef overlap   1  25   1.111776e-06       78.33151   6.284098e-12
+Contribution: n m occupation deltacoef overlap   1  24   1.111776e-06       14.71551   4.238775e-11
+Contribution: n m occupation deltacoef overlap   1  23   1.111776e-06      0.5794674   2.804245e-10
+Contribution: n m occupation deltacoef overlap   1  22   1.111776e-06    0.004782969   1.817064e-09
+Contribution: n m occupation deltacoef overlap   1  21   1.111776e-06   8.275247e-06   1.151408e-08
+Contribution: n m occupation deltacoef overlap   0  29      0.9999989   5.063143e-05   1.336302e-17
+Contribution: n m occupation deltacoef overlap   0  28      0.9999989     0.01946023    1.01385e-16
+Contribution: n m occupation deltacoef overlap   0  27      0.9999989         1.5678   7.593278e-16
+Contribution: n m occupation deltacoef overlap   0  26      0.9999989       26.47574   5.609912e-15
+Contribution: n m occupation deltacoef overlap   0  25      0.9999989       93.71744   4.085262e-14
+Contribution: n m occupation deltacoef overlap   0  24      0.9999989       69.53568   2.929782e-13
+Contribution: n m occupation deltacoef overlap   0  23      0.9999989       10.81458   2.067232e-12
+Contribution: n m occupation deltacoef overlap   0  22      0.9999989      0.3525549   1.433574e-11
+Contribution: n m occupation deltacoef overlap   0  21      0.9999989    0.002409121   9.759203e-11
+Contribution: n m occupation deltacoef overlap   0  20      0.9999989   3.450686e-06   6.513245e-10
+<\chi|Q-Q0|\chi> @ T =                      100       5.1999971314217e-11
+Temperature :   50 K ; Maximum initial state oscillator quantum number    0
+Contribution: n m occupation deltacoef overlap   0  29              1   5.063143e-05   1.336302e-17
+Contribution: n m occupation deltacoef overlap   0  28              1     0.01946023    1.01385e-16
+Contribution: n m occupation deltacoef overlap   0  27              1         1.5678   7.593278e-16
+Contribution: n m occupation deltacoef overlap   0  26              1       26.47574   5.609912e-15
+Contribution: n m occupation deltacoef overlap   0  25              1       93.71744   4.085262e-14
+Contribution: n m occupation deltacoef overlap   0  24              1       69.53568   2.929782e-13
+Contribution: n m occupation deltacoef overlap   0  23              1       10.81458   2.067232e-12
+Contribution: n m occupation deltacoef overlap   0  22              1      0.3525549   1.433574e-11
+Contribution: n m occupation deltacoef overlap   0  21              1    0.002409121   9.759203e-11
+Contribution: n m occupation deltacoef overlap   0  20              1   3.450686e-06   6.513245e-10
+<\chi|Q-Q0|\chi> @ T =                       50        5.199850605976e-11
+Temperature :   10 K ; Maximum initial state oscillator quantum number    0
+Contribution: n m occupation deltacoef overlap   0  29              1   5.063143e-05   1.336302e-17
+Contribution: n m occupation deltacoef overlap   0  28              1     0.01946023    1.01385e-16
+Contribution: n m occupation deltacoef overlap   0  27              1         1.5678   7.593278e-16
+Contribution: n m occupation deltacoef overlap   0  26              1       26.47574   5.609912e-15
+Contribution: n m occupation deltacoef overlap   0  25              1       93.71744   4.085262e-14
+Contribution: n m occupation deltacoef overlap   0  24              1       69.53568   2.929782e-13
+Contribution: n m occupation deltacoef overlap   0  23              1       10.81458   2.067232e-12
+Contribution: n m occupation deltacoef overlap   0  22              1      0.3525549   1.433574e-11
+Contribution: n m occupation deltacoef overlap   0  21              1    0.002409121   9.759203e-11
+Contribution: n m occupation deltacoef overlap   0  20              1   3.450686e-06   6.513245e-10
+<\chi|Q-Q0|\chi> @ T =                       10       5.1998506059824e-11
+atomic unit dQ :          20.642673397039
+Contribution: n m occupation deltacoef overlap   0  29   5.063143e-05   1.501715e-26
+Contribution: n m occupation deltacoef overlap   0  28     0.01946023   3.867983e-25
+Contribution: n m occupation deltacoef overlap   0  27         1.5678    9.59648e-24
+Contribution: n m occupation deltacoef overlap   0  26       26.47574   2.290027e-22
+Contribution: n m occupation deltacoef overlap   0  25       93.71744   5.247968e-21
+Contribution: n m occupation deltacoef overlap   0  24       69.53568   1.152996e-19
+Contribution: n m occupation deltacoef overlap   0  23       10.81458   2.424099e-18
+Contribution: n m occupation deltacoef overlap   0  22      0.3525549   4.867286e-17
+Contribution: n m occupation deltacoef overlap   0  21    0.002409121   9.312842e-16
+Contribution: n m occupation deltacoef overlap   0  20   3.450686e-06   1.693894e-14
+<\chi|Q-Q0|\chi> @ T = 0 ~=       5.4192842377085e-17
+Read from QE input
+Read from QE output
+Not relax calculation, skip .out file

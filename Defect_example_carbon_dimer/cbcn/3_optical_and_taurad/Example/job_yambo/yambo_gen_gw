@@ -1,0 +1,28 @@
+#!/bin/bash
+
+######################### Kairay #################################
+# module add intel/17.0.5.239 impi/2017
+# YAMDIR=/export/data/share/jxu/yambo-codes/yambo-4.1.4/bin
+# YAMDIR=/export/data/share/jxu/yambo-codes/yambo-4.4.0/bin
+##################################################################
+
+######################### Stampede2 ##############################
+# YAMDIR=/home1/06931/kli1003/work/yambo_install/yambo-4.1.4/bin
+##################################################################
+
+####################### Lux ##############################
+ module loa intel/impi
+ YAMDIR=/data/users/jxu153/codes/yambo/yambo-4.1.4/bin
+# YAMDIR=/data/users/jxu153/codes/yambo/yambo-4.4.0/bin
+# YAMDIR=/home/kli103/work/programs/yambo-4.4.0/bin
+##########################################################
+
+############################### BNL ###########################
+# module load intel
+# YAMDIR="/sdcc/u/kli/programs/yambo-4.1.4_feng/bin"
+###############################################################
+
+
+cd ../data
+$YAMDIR/yambo -x -p p -g n -F gw_ff.in -V par qp -r
+

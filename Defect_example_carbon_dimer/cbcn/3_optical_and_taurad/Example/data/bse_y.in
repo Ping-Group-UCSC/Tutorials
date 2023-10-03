@@ -1,0 +1,57 @@
+#                                                           
+#  __  __   ________   ___ __ __    _______   ______        
+# /_/\/_/\ /_______/\ /__//_//_/\ /_______/\ /_____/\       
+# \ \ \ \ \\::: _  \ \\::\| \| \ \\::: _  \ \\:::_ \ \      
+#  \:\_\ \ \\::(_)  \ \\:.      \ \\::(_)  \/_\:\ \ \ \     
+#   \::::_\/ \:: __  \ \\:.\-/\  \ \\::  _  \ \\:\ \ \ \    
+#     \::\ \  \:.\ \  \ \\. \  \  \ \\::(_)  \ \\:\_\ \ \   
+#      \__\/   \__\/\__\/ \__\/ \__\/ \_______\/ \_____\/   
+#                                                           
+#                                                           
+#              GPL Version 4.1.4 Revision 76                
+#                        MPI Build                          
+#                http://www.yambo-code.org                  
+#
+optics                       # [R OPT] Optics
+bss                          # [R BSS] Bethe Salpeter Equation solver
+rim_cut                      # [R RIM CUT] Coulomb potential
+bse                          # [R BSE] Bethe Salpeter Equation.
+bsk                          # [R BSK] Bethe Salpeter Equation kernel
+NLogCPUs=0                   # [PARALLEL] Live-timing CPU`s (0 for all)
+X_all_q_CPU= "2 2 4 2"              # [PARALLEL] CPUs for each role
+X_all_q_ROLEs= "q k c v"            # [PARALLEL] CPUs roles (q,k,c,v)
+X_all_q_nCPU_LinAlg_INV= 1   # [PARALLEL] CPUs for Linear Algebra
+BS_CPU= "2 4 4"                   # [PARALLEL] CPUs for each role
+BS_ROLEs= "k eh t"                 # [PARALLEL] CPUs roles (k,eh,t)
+BS_nCPU_LinAlg_INV= 1        # [PARALLEL] CPUs for Linear Algebra
+BS_nCPU_LinAlg_DIAGO= 1      # [PARALLEL] CPUs for Linear Algebra
+RandQpts=1000000                   # [RIM] Number of random q-points in the BZ
+RandGvec= 100            RL    # [RIM] Coulomb interaction RS components
+CUTGeo= "box z"               # [CUT] Coulomb Cutoff geometry: box/cylinder/sphere X/Y/Z/XY..
+% CUTBox
+ 0.00     | 0.00     | 29.00     |        # [CUT] [au] Box sides
+%
+CUTRadius= 0.000000          # [CUT] [au] Sphere/Cylinder radius
+CUTCylLen= 0.000000          # [CUT] [au] Cylinder length
+Chimod= "hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+BSEmod= "retarded"           # [BSE] resonant/retarded/coupling
+BSKmod= "SEX"                # [BSE] IP/Hartree/HF/ALDA/SEX
+BSSmod= "d"                  # [BSS] (h)aydock/(d)iagonalization/(i)nversion/(t)ddft`
+BSENGexx= 40        Ry    # [BSK] Exchange components
+BSENGBlk= 5            Ry    # [BSK] Screened interaction block size
+KfnQPdb= "E < ./all_Bz/ndb.QP"
+#WehCpl                      # [BSK] eh interaction included also in coupling
+% BEnRange
+ 0.000000 | 9.999999 | eV    # [BSS] Energy range
+%
+% BDmRange
+  0.02000 |  0.02000 | eV    # [BSS] Damping range
+%
+BEnSteps= 9100                # [BSS] Energy steps
+% BLongDir
+ -0.500000 | 0.866025 | 0.000000 |        # [BSS] [cc] Electric Field
+%
+% BSEBands
+    100 | 180 |               # [BSK] Bands range
+%
+WRbsWF

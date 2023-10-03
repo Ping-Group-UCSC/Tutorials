@@ -1,0 +1,11 @@
+phonons of BN
+ &inputph
+  !alpha_mix(1)=0.7,
+  tr2_ph=1.0d-15,
+  prefix='BN',
+  outdir='../temp',
+  !recover=.true.
+  epsil=.true.,
+  verbosity = 'high'
+ /
+0.0 0.0 0.0

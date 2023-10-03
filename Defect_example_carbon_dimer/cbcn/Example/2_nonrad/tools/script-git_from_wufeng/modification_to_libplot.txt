@@ -1,0 +1,30 @@
+*** libplot.py	2020-10-11 22:39:58.000000000 -0700
+--- libplot_python3_compatible.py	2020-10-11 22:19:39.000000000 -0700
+***************
+*** 3,15 ****
+  import os
+  import numpy as np
+  
+! from libreadqe import read_pos_and_etot_ratio, read_wave, get_ratio_folder, read_eig, get_save_folder
+  import matplotlib
+  matplotlib.use('Agg')
+  import matplotlib.pyplot as plt
+  from matplotlib import rc
+! #import cPickle as pickle
+! import pickle as pickle
+  
+  list_color = ["black", "red", "blue", "darkgreen", "orange", "magenta", "darkgoldenrod", "coral", "lightskyblue", "darkolivegreen", "wheat", "lightcoral", "blueviolet", "lightseagreen", "gold"]
+  list_linestyle = ["-", "--", "--", "--", "--", "--", "--"]
+--- 3,14 ----
+  import os
+  import numpy as np
+  
+! from libreadqe_python3_compatible import read_pos_and_etot_ratio, read_wave, get_ratio_folder, read_eig, get_save_folder
+  import matplotlib
+  matplotlib.use('Agg')
+  import matplotlib.pyplot as plt
+  from matplotlib import rc
+! import cPickle as pickle
+  
+  list_color = ["black", "red", "blue", "darkgreen", "orange", "magenta", "darkgoldenrod", "coral", "lightskyblue", "darkolivegreen", "wheat", "lightcoral", "blueviolet", "lightseagreen", "gold"]
+  list_linestyle = ["-", "--", "--", "--", "--", "--", "--"]

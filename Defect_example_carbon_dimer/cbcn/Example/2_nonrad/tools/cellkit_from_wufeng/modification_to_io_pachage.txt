@@ -1,0 +1,80 @@
+*** io_package.py	2021-04-21 22:20:36.000000000 -0700
+--- io_package_python3_compatible.py	2021-04-21 22:47:36.000000000 -0700
+***************
+*** 1,6 ****
+--- 1,7 ----
+  #!/usr/bin/env python
+  #Read from different packages
+  import os
++ import re
+  import numpy as np
+  from numpy.linalg import norm, inv
+  
+***************
+*** 93,99 ****
+                      pos = np.dot(vecRi, pos) / Bohr2Ang
+                  else:
+                      raise ValueError("Unsupported unit %s" % unit_coord)
+!                 list_pos.append({"species": filter(lambda x:x.isalpha(), ar[0]), "pos" : pos, "speciesfull" : ar[0]})
+  
+      if (os.path.exists(prefix + ".out")):
+          print("Read from QE output")
+--- 94,100 ----
+                      pos = np.dot(vecRi, pos) / Bohr2Ang
+                  else:
+                      raise ValueError("Unsupported unit %s" % unit_coord)
+!                 list_pos.append({"species": ''.join(list(filter(lambda x:x.isalpha(), ar[0]))), "pos" : pos, "speciesfull" : ar[0]})
+  
+      if (os.path.exists(prefix + ".out")):
+          print("Read from QE output")
+***************
+*** 133,139 ****
+                      pos = np.array([float(x) for x in ar[-4:-1]])
+  #                   print(pos)
+                      species = ar[1]
+!                     list_pos.append({"species": filter(lambda x:x.isalpha(), species), "pos" : pos, "speciesfull" : species})
+                      i += 1
+          else:
+          #Check if it is vc-relax
+--- 134,140 ----
+                      pos = np.array([float(x) for x in ar[-4:-1]])
+  #                   print(pos)
+                      species = ar[1]
+!                     list_pos.append({"species": ''.join(list(filter(lambda x:x.isalpha(), species))), "pos" : pos, "speciesfull" : species})
+                      i += 1
+          else:
+          #Check if it is vc-relax
+***************
+*** 172,178 ****
+                      pos = np.dot(vecRi, pos)
+                  else:
+                      raise ValueError("Unsupported unit %s" % unit_coord)
+!                 list_pos.append({"species": filter(lambda x:x.isalpha(), ar[0]), "pos" : pos, "speciesfull" : ar[0]})
+  #               print(list_pos[-1])
+  
+  
+--- 173,179 ----
+                      pos = np.dot(vecRi, pos)
+                  else:
+                      raise ValueError("Unsupported unit %s" % unit_coord)
+!                 list_pos.append({"species": ''.join(list(filter(lambda x:x.isalpha(), ar[0]))), "pos" : pos, "speciesfull" : ar[0]})
+  #               print(list_pos[-1])
+  
+  
+***************
+*** 302,308 ****
+                      pass
+                  else:
+                      raise ValueError("Unsupported unit %s" % unit_coord)
+!                 list_atom.append({"species": filter(lambda x:x.isalpha(), ar[0]), "pos" : pos, "speciesfull" : ar[0]})
+              lines_after = lines[i+nat+1:]
+  
+      return vecR, list_atom, unit_coord, lines_before, lines_after
+--- 303,309 ----
+                      pass
+                  else:
+                      raise ValueError("Unsupported unit %s" % unit_coord)
+!                 list_atom.append({"species": ''.join(list(filter(lambda x:x.isalpha(), ar[0]))), "pos" : pos, "speciesfull" : ar[0]})
+              lines_after = lines[i+nat+1:]
+  
+      return vecR, list_atom, unit_coord, lines_before, lines_after

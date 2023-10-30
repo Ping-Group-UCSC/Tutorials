@@ -1,0 +1,50 @@
+
+
+ __    __ ______           ____     _____
+/\ \  /\ \\  _  \  /"\_/`\/\  _`\ /\  __`\
+\ `\`\\/"/ \ \L\ \/\      \ \ \L\ \ \ \/\ \
+ `\ `\ /" \ \  __ \ \ \__\ \ \  _ <" \ \ \ \
+   `\ \ \  \ \ \/\ \ \ \_/\ \ \ \L\ \ \ \_\ \
+     \ \_\  \ \_\ \_\ \_\\ \_\ \____/\ \_____\
+      \/_/   \/_/\/_/\/_/ \/_/\/___/  \/_____/
+
+
+ <---> DBs path set to .
+ <---> Index file set to data-file.xml
+ <---> Header/K-points/Energies...
+ <---> Cell data...
+ <---> Atomic data...
+ <---> Symmetries...
+ <---> XC functional...Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+ <---> EXX fraction... 0.000000
+ <---> EXX screening... 0.000000
+ <---> K-points mesh...
+ <---> RL vectors...
+ <02s> IGK arrays...
+ <02s> Energies...
+ <02s>  :: Electrons             : 288.0000
+ <02s>  :: Temperature       [ev]: 0.000000
+ <02s>  :: Lattice factors [a.u.]: 28.42867  24.61996  30.00001
+ <02s>  :: K-points              :  5
+ <02s>  :: Bands                 : 1800
+ <02s>  :: Spinor components     : 1
+ <02s>  :: Spin polarizations    : 1
+ <02s>  :: Spin orbit coupling   : no
+ <02s>  :: Symmetries   [spatial]: 2
+ <02s>  ::                [T-rev]: yes
+ <02s>  :: Max WF components     : 144706
+ <02s>  :: RL vectors        (WF): 153387
+ <02s>  :: RL vectors    (CHARGE): 1156971
+ <02s>  :: XC potential          : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+ <02s>  :: Atomic species        : 3
+ <02s>  :: Max atoms/species     :  35
+ <02s> == DB1 (Gvecs and more) ...
+ <02s> ... Database done
+ <02s> :: WF splitter Blocks/bands/block size(Mb): 20.00000  90.00000  99.36172
+ <02s> == DB2 (wavefunctions)  ...
+ <02s> [M  0.097 Gb] Alloc wf_disk ( 0.097)
+ <02m-37s> [M  0.000 Gb] Free wf_disk ( 0.097)
+ <02m-37s> == DB3 (PseudoPotential) ...
+ <02m-38s> [M  0.013 Gb] Alloc pp_kbs pp_kb pp_kbd ( 0.013)
+ <02m-44s> [M  0.000 Gb] Free pp_kbs pp_kb pp_kbd ( 0.013)
+ <02m-44s>  == P2Y completed ==

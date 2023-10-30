@@ -1,0 +1,33 @@
+#!/bin/bash
+#SBATCH --job-name=dynmat
+#SBATCH --output=qe.%j
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=40
+#SBATCH --time=04:00:00
+#SBATCH --partition=cpuq
+# SBATCH --dependency=afterany:48083
+#SBATCH --account=cpuq
+
+######################### Kairay #########################################
+# module add intel/17.0.5.239 impi/2017
+# NCORES=$(($SLURM_NTASKS_PER_NODE * $SLURM_JOB_NUM_NODES))
+# MPICMD="mpirun -genv I_MPI_FABRICS shm:ofa -n $SLURM_NTASKS"
+# PWDIR="/export/data/share/wufeng/programs-intel2017.5/qe-6.1-scal/bin"
+##########################################################################
+
+
+
+####################################### Lux #########################################################################################################
+ pwd; hostname
+ echo "Running program on $SLURM_JOB_NUM_NODES nodes with $SLURM_NTASKS total tasks, with each node getting $SLURM_NTASKS_PER_NODE running on cores."
+ module load intel/impi
+ MPICMD="mpirun -n $SLURM_NTASKS --ppn 40"
+ PWDIR=/data/users/jxu153/codes/qe/qe-6.1.0/bin
+#####################################################################################################################################################
+
+
+date
+
+$MPICMD $PWDIR/dynmat.x -nk 1  -inp dynmat.in > dynmat.out
+
+date

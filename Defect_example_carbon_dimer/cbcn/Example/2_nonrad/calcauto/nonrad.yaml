@@ -1,0 +1,62 @@
+M: 12.17793922542381
+S_f: 1.05221952009413
+S_i: 0.9250127915465073
+Wif: 0.25976288583508805
+WifBand: 144
+Wif_Allband:
+  144: 0.25976288583508805
+dErelf: 0.13093328561990347
+dEreli: 0.11792257081833668
+dQ: 0.2558509229436068
+diffEigQ0: 3.552556425146892
+filename_Cp_tilde: cp_T.txt
+filename_Q_etot: tot_Q.png
+filename_Q_etot_f: tot_Q_f.txt
+filename_Q_etot_i: tot_Q_i.txt
+filename_eigvals_f-down: occ-f-down.txt
+filename_eigvals_f-up: occ-f-up.txt
+filename_eigvals_i-down: occ-i-down.txt
+filename_eigvals_i-up: occ-i-up.txt
+filename_lifetime: lifetime_T.txt
+filename_overlap: overlap.txt
+filename_phonon_part: phonon_part.txt
+hbarFreqf: 134.38636318450534
+hbarFreqf_error: 18.402288975637422
+hbarFreqf_order:
+- hbarfreq: 0.13438636318450534
+  order: 2
+- hbarfreq: 0.13598667800429942
+  order: 3
+- hbarfreq: 0.117584389028662
+  order: 4
+hbarFreqf_to02_order:
+- hbarfreq: 0.13384496356166456
+  order: 2
+- hbarfreq: 0.13599580568923159
+  order: 3
+- hbarfreq: 0.13597496276880444
+  order: 4
+hbarFreqi: 118.13989626799696
+hbarFreqi_error: 16.245253366537913
+hbarFreqi_order:
+- hbarfreq: 0.11813989626799697
+  order: 2
+- hbarfreq: 0.11703155247153509
+  order: 3
+- hbarfreq: 0.10189464290145905
+  order: 4
+hbarFreqi_to02_order:
+- hbarfreq: 0.11851542127423559
+  order: 2
+- hbarfreq: 0.11701033487791102
+  order: 3
+- hbarfreq: 0.11705875878330267
+  order: 4
+phonon_part_T0_HR: 5.419284237708475e-17
+unit:
+  M: aMU
+  dQ: aMU^1/2 Ang
+  hbarFreqf: meV
+  hbarFreqf_error: meV
+  hbarFreqi: meV
+  hbarFreqi_error: meV

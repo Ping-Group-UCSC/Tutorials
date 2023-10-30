@@ -1,0 +1,60 @@
+#!/bin/bash
+#SBATCH --job-name=wk
+#SBATCH --output=qe.%j
+#SBATCH --nodes=4
+#SBATCH --ntasks-per-node=40
+#SBATCH --time=8:00:00
+#SBATCH --partition=windfall
+# SBATCH --dependency=afterany:48083
+#SBATCH --account=windfall
+
+#################### Kairay ################################################################
+# module add intel/17.0.5.239 impi/2017
+# export OMP_NUM_THREADS=1
+# NORES=$(($SLURM_NTASKS_PER_NODE * $SLURM_JOB_NUM_NODES))
+# MPICMD="mpirun -genv I_MPI_FABRICS shm:ofa -n $SLURM_NTASKS"
+# PWDIR="/export/data/share/wufeng/programs-intel2017.5/qe-6.1-scal/bin"
+# VASPDIR="/export/data/share/wufeng/programs-intel2017.5/vasp/vasp.5.4.4-vtst/bin/vasp_std"
+
+# module load gnu openmpi mkl gsl
+# MPICMD="mpirun --mca btl openib,sm,self --bind-to none -n $SLURM_NTASKS"
+# JDFTXDIR=/export/data/share/wufeng/share/programs/JDFTX-fix20180209/build/
+############################################################################################
+
+
+######################### Stampede2 #####################################
+# MPICMD="ibrun"
+# PWDIR=/home1/06931/kli1003/work/programs/qe-6.1.0/bin
+#########################################################################
+
+
+#################################### Lux ############################################################################################################
+ hostname
+ echo "Running program on $SLURM_JOB_NUM_NODES nodes with $SLURM_NTASKS total tasks, with each node getting $SLURM_NTASKS_PER_NODE running on cores."
+ module load intel/impi
+ MPICMD="mpirun -n $SLURM_NTASKS --ppn 40"
+ PWDIR=/data/users/jxu153/codes/qe/qe-6.1.0/bin
+# PWDIR=/data/users/jxu153/codes/qe/qe-6.4.1/bin
+#####################################################################################################################################################
+
+
+############################### BNL ###########################
+# module load intel
+# export OMP_NUM_THREADS=1
+# MPICMD="srun -n $SLURM_NTASKS"
+# MPICMDS="mpirun -n 1"
+# YAMDIR="/sdcc/u/kli/programs/yambo-4.1.4_feng/bin"
+# PWDIR="/sdcc/u/kli/programs/qe-6.1.0/bin"
+###############################################################
+
+
+echo "Start:"; date
+
+ $MPICMD $PWDIR/pw.x -nk 5 -nb 2 -nd 1 -inp scf.in > scf.out
+ $MPICMD $PWDIR/pw.x -nk 5 -nb 2 -nd 1 -inp nscf.in > nscf.out
+# $MPICMD $VASPDIR > std.out
+# $MPICMD $JDFTXDIR/jdftx -i main.in > main.out
+
+echo "Done:"; date
+
+# "-genv I_MPI_FABRICS shm:ofa" is included to improve a calculation 

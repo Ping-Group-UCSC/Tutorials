@@ -1,0 +1,38 @@
+*** mix_structure_linear.py	2020-10-11 08:27:47.000000000 -0700
+--- mix_structure_linear_python3_compatible.py	2020-10-11 08:27:46.000000000 -0700
+***************
+*** 13,19 ****
+  os.chdir(cwd)
+  sys.path.insert(0, os.path.join(wd_tools, "cellkit_from_wufeng"))
+  
+! from io_package import read_cell_and_pos_auto, write_cell_and_pos_auto
+  
+  
+  def mix_structure(vecR, list_pos1, list_pos2, ratio, head, tail, filename_out):
+--- 13,19 ----
+  os.chdir(cwd)
+  sys.path.insert(0, os.path.join(wd_tools, "cellkit_from_wufeng"))
+  
+! from io_package_python3_compatible import read_cell_and_pos_auto, write_cell_and_pos_auto
+  
+  
+  def mix_structure(vecR, list_pos1, list_pos2, ratio, head, tail, filename_out):
+***************
+*** 40,47 ****
+      suffix1 = None
+      suffix2 = None
+      for p1, p2 in zip(list_pos1, list_pos2):
+!         element1 = p1["species"].translate(None, digits)
+!         element2 = p2["species"].translate(None, digits)
+          if (element1 != element2):
+              raise ValueError("Different atom found : %s %s" % (p1["species"], p2["species"]))
+  #Match atom positions to the nearest position (0.01 and 0.99 => 0.01 and -0.01)
+--- 40,47 ----
+      suffix1 = None
+      suffix2 = None
+      for p1, p2 in zip(list_pos1, list_pos2):
+!         element1 = p1["species"].translate(str.maketrans('', '', digits))
+!         element2 = p2["species"].translate(str.maketrans('', '', digits))
+          if (element1 != element2):
+              raise ValueError("Different atom found : %s %s" % (p1["species"], p2["species"]))
+  #Match atom positions to the nearest position (0.01 and 0.99 => 0.01 and -0.01)

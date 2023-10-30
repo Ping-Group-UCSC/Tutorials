@@ -1,0 +1,51 @@
+#                                                           
+#   __   __     _        __  __       ____      U  ___  u   
+#   \ \ / / U  /"\  U u |" \/ "| u U | __") u    \/"_ \/    
+#    \ V /   \/ _ \/   \| |\/| |/   \|  _ \/     | | | |    
+#   U_|"|_u  / ___ \    | |  | |     | |_) | .-,_| |_| |    
+#     |_|   /_/   \_\   |_|  |_|     |____/   \_)-\___/     
+# .-,//|(_   \\    >>  <<,-,,-.     _|| \\_        \\       
+#  \_) (__) (__)  (__)  (./  \.)   (__) (__)      (__)      
+#                                                           
+#                                                           
+#              GPL Version 4.1.4 Revision 76                
+#                        MPI Build                          
+#                http://www.yambo-code.org                  
+#
+ppa                          # [R Xp] Plasmon Pole Approximation
+gw0                          # [R GW] GoWo Quasiparticle energy levels
+em1d                         # [R Xd] Dynamical Inverse Dielectric Matrix
+HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
+EXXRLvcs= 40        Ry    # [XX] Exchange RL components
+Chimod= "hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+% GbndRnge
+   1 |  1000 |                 # [GW] G[W] bands range
+%
+GDamping=  0.10000     eV    # [GW] G[W] damping
+dScStep=  0.10000      eV    # [GW] Energy step to evaluate Z factors
+% BndsRnXp
+   1 |  1000 |                 # [Xd] Polarization function bands
+%
+PPAPntXp = 27.21138     eV    # [Xp] PPA imaginary energy
+NGsBlkXp= 5            Ry    # [Xd] Response block size
+% DmRngeXp
+  0.02000 |  0.02000 | eV    # [Xd] Damping range
+%
+% LongDrXp
+ 1.000000 | 1.000000 | 1.000000 |        # [Xd] [cc] Electric Field
+%
+DysSolver= "n"               # [GW] Dyson Equation solver ("n","s","g")
+%QPkrange                    # [GW] QP generalized Kpoint/Band indices
+  1|  1|  142|  154|
+%
+rim_cut
+RandQpts = 1000000   # [RIM] Number of random q-points in the BZ
+RandGvec = 100  RL   # [RIM] Coulomb interaction RS components 
+CUTGeo = "box z" # [CUT] Coulomb Cutoff geometry: box/cylinder/sphere X/Y/Z/XY..
+% CUTBox
+ 0.00     | 0.00     | 27.3459    |        # [CUT] [au] Box sides
+%
+X_all_q_CPU= "2 2 32 2"              # [PARALLEL] CPUs for each role
+X_all_q_ROLEs= "q k c v"            # [PARALLEL] CPUs roles (q,k,c,v)
+SE_CPU= "2 2 64"                   # [PARALLEL] CPUs for each role
+SE_ROLEs= "q qp b"                 # [PARALLEL] CPUs roles (q,qp,b)

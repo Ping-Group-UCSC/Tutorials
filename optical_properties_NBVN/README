@@ -1,0 +1,9 @@
+
+================================================================= 
+E (eV)    tau (ns)    QP_corr     file
+2.408      31.3       scissor     nbnv_66_bse_k33/o-bse.eps_q1_haydock_bse
+2.284      38.8       scissor     nbvn_gw_bse_nbnd570/bse/KfnQP-2.6-3.5/o.eps_q1_diago_bse
+2.306      37.5       ndbQP       nbvn_gw_bse_nbnd570/bse/KfnQPdb/o.eps_q1_diago_bse
+=================================================================
+
+This ndb.QP and scissor are from the calculation with nk 2x2x1

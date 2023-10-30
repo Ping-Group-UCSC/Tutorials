@@ -1,0 +1,27 @@
+*** calc_auto.py	2020-10-12 14:06:43.000000000 -0700
+--- calc_auto_python3_compatible.py	2020-10-12 14:17:13.000000000 -0700
+***************
+*** 7,17 ****
+  from numpy.linalg import norm
+  np.seterr(all="log")
+  
+! from libreadqe import read_pos_and_etot_ratio
+! from libcalc import calc_dQ, calc_freq, calc_wif, calc_phonon_part, calc_cp_T, calc_phonon_part_T0_HR, calc_lifetime_T, calc_dE
+! from libplot import plot_tot_Q, plot_eig_Q, plot_overlap_Q, plot_cp_T
+  
+! from io_package import read_cell_and_pos_auto 
+  
+  def saveinput():
+      with open(file_input, 'w') as f:
+--- 7,17 ----
+  from numpy.linalg import norm
+  np.seterr(all="log")
+  
+! from libreadqe_python3_compatible import read_pos_and_etot_ratio
+! from libcalc_python3_compatible import calc_dQ, calc_freq, calc_wif, calc_phonon_part, calc_cp_T, calc_phonon_part_T0_HR, calc_lifetime_T, calc_dE
+! from libplot_python3_compatible import plot_tot_Q, plot_eig_Q, plot_overlap_Q, plot_cp_T
+  
+! from io_package_python3_compatible import read_cell_and_pos_auto 
+  
+  def saveinput():
+      with open(file_input, 'w') as f:

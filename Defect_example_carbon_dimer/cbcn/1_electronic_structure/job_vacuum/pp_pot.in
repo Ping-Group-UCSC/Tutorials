@@ -1,0 +1,11 @@
+&inputPP
+ outdir='../temp/',
+ prefix="BN",
+ plot_num=11
+ filplot = 'bn.pot'
+/
+ 
+&plot
+ iflag=3,
+ output_format=5
+/ 

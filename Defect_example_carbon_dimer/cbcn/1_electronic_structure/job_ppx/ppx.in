@@ -1,0 +1,30 @@
+#!/bin/bash
+# pp.x is organized in two steps 1. &inputpp and 2. &plot
+# 1. &inputpp reads QE output and generates a data file
+# 2. &plot plots the data file created in the first step (or previously generated) into a format readable by other programs
+# Read https://www.quantum-espresso.org/Doc/INPUT_PP.html for more specific details
+
+function ppxable(){
+	cat > $in << EOF	# creat a file named a the beginning
+&inputpp
+ prefix = 'BN'			!!!! make sure prefix and outdir match previous calculation
+ outdir = '../temp'
+ filplot = '${fname}.dat'	! first portion of pp.x generates this file
+ plot_num = 7			! type of data file to create. plot_num=7 corresponds to |psi|^2
+ kband = $band			! which state to plot (spin is decided with kpoint
+ kpoint = $kpoint		! plot the 1st kpoint. If there are n kpoints and npsin=2 then choose n+1 to plot spin down
+ lsign=.true.			! sign of the wavefunction is included
+/
+&plot
+  nfile = 1			! number of files to read in
+  filepp(1) = '${fname}.dat'	! name of file number 1
+  weight(1) = 1.0		! weight on file number 1 (can rescale data or invert)
+  iflag = 3			! dimension of plot iflag=3 corresponds to 3D plot
+  output_format = 5		! xsf format. see pp.x input data description for futher details
+  fileout='${fname}.xsf'	! name of output file. this file can be opened with either VESTA or xcrysden
+ /
+EOF
+}
+
+# invoke the function
+ppxable

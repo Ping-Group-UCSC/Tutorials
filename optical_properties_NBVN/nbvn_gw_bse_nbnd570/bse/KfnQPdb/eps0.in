@@ -1,0 +1,29 @@
+rim_cut
+em1s                         # [R Xs] Static Inverse Dielectric Matrix
+X_all_q_CPU= "1 1 24 4"       # [PARALLEL] CPUs for each role
+X_all_q_ROLEs= "q k c v"     # [PARALLEL] CPUs roles (q,k,c,v)
+X_all_q_nCPU_LinAlg_INV=0    # [PARALLEL] CPUs for matrix inversion
+X_Threads=  0                # [OPENMP/X] Number of threads for response functions
+RandQpts= 1000000             # [RIM] Number of random q-points in the BZ
+RandGvec= 100          RL     # [RIM] Coulomb interaction RS components
+CUTGeo= "box z"              # [CUT] Coulomb Cutoff geometry: box/cylinder/sphere X/Y/Z/XY..
+% CUTBox
+ 0.0 | 0.0 | 29.0 |          # [CUT] [au] Box sides
+%
+CUTRadius= 0.000000          # [CUT] [au] Sphere/Cylinder radius
+CUTCylLen= 0.000000          # [CUT] [au] Cylinder length
+Chimod= "Hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+XfnQPdb= "E < ./gw0-ppa/ndb.QP"
+% BndsRnXs
+ 1 |  570 |                  # [Xs] Polarization function bands
+%
+NGsBlkXs= 4           Ry     # [Xs] Response block size
+% DmRngeXs
+  0.10000 |  0.10000 | eV    # [Xs] Damping range
+%
+% LongDrXs
+-1.732051 | 1.000000 | 0.000000 | # [Xs] [cc] Electric Field
+%
+% QpntsRXs
+  1 | 999 |                  # [Xs] Transferred momenta
+%

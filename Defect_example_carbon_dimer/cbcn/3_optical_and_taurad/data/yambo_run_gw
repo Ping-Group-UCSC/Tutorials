@@ -1,0 +1,62 @@
+#!/bin/bash
+#SBATCH --job-name=xxf
+#SBATCH --output=qe.%j
+#SBATCH --nodes=8
+#SBATCH --ntasks-per-node=40
+#SBATCH --time=24:00:00
+#SBATCH --partition=windfall
+#SBATCH --dependency=afterany:518
+#SBATCH --account=windfall
+#SBATCH --mail-user=kli103@ucsc.edu
+#SBATCH --mail-type=FAIL
+
+####################### Kairay ###########################################
+# echo "Start:"; date
+# module add intel/17.0.5.239 impi/2017
+# NORES=$(($SLURM_NTASKS_PER_NODE * $SLURM_JOB_NUM_NODES))
+# MPICMD="mpirun -genv I_MPI_FABRICS shm:ofa -n $SLURM_NTASKS"
+# PWDIR="/export/data/share/wufeng/programs-intel2017.5/qe-6.1-scal/bin"
+# YAMDIR=/export/data/share/jxu/yambo-codes/yambo-4.1.4/bin
+# YAMDIR=/export/data/share/jxu/yambo-codes/yambo-4.4.0/bin
+##########################################################################
+
+################### Stampede2 ###########################################
+# echo "Start:"; date
+# echo "Running program on $SLURM_JOB_NUM_NODES nodes with $SLURM_NTASKS total tasks, with each node getting $SLURM_NTASKS_PER_NODE running on cores."
+# export OMP_NUM_THREADS=1
+# MPICMD="ibrun"
+# PWDIR=/home1/06931/kli1003/work/programs/qe-6.1.0/bin
+# YAMDIR=/home1/06931/kli1003/work/yambo_install/yambo-4.1.4/bin
+#########################################################################
+
+####################################### Lux #########################################################################################################
+ echo "Start:"; date;
+ echo "Running program on $SLURM_JOB_NUM_NODES nodes with $SLURM_NTASKS total tasks, with each node getting $SLURM_NTASKS_PER_NODE running on cores."
+ module load intel/impi
+ export OMP_NUM_THREADS=1
+ MPICMD="mpirun -n $SLURM_NTASKS --ppn 40"
+ PWDIR="/data/users/jxu153/codes/qe/qe-6.1.0/bin"
+ YAMDIR=/data/users/jxu153/codes/yambo/yambo-4.1.4/bin
+# YAMDIR=/data/users/jxu153/codes/yambo/yambo-4.4.0/bin
+# YAMDIR=/home/kli103/work/programs/yambo-4.4.0/bin
+#####################################################################################################################################################
+
+############################### BNL ###########################
+# module load intel
+# echo "Start:"; date
+# export OMP_NUM_THREADS=1
+# MPICMD="srun -n $SLURM_NTASKS"
+# MPICMDS="mpirun -n 1"
+# YAMDIR="/sdcc/u/kli/programs/yambo-4.1.4_feng/bin"
+# PWDIR="/sdcc/u/kli/programs/qe-6.1.0/bin"
+###############################################################
+
+
+#######################################################################################################
+# Yambo's command line interface (see in the link below) (RL: reciprocal lattice)
+# http://www.yambo-code.org/wiki/index.php?title=Input_file_generation_and_command_line_options
+
+ $MPICMD $YAMDIR/yambo -F gw_ff.in -J all_Bz
+ echo "Done"
+ echo "End:"; date
+#######################################################################################################

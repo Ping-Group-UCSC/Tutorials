@@ -1,0 +1,78 @@
+*** libreadqe.py	2020-10-12 14:06:43.000000000 -0700
+--- libreadqe_python3_compatible.py	2020-10-12 14:16:15.000000000 -0700
+***************
+*** 7,13 ****
+  import numpy as np
+  import sys
+  
+! from io_package import read_cell_and_pos_auto 
+  
+  Ha2eV = 27.2113834
+  Ry2eV = Ha2eV / 2
+--- 7,13 ----
+  import numpy as np
+  import sys
+  
+! from io_package_python3_compatible import read_cell_and_pos_auto 
+  
+  Ha2eV = 27.2113834
+  Ry2eV = Ha2eV / 2
+***************
+*** 44,51 ****
+--- 44,55 ----
+  #Remove numbers in species and convert to cartesian
+          for atom in list_pos:
+              atom["species"] = filter(lambda x:x.isalpha(), atom["species"])
++ #            print(atom["species"])
++             atom["species"] = list(atom["species"])[0]
++ #            print(atom["species"])
+              atom["posxyz"] = np.dot(vecR, atom["pos"])
+  
++ 
+  #Read energy
+  #Always read first \!\! for hybrid or \! for non-yhybrid
+          with open(filename.replace(".in", ".out"), 'r') as f:
+***************
+*** 103,111 ****
+  
+      
+  def parse_attribute(st):
+!     l1 = [x.split("=") for x in st.split()[1:]]
+      for x in l1:
+!         x[1] = x[1][1:-1]
+          if (x[1].isdigit()):
+              x[1] = int(x[1])
+      return dict(l1)
+--- 107,119 ----
+  
+      
+  def parse_attribute(st):
+!     l1 = [str(x).split("=") for x in st.split()[1:]]
+! #    print(l1)
+      for x in l1:
+!         x[0] = x[0][2:]
+! #        print(x[1])
+!         x[1] = re.findall(r"[+-]?\d+\.\d*|[+-]?\d+|\w+", x[1])[0]
+! #        print(x[1])
+          if (x[1].isdigit()):
+              x[1] = int(x[1])
+      return dict(l1)
+***************
+*** 140,146 ****
+  #       print("Block: %i %i" % (ix2, ix3))
+  
+          mm.seek(ix)
+!         st = mm.readline().strip()[1:-1]
+          dic_attr = parse_attribute(st)
+          if (dic_attr["type"] == "complex"):
+              sizev = dic_attr["kind"] * 2
+--- 148,156 ----
+  #       print("Block: %i %i" % (ix2, ix3))
+  
+          mm.seek(ix)
+!         st = mm.readline().strip()
+! #        print(mm.readline().strip()[1:-1])
+! #        print(st)
+          dic_attr = parse_attribute(st)
+          if (dic_attr["type"] == "complex"):
+              sizev = dic_attr["kind"] * 2

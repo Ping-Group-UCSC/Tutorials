@@ -1,0 +1,36 @@
+*** io_package.py	2020-10-12 14:14:40.000000000 -0700
+--- io_package_python3_compatible.py	2020-10-12 14:14:18.000000000 -0700
+***************
+*** 76,82 ****
+              for line2 in lines[i+1:i+nat+1]:
+                  ar = line2.strip().split()
+                  pos = np.asarray([float(x) for x in ar[1:]])
+!                 list_pos.append({"species": filter(lambda x:x.isalpha(), ar[0]), "pos" : pos, "speciesfull" : ar[0]})
+  
+      if (os.path.exists(prefix + ".out")):
+          print("Read from QE output")
+--- 76,82 ----
+              for line2 in lines[i+1:i+nat+1]:
+                  ar = line2.strip().split()
+                  pos = np.asarray([float(x) for x in ar[1:]])
+!                 list_pos.append({"species": list(filter(lambda x:x.isalpha(), ar[0]))[0], "pos" : pos, "speciesfull" : ar[0]})
+  
+      if (os.path.exists(prefix + ".out")):
+          print("Read from QE output")
+***************
+*** 139,145 ****
+                      pos = np.dot(vecRi, pos)
+                  else:
+                      raise ValueError("Unsupported unit %s" % unit_coord)
+!                 list_pos.append({"species": filter(lambda x:x.isalpha(), ar[0]), "pos" : pos, "speciesfull" : ar[0]})
+  #               print(list_pos[-1])
+  
+  
+--- 139,145 ----
+                      pos = np.dot(vecRi, pos)
+                  else:
+                      raise ValueError("Unsupported unit %s" % unit_coord)
+!                 list_pos.append({"species": list(filter(lambda x:x.isalpha(), ar[0]))[0], "pos" : pos, "speciesfull" : ar[0]})
+  #               print(list_pos[-1])
+  
+  

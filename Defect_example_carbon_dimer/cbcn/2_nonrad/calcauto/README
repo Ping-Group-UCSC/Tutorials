@@ -1,0 +1,92 @@
+bulkband_index: [255,255]                    # the index of the lowest band that is unoccupied in the first excited state
+defectband_index: 256                        # the index of the highest band that is occupied in the first excited state
+defectband_spin: "up"                        # if spin up is the ground state, input up
+folder_final_state: ../lin-gs/
+folder_init_state: ../lin-cdftup1/
+ratio_final: 0.0                             # ratio of the distance to the final (ground) nuclear coordinate to the distance between the initial and final nuclear coordinates
+ratio_init: 1.0                              # ratio of the distance to the initial (excited) nuclear coordinate to the distance between the initial and final nuclear coordinates
+title: Nonradiative
+dE: 2.076048296958102212                     # ZPL
+dimension: xy
+temperature: [10,50,100,300,600]             # temperature of the material studied
+g: 1                                         # degeneracy
+
+
+
+M: 12.091669061587309                        # effective mass
+S_f: 5.660987351231782                       # Huang-Rhys factor with respect to phonon in the ground state
+S_i: 5.892617107639922                       # Huang-Rhys factor with respect to phonon in the excited state
+Wif: 0.35995889430328465                     # electronic term that contributes to nonradiative recombination
+WifBand: 255                                 # the highest occupied band in the ground state
+Wif_Allband:
+  255: 0.35995889430328465
+dErelf: 0.5345330684358487
+dEreli: 3.1450971356462105
+dQ: 0.7007279446719012                       # the change of nuclear position (the change in the atomic coordination between the initial and final states)
+diffEigQ0: 2.0252987909368936                # optical transition at 0 nuclear coordinate in configuration coordinate diagram
+filename_Cp_tilde: cp_T.txt
+filename_Q_etot: tot_Q.png
+filename_Q_etot_f: tot_Q_f.txt
+filename_Q_etot_i: tot_Q_i.txt
+filename_eigvals_f-down: occ-f-down.txt
+filename_eigvals_f-up: occ-f-up.txt
+filename_eigvals_i-down: occ-i-down.txt
+filename_eigvals_i-up: occ-i-up.txt
+filename_lifetime: lifetime_T.txt
+filename_overlap: overlap.txt
+filename_phonon_part: phonon_part.txt
+hbarFreqf: 96.38648274311535                 # phonon energy in the ground state (final)
+hbarFreqf_error: 12.844439691781979
+hbarFreqf_order:
+- hbarfreq: 0.09638648274311536
+  order: 2
+- hbarfreq: 0.09636484956122661
+  order: 3
+- hbarfreq: 0.08354204305133338
+  order: 4
+hbarFreqf_to02_order:
+- hbarfreq: 0.09637446493387103
+  order: 2
+- hbarfreq: 0.09641291685505414
+  order: 3
+- hbarfreq: 0.09630312717482885
+  order: 4
+hbarFreqi: 100.33031376297576               # phonon energy in the excited state (initial)
+hbarFreqi_error: 13.723575295090953
+hbarFreqi_order:
+- hbarfreq: 0.10033031376297576
+  order: 2
+- hbarfreq: 0.10126454751167108
+  order: 3
+- hbarfreq: 0.08754097221658012
+  order: 4
+hbarFreqi_to02_order:
+- hbarfreq: 0.09980563724206683
+  order: 2
+- hbarfreq: 0.10178446769225932
+  order: 3
+- hbarfreq: 0.10059337969907979
+  order: 4
+phonon_part_T0_HR: 1.8252574893731903       # ?
+unit:
+  M: aMU
+  dQ: aMU^1/2 Ang
+  hbarFreqf: meV
+  hbarFreqf_error: meV
+  hbarFreqi: meV
+  hbarFreqi_error: meV
+
+
+cp_T: capture coefficient at temperature T
+first column    second column
+T(K)            cp_T(cm^n/s)   (n-dimension)
+
+lifetime_T: nonradiative lifetime at temperature T
+first column    second column
+T(K)            tau^NR(s)
+
+phonon_part: X_if
+first column    second column
+T(K)            X_if
+
+

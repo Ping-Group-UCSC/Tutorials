@@ -1,0 +1,37 @@
+rim_cut                      # [R RIM CUT] Coulomb potential
+optics                       # [R OPT] Optics
+bse                          # [R BSE] Bethe Salpeter Equation.
+bsk                          # [R BSK] Bethe Salpeter Equation kernel
+bss                          # [R BSS] Bethe Salpeter Equation solver
+RandQpts= 1000000             # [RIM] Number of random q-points in the BZ
+RandGvec= 100          RL    # [RIM] Coulomb interaction RS components
+CUTGeo= "box z"              # [CUT] Coulomb Cutoff geometry: box/cylinder/sphere X/Y/Z/XY..
+% CUTBox
+ 0.0 | 0.0 | 29.0 |          # [CUT] [au] Box sides
+%
+CUTRadius= 0.000000          # [CUT] [au] Sphere/Cylinder radius
+CUTCylLen= 0.000000          # [CUT] [au] Cylinder length
+BS_CPU= "3 3 12"              # [PARALLEL] CPUs for each role
+BS_ROLEs= "k eh t"           # [PARALLEL] CPUs roles (k,eh,t)
+#BS_nCPU_invert=4             # [PARALLEL] CPUs for matrix inversion
+#BS_nCPU_diago=4              # [PARALLEL] CPUs for matrix diagonalization
+Chimod= "Hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+BSEmod= "causal"             # [BSE] resonant/causal/coupling
+BSKmod= "SEX"                # [BSE] IP/Hartree/HF/ALDA/SEX/BSfxc
+BSSmod= "d"                  # [BSS] (h)aydock/(d)iagonalization/(i)nversion/(t)ddft`
+BSENGBlk= 1           Ry    # [BSK] Screened interaction block size
+KfnQPdb= "E < ./gw0-ppa/ndb.QP"
+% BEnRange
+  0.00000 | 9.00000 | eV    # [BSS] Energy range
+%
+% BDmRange
+  0.02000 |  0.02000 | eV    # [BSS] Damping range
+%
+BEnSteps= 9001                # [BSS] Energy steps
+% BLongDir
+-1.732051 | 1.000000 | 0.000000 | # [BSS] [cc] Electric Field
+%
+% BSEBands
+  121 | 172 |                   # [BSK] Bands range
+%
+WRbsWF

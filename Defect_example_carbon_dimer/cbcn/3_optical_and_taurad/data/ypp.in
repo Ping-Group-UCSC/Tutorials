@@ -1,0 +1,3 @@
+BoseTemp=  0.02585     eV    # Bosonic Temperature
+excitons                     # [R] Excitons
+States= "1 - 9"              # Index of the BS state(s)

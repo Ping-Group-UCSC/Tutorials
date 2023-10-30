@@ -1,0 +1,9 @@
+Start:
+Sun Dec 12 00:38:31 PST 2021
+Running program on 1 nodes with 1 total tasks, with each node getting 1 running on cores.
+mkdir: cannot create directory ‘../data’: File exists
+RL = 27990
+mv: cannot stat ‘LOG’: No such file or directory
+Done
+End:
+Sun Dec 12 00:41:26 PST 2021

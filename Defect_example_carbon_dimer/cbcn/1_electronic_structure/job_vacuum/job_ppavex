@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH --job-name=vac
+#SBATCH --output=qe.%j
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --time=24:00:00
+#SBATCH --partition=normal
+# SBATCH --dependency=afterany:48083
+# SBATCH --account=windfall
+
+ module add intel/17.0.5.239 impi/2017
+ NCORES=$(($SLURM_NTASKS_PER_NODE * $SLURM_JOB_NUM_NODES))
+ MPICMD="mpirun -genv I_MPI_FABRICS shm:ofa -n $SLURM_NTASKS"
+ PWDIR="/export/data/share/wufeng/programs-intel2017.5/qe-6.1-scal/bin"
+
+
+
+echo "Start: "; date
+
+$MPICMD $PWDIR/pp.x -inp pp_pot.in > pp_pot.out
+$MPICMD $PWDIR/average.x < avg.in > avg.out
+
+echo "End: "; date
+echo "Done"
+

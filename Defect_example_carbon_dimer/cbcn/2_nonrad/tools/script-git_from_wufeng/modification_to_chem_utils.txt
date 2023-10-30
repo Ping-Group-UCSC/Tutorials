@@ -1,0 +1,23 @@
+*** chem_utils.py	2020-10-12 14:06:43.000000000 -0700
+--- chem_utils_python3_compatible.py	2020-10-12 14:07:14.000000000 -0700
+***************
+*** 123,131 ****
+  
+  def f_Element_Symbol_to_Z(symbl):
+    try: 
+!     z = elements.index(symbl.strip()) + 1
+    except:
+!     print "WARNING in f_Element_Symbol_to_Z: %s is not an element symbol" %(symbl)
+      z = 0 
+    return z
+  
+--- 123,131 ----
+  
+  def f_Element_Symbol_to_Z(symbl):
+    try: 
+!     z = elements.index(symbl) + 1
+    except:
+!     print("WARNING in f_Element_Symbol_to_Z: %s is not an element symbol" %(symbl))
+      z = 0 
+    return z
+  

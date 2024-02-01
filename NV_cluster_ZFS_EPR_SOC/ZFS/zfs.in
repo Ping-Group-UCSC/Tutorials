@@ -1,0 +1,15 @@
+
+# Use EPR-II is a special basis set for epr, autoaux creates a large auxiliary basis set
+!PBE EPR-II AUTOAUX RIJCOSX
+
+# use original (unoptimized) cluster xyz
+*xyzfile -1 3 nv_cluster.xyz
+
+# Parallelization
+%PAL NPROCS 72 END
+
+# ZFS calculation
+%EPRNMR DTENSOR SSANDSO
+    DSS     UNO
+    DSOC    CP
+END

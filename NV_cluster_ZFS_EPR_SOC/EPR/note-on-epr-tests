@@ -1,0 +1,9 @@
+Attempted to run calculations with GIAO (gauge-invariant atomic orbitals) but it persistently failed
+
+Things I tried:
+
+    > 1,2,3,4 and 8 nodes with 36 cores per node
+    > specify restricted memory usage
+        >> using maxcore specified 75% of available memory
+    > attempted using fewer cores on a single node
+    > attempted RIJCOSX

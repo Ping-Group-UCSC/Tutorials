@@ -1,0 +1,9 @@
+
+# specify functional, basis set, and geometry optimzation
+! PBE def2-TZVP Opt
+
+# specify geometry, charge, and multiplicity (2S+1)
+*xyzfile -1 3 nv_cluster.xyz
+
+# Parallelization
+%PAL NPROCS 72 END

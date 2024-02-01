@@ -1,0 +1,22 @@
+# functional/basis
+! PBE def2-TZVP
+
+# extend scf settings
+%SCF MaxIter 500 end
+
+# modify damping parameters
+!SlowConv
+
+# faster algo
+!KDIIS SOSCF
+
+# TDDFT block
+%TDDFT  NROOTS  5
+        DOSOC   TRUE
+END
+
+# geometry
+* xyzFile -1 1 nv.xyz
+
+# parallelization
+%PAL NPROCS 72 END

@@ -1,0 +1,33 @@
+include totalE-ph.in
+
+wannier \
+        loadRotations yes \
+        innerWindow  -0.22 0.35 \
+        outerWindow  -0.22 0.62 \
+        saveMomenta yes \
+        saveSpin yes \
+        phononSupercell 4 4 4
+
+wannier-initial-state totalE.$VAR
+wannier-dump-name wannier.$VAR
+
+wannier-minimize \
+    energyDiffThreshold 1e-12 \
+    nIterations 50000
+
+wannier-center Gaussian   0.186076  -0.189949  -0.342823 2.0 sUp 
+wannier-center Gaussian   0.186076  -0.189949  -0.342823 2.0 sDn 
+wannier-center Gaussian   0.359158  -0.046179  -0.403578 2.0 sUp 
+wannier-center Gaussian   0.359158  -0.046179  -0.403578 2.0 sDn 
+wannier-center Gaussian  -0.287563   0.248038   0.149664 2.0 sUp 
+wannier-center Gaussian  -0.287563   0.248038   0.149664 2.0 sDn 
+wannier-center Gaussian   0.174180   0.220092   0.292742 2.0 sUp 
+wannier-center Gaussian   0.174180   0.220092   0.292742 2.0 sDn 
+wannier-center Gaussian   0.175555   0.481947  -0.472100 2.0 sUp 
+wannier-center Gaussian   0.175555   0.481947  -0.472100 2.0 sDn 
+wannier-center Gaussian  -0.135836   0.204017  -0.371765 2.0 sUp 
+wannier-center Gaussian  -0.135836   0.204017  -0.371765 2.0 sDn 
+wannier-center Gaussian   0.177303  -0.145950   0.263045 2.0 sUp 
+wannier-center Gaussian   0.177303  -0.145950   0.263045 2.0 sDn 
+wannier-center Gaussian   0.251832  -0.228231   0.224170 2.0 sUp 
+wannier-center Gaussian   0.251832  -0.228231   0.224170 2.0 sDn 

@@ -1,0 +1,24 @@
+# note that parameters scissor and seedStart are not included in original version
+# so that they must be commented out for original ePhSpinRelax
+
+scissor           0.586 # scissor operator to change the band gap, in eV
+
+# scissor will change the energy of CBM
+# in this example, CBM + scissor = dmuMax = 1.14 eV
+# so if without scissor and you want to keep dmuMax at CBM,
+# you must change dmuMax to 1.14 - 0.537621548118 = 0.602378451882 eV
+
+nOffsets          50000   #Total number of k-pair offsets (or shifts from DFT k/q grids)
+seedStart         0   #Random seed number of offset o = seedStart + o
+nBlocks           4   #Number of blocks for error estimation
+TMin            100   #Temperature in Kelvin
+TMax            300
+TCount            3
+dmuMin            0.0   #optional shift in chemical potential from neutral value; start of range (default to 0)
+                        #if no smearing is used in DFT, energy zero will be VBM
+                        #if smearing is used, energy zero is Fermi level by DFT simulation (on coarse meshes)
+dmuMax            1.14   #optional shift in chemical potential from neutral value; end of range (default to 0)
+dmuCount         12   #number of chemical potential shifts (default to 1)
+
+EconserveWidth    0.01   #Gaussian delta function width in eV
+neglectThreshold  1e-6

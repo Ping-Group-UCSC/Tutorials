@@ -1,0 +1,17 @@
+include totalE-ph.in
+
+wannier \
+        loadRotations yes \
+        innerWindow  -0.22 0.35 \
+        outerWindow  -0.22 0.62 \
+        saveMomenta yes \
+        saveSpin yes \
+        phononSupercell 4 4 4
+
+wannier-initial-state totalE.$VAR
+wannier-dump-name wannier.$VAR
+
+wannier-minimize \
+    energyDiffThreshold 1e-12 \
+    nIterations 50000
+

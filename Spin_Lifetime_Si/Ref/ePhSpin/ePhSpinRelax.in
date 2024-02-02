@@ -1,0 +1,12 @@
+scissor           0.537621548118 # scissor operator to change the band gap, in eV
+
+nOffsets       1000   #Total number of k-pair offsets (or shifts from DFT k/q grids)
+seedStart         0   #Random seed number of offset o = seedStart + o
+nBlocks           4   #Number of blocks for error estimation
+TMin            100   #Temperature in Kelvin
+TMax            300
+TCount            3
+dmuMin            0.0   #optional shift in chemical potential from neutral value; start of range (default to 0)
+dmuMax            1.14   #optional shift in chemical potential from neutral value; end of range (default to 0)
+dmuCount         12   #number of chemical potential shifts (default to 1)
+EconserveWidth    0.01   #Gaussian delta function width in eV

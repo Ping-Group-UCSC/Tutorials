@@ -1,0 +1,21 @@
+scissor		0.586
+Bext		1,0,0
+#read_kpts	1
+
+#band_skipped    0
+#assumeMetal     1
+
+NkMult		5
+dmuMin	        0
+dmuMax	        1.14
+Tmax		300
+nkBT            6
+pumpOmegaMax    0.0
+pumpTau         10000
+probeOmegaMax	0.0
+
+ePhMode		DiagK
+ePhOnlyElec	1
+detailBalance   1
+ePhDelta        0.01
+#write_sparseP   1

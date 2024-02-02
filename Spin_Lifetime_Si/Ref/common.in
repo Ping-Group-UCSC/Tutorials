@@ -1,0 +1,10 @@
+lattice face-centered Cubic 10.263
+ion-species Si.upf
+elec-cutoff 14
+
+ion Si 0.00 0.00 0.00  0
+ion Si 0.25 0.25 0.25  0
+
+elec-n-bands 24
+converge-empty-states yes
+spintype spin-orbit

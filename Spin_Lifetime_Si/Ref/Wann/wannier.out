@@ -1,0 +1,642 @@
+TACC:  Starting up job 6518493 
+TACC:  Starting parallel tasks... 
+
+*************** JDFTx 1.5.0  ***************
+
+Start date and time: Sun Sep 27 08:04:35 2020
+Executable /home1/06235/tg855346/jdftx_codes/jdftx-20190827/build/wannier with command-line: -i wannier.in
+Running on hosts (process indices):  c506-062.stampede2.tacc.utexas.edu (0-47)
+Divided in process groups (process indices):  0 (0)  1 (1)  2 (2)  3 (3)  4 (4)  5 (5)  6 (6)  7 (7)  8 (8)  9 (9)  10 (10)  11 (11)  12 (12)  13 (13)  14 (14)  15 (15)  16 (16)  17 (17)  18 (18)  19 (19)  20 (20)  21 (21)  22 (22)  23 (23)  24 (24)  25 (25)  26 (26)  27 (27)  28 (28)  29 (29)  30 (30)  31 (31)  32 (32)  33 (33)  34 (34)  35 (35)  36 (36)  37 (37)  38 (38)  39 (39)  40 (40)  41 (41)  42 (42)  43 (43)  44 (44)  45 (45)  46 (46)  47 (47)
+Resource initialization completed at t[s]:      0.01
+Run totals: 48 processes, 48 threads, 0 GPUs
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+converge-empty-states yes
+coords-type Lattice
+core-overlap-check vector
+coulomb-interaction Periodic
+davidson-band-ratio 1.1
+dump End State Vscloc BandEigs
+dump Init Symmetries
+dump-name totalE.$VAR
+elec-cutoff 14
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBE
+elec-n-bands 24
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-09 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+exchange-regularization WignerSeitzTruncated
+fluid None
+fluid-ex-corr lda-TF lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42 \
+	tauNuc 343133 \
+	poleEl 15 7 1
+forces-output-coords Positions
+initial-state totalE.$VAR
+ion Si   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Si   0.250000000000000   0.250000000000000   0.250000000000000 0
+ion-species Si.upf
+ion-width 0
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0.0001 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+kpoint   0.000000000000   0.000000000000   0.000000000000  1.00000000000000
+kpoint-folding 12 12 12 
+latt-move-scale 1 1 1
+latt-scale 1 1 1 
+lattice Face-Centered Cubic 10.263
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+lcao-params -1 1e-06 0.001
+pcm-variant GLSSA13
+spintype spin-orbit
+subspace-rotation-factor 1 yes
+symmetries automatic
+symmetry-threshold 0.0001
+wannier  \
+	localizationMeasure FiniteDifference \
+	precondition no \
+	saveWfns no \
+	saveWfnsRealSpace no \
+	saveMomenta yes \
+	saveSpin yes \
+	loadRotations no \
+	outerWindow -0.22 0.62 \
+	innerWindow -0.22 0.35 \
+	phononSupercell 4 4 4 \
+	rSmooth 1 \
+	spinMode All \
+	polar no
+wannier-center Gaussian 0.071706 0.296365 0.151637 2 sUp  1
+wannier-center Gaussian 0.071706 0.296365 0.151637 2 sDn  1
+wannier-center Gaussian -0.012008 0.242468 -0.311706 2 sUp  1
+wannier-center Gaussian -0.012008 0.242468 -0.311706 2 sDn  1
+wannier-center Gaussian 0.150384 0.15283 -0.140764 2 sUp  1
+wannier-center Gaussian 0.150384 0.15283 -0.140764 2 sDn  1
+wannier-center Gaussian 0.329152 -0.346624 -0.199208 2 sUp  1
+wannier-center Gaussian 0.329152 -0.346624 -0.199208 2 sDn  1
+wannier-center Gaussian -0.240256 0.419872 -0.062452 2 sUp  1
+wannier-center Gaussian -0.240256 0.419872 -0.062452 2 sDn  1
+wannier-center Gaussian -0.492476 0.211931 -0.026286 2 sUp  1
+wannier-center Gaussian -0.492476 0.211931 -0.026286 2 sDn  1
+wannier-center Gaussian 0.264661 -0.007036 0.247718 2 sUp  1
+wannier-center Gaussian 0.264661 -0.007036 0.247718 2 sDn  1
+wannier-center Gaussian -0.269243 0.05833 -0.095415 2 sUp  1
+wannier-center Gaussian -0.269243 0.05833 -0.095415 2 sDn  1
+wannier-dump-name wannier.$VAR
+wannier-initial-state totalE.$VAR
+wannier-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          50000 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-12 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+
+
+
+---------- Setting up symmetries ----------
+
+Found 48 point-group symmetries of the bravais lattice
+Found 48 space-group symmetries with basis
+Applied RMS atom displacement 0 bohrs to make symmetries exact.
+
+---------- Initializing the Grid ----------
+R = 
+[          0     5.1315     5.1315  ]
+[     5.1315          0     5.1315  ]
+[     5.1315     5.1315          0  ]
+unit cell volume = 270.248
+G =
+[  -0.612217   0.612217   0.612217  ]
+[   0.612217  -0.612217   0.612217  ]
+[   0.612217   0.612217  -0.612217  ]
+Minimum fftbox size, Smin = [  28  28  28  ]
+Chosen fftbox size, S = [  28  28  28  ]
+
+---------- Exchange Correlation functional ----------
+Initalized PBE GGA exchange.
+Initalized PBE GGA correlation.
+
+---------- Setting up pseudopotentials ----------
+Width of ionic core gaussian charges (only for fluid interactions / plotting) set to 0
+
+Reading pseudopotential file 'Si.upf':
+  'Si' pseudopotential, 'PBE' functional
+  Generated using ONCVPSP code by D. R. Hamann
+  Author: anonymous  Date: 180423.
+  4 valence electrons, 3 orbitals, 10 projectors, 1528 radial grid points, with lMax = 2
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1427 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 363 points.
+    3S    l: 0   occupation:  2.0   eigenvalue: -0.397349
+    3P    l: 1   occupation:  1.3   eigenvalue: -0.149589
+    3P    l: 1   occupation:  0.7   eigenvalue: -0.150748
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 363 points.
+  Transforming core density to a uniform radial grid of dG=0.02 with 1427 points.
+  Core radius for overlap checks: 1.86 bohrs.
+
+Initialized 1 species with 2 total atoms.
+
+Folded 1 k-points by 12x12x12 to 1728 k-points.
+
+---------- Setting up k-points, bands, fillings ----------
+Reduced to 72 k-points under symmetry. 
+Computing the number of bands and number of electrons
+Calculating initial fillings.
+Turning on subspace rotations due to non-scalar fillings.
+nElectrons:   8.000000   nBands: 24   nStates: 72
+
+----- Setting up reduced wavefunction bases (one per k-point) -----
+average nbasis = 675.895 , ideal nbasis = 676.159
+
+---------- Setting up ewald sum ----------
+Optimum gaussian width for ewald sums = 2.330638 bohr.
+Real space sum over 1331 unit cells with max indices [  5  5  5  ]
+Reciprocal space sum over 2197 terms with max indices [  6  6  6  ]
+
+---------- Allocating electronic variables ----------
+Initializing wave functions:  reading from 'totalE.wfns'
+
+
+----- Initializing Supercell corresponding to k-point mesh -----
+Lattice vector linear combinations in supercell:
+[  12   0   0  ]
+[   0  12   0  ]
+[   0   0  12  ]
+Supercell lattice vectors:
+[  0  61.578  61.578  ]
+[  61.578  0  61.578  ]
+[  61.578  61.578  0  ]
+
+---------- Initializing Wannier Function solver ----------
+
+---------- Initializing supercell grid for Wannier functions ----------
+Dumping 'wannier.mlwfBandRanges' ... done.
+Found 6 phonon modes in 'totalE.phononBasis'
+Setting up finite difference formula on k-mesh ... found a 8 neighbour formula.
+nbasis = 1139 for k = [   0.000   0.000   0.000  ]
+
+---- Citations for features of the code used in this run ----
+
+   Software package:
+      R. Sundararaman, K. Letchworth-Weaver, K.A. Schwarz, D. Gunceler, Y. Ozhabes and T.A. Arias, 'JDFTx: software for joint density-functional theory', SoftwareX 6, 278 (2017)
+
+   gga-PBE exchange-correlation functional:
+      J.P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996)
+
+   Total energy minimization:
+      T.A. Arias, M.C. Payne and J.D. Joannopoulos, Phys. Rev. Lett. 69, 1077 (1992)
+
+   Maximally-localized Wannier functions:
+      N. Marzari and D. Vanderbilt, Phys. Rev. B 56, 12847 (1997)
+
+This list may not be complete. Please suggest additional citations or
+report any other bugs at https://github.com/shankar1729/jdftx/issues
+
+
+Dumping 'wannier.mlwfM0' ... done.
+WannierMinimize: Iter:   0  Omega:  4.882212374142310e+02  |grad|_K:  8.161e+00  t[s]:      4.76
+WannierMinimize: Iter:   1  Omega:  4.348452859356012e+02  |grad|_K:  5.636e+00  alpha:  1.000e+00  linmin: -8.632e-01  t[s]:      4.78
+WannierMinimize: Iter:   2  Omega:  3.674526555650967e+02  |grad|_K:  4.914e+00  alpha:  1.000e+00  linmin: -1.158e-02  t[s]:      4.80
+WannierMinimize: Iter:   3  Omega:  3.471959727559686e+02  |grad|_K:  6.459e+00  alpha:  1.000e+00  linmin:  1.247e-01  t[s]:      4.82
+WannierMinimize: Iter:   4  Omega:  3.274783448834908e+02  |grad|_K:  3.129e+00  alpha:  1.000e+00  linmin: -6.595e-01  t[s]:      4.83
+WannierMinimize: Iter:   5  Omega:  3.148021040567477e+02  |grad|_K:  2.653e+00  alpha:  1.000e+00  linmin: -2.696e-01  t[s]:      4.85
+WannierMinimize: Iter:   6  Omega:  3.048040615367530e+02  |grad|_K:  2.836e+00  alpha:  1.000e+00  linmin: -2.696e-01  t[s]:      4.87
+WannierMinimize: Iter:   7  Omega:  2.961765044820957e+02  |grad|_K:  5.187e+00  alpha:  1.000e+00  linmin:  1.122e-01  t[s]:      4.89
+WannierMinimize: Iter:   8  Omega:  2.850301393484916e+02  |grad|_K:  2.157e+00  alpha:  1.000e+00  linmin: -2.222e-01  t[s]:      4.90
+WannierMinimize: Iter:   9  Omega:  2.805799168200641e+02  |grad|_K:  1.687e+00  alpha:  1.000e+00  linmin: -4.901e-01  t[s]:      4.92
+WannierMinimize: Iter:  10  Omega:  2.743671276058546e+02  |grad|_K:  1.811e+00  alpha:  1.000e+00  linmin: -2.226e-01  t[s]:      4.94
+WannierMinimize: Iter:  11  Omega:  2.700434343925612e+02  |grad|_K:  3.245e+00  alpha:  1.000e+00  linmin:  6.637e-02  t[s]:      4.96
+WannierMinimize: Iter:  12  Omega:  2.653162866239834e+02  |grad|_K:  1.431e+00  alpha:  1.000e+00  linmin: -1.941e-01  t[s]:      4.98
+WannierMinimize: Iter:  13  Omega:  2.628788144676932e+02  |grad|_K:  1.177e+00  alpha:  1.000e+00  linmin: -4.308e-01  t[s]:      5.00
+WannierMinimize: Iter:  14  Omega:  2.598027750299337e+02  |grad|_K:  1.344e+00  alpha:  1.000e+00  linmin: -2.028e-01  t[s]:      5.02
+WannierMinimize: Iter:  15  Omega:  2.574779977424888e+02  |grad|_K:  2.702e+00  alpha:  1.000e+00  linmin:  6.421e-02  t[s]:      5.04
+WannierMinimize: Iter:  16  Omega:  2.542546773539341e+02  |grad|_K:  1.199e+00  alpha:  1.000e+00  linmin: -2.886e-01  t[s]:      5.07
+WannierMinimize: Iter:  17  Omega:  2.523214390678858e+02  |grad|_K:  9.802e-01  alpha:  1.000e+00  linmin: -3.357e-01  t[s]:      5.10
+WannierMinimize: Iter:  18  Omega:  2.503402782231781e+02  |grad|_K:  1.173e+00  alpha:  1.000e+00  linmin: -1.830e-01  t[s]:      5.13
+WannierMinimize: Iter:  19  Omega:  2.478872375029094e+02  |grad|_K:  1.959e+00  alpha:  1.000e+00  linmin: -1.124e-02  t[s]:      5.16
+WannierMinimize: Iter:  20  Omega:  2.453396764601356e+02  |grad|_K:  1.178e+00  alpha:  1.000e+00  linmin: -3.957e-02  t[s]:      5.18
+WannierMinimize: Iter:  21  Omega:  2.435256219992374e+02  |grad|_K:  9.126e-01  alpha:  1.000e+00  linmin: -4.330e-01  t[s]:      5.19
+WannierMinimize: Iter:  22  Omega:  2.412493898462803e+02  |grad|_K:  1.394e+00  alpha:  1.000e+00  linmin: -3.566e-02  t[s]:      5.21
+WannierMinimize: Iter:  23  Omega:  2.394873602435097e+02  |grad|_K:  1.647e+00  alpha:  1.000e+00  linmin: -6.708e-03  t[s]:      5.23
+WannierMinimize: Iter:  24  Omega:  2.376688016357128e+02  |grad|_K:  1.128e+00  alpha:  1.000e+00  linmin: -3.194e-01  t[s]:      5.25
+WannierMinimize: Iter:  25  Omega:  2.353337513905614e+02  |grad|_K:  1.199e+00  alpha:  1.000e+00  linmin:  3.810e-02  t[s]:      5.27
+WannierMinimize: Iter:  26  Omega:  2.338013316672666e+02  |grad|_K:  1.241e+00  alpha:  1.000e+00  linmin: -5.388e-03  t[s]:      5.29
+WannierMinimize: Iter:  27  Omega:  2.321367399250667e+02  |grad|_K:  1.167e+00  alpha:  1.000e+00  linmin: -1.218e-01  t[s]:      5.31
+WannierMinimize: Iter:  28  Omega:  2.303926214727058e+02  |grad|_K:  8.411e-01  alpha:  1.000e+00  linmin: -1.309e-01  t[s]:      5.33
+WannierMinimize: Iter:  29  Omega:  2.290072447166596e+02  |grad|_K:  1.074e+00  alpha:  1.000e+00  linmin: -7.723e-02  t[s]:      5.35
+WannierMinimize: Iter:  30  Omega:  2.275429698876414e+02  |grad|_K:  1.020e+00  alpha:  1.000e+00  linmin: -3.315e-02  t[s]:      5.37
+WannierMinimize: Iter:  31  Omega:  2.261995528165695e+02  |grad|_K:  8.667e-01  alpha:  1.000e+00  linmin: -2.043e-01  t[s]:      5.38
+WannierMinimize: Iter:  32  Omega:  2.249351815461802e+02  |grad|_K:  1.113e+00  alpha:  1.000e+00  linmin:  2.615e-02  t[s]:      5.40
+WannierMinimize: Iter:  33  Omega:  2.238796285017208e+02  |grad|_K:  7.880e-01  alpha:  1.000e+00  linmin: -1.142e-01  t[s]:      5.42
+WannierMinimize: Iter:  34  Omega:  2.229234051067680e+02  |grad|_K:  8.592e-01  alpha:  1.000e+00  linmin: -1.163e-01  t[s]:      5.44
+WannierMinimize: Iter:  35  Omega:  2.219381409994881e+02  |grad|_K:  9.271e-01  alpha:  1.000e+00  linmin:  2.033e-02  t[s]:      5.46
+WannierMinimize: Iter:  36  Omega:  2.211693562402813e+02  |grad|_K:  7.376e-01  alpha:  1.000e+00  linmin: -6.331e-02  t[s]:      5.48
+WannierMinimize: Iter:  37  Omega:  2.203674471422733e+02  |grad|_K:  6.709e-01  alpha:  1.000e+00  linmin: -2.586e-01  t[s]:      5.50
+WannierMinimize: Iter:  38  Omega:  2.194085552339871e+02  |grad|_K:  7.425e-01  alpha:  1.000e+00  linmin: -4.949e-02  t[s]:      5.52
+WannierMinimize: Iter:  39  Omega:  2.186857702478927e+02  |grad|_K:  1.107e+00  alpha:  1.000e+00  linmin:  2.144e-02  t[s]:      5.54
+WannierMinimize: Iter:  40  Omega:  2.177869740044830e+02  |grad|_K:  7.173e-01  alpha:  1.000e+00  linmin: -2.538e-01  t[s]:      5.55
+WannierMinimize: Iter:  41  Omega:  2.165912888737549e+02  |grad|_K:  7.436e-01  alpha:  1.000e+00  linmin: -8.974e-02  t[s]:      5.57
+WannierMinimize: Iter:  42  Omega:  2.156173933235472e+02  |grad|_K:  9.837e-01  alpha:  1.000e+00  linmin: -1.044e-01  t[s]:      5.59
+WannierMinimize: Iter:  43  Omega:  2.140472910938402e+02  |grad|_K:  1.002e+00  alpha:  1.000e+00  linmin: -1.443e-02  t[s]:      5.61
+WannierMinimize: Iter:  44  Omega:  2.128869876226797e+02  |grad|_K:  1.479e+00  alpha:  1.000e+00  linmin:  4.299e-02  t[s]:      5.63
+WannierMinimize: Iter:  45  Omega:  2.114995687336913e+02  |grad|_K:  8.141e-01  alpha:  1.000e+00  linmin: -4.032e-01  t[s]:      5.65
+WannierMinimize: Iter:  46  Omega:  2.104227662074906e+02  |grad|_K:  6.995e-01  alpha:  1.000e+00  linmin: -1.316e-01  t[s]:      5.67
+WannierMinimize: Iter:  47  Omega:  2.095216867712032e+02  |grad|_K:  9.344e-01  alpha:  1.000e+00  linmin: -7.902e-02  t[s]:      5.69
+WannierMinimize: Iter:  48  Omega:  2.085513970022253e+02  |grad|_K:  8.104e-01  alpha:  1.000e+00  linmin: -2.898e-02  t[s]:      5.71
+WannierMinimize: Iter:  49  Omega:  2.078251241121058e+02  |grad|_K:  6.388e-01  alpha:  1.000e+00  linmin: -1.448e-01  t[s]:      5.73
+WannierMinimize: Iter:  50  Omega:  2.072395450814938e+02  |grad|_K:  5.589e-01  alpha:  1.000e+00  linmin: -1.549e-01  t[s]:      5.75
+WannierMinimize: Iter:  51  Omega:  2.066906461231114e+02  |grad|_K:  6.821e-01  alpha:  1.000e+00  linmin: -2.680e-02  t[s]:      5.77
+WannierMinimize: Iter:  52  Omega:  2.060815156712216e+02  |grad|_K:  6.289e-01  alpha:  1.000e+00  linmin: -4.147e-02  t[s]:      5.78
+WannierMinimize: Iter:  53  Omega:  2.055877736038031e+02  |grad|_K:  5.418e-01  alpha:  1.000e+00  linmin: -1.328e-01  t[s]:      5.80
+WannierMinimize: Iter:  54  Omega:  2.051300292768767e+02  |grad|_K:  5.381e-01  alpha:  1.000e+00  linmin: -1.090e-01  t[s]:      5.82
+WannierMinimize: Iter:  55  Omega:  2.046141278208354e+02  |grad|_K:  6.991e-01  alpha:  1.000e+00  linmin: -4.519e-02  t[s]:      5.84
+WannierMinimize: Iter:  56  Omega:  2.040124163446707e+02  |grad|_K:  5.759e-01  alpha:  1.000e+00  linmin: -9.755e-02  t[s]:      5.86
+WannierMinimize: Iter:  57  Omega:  2.033496628966028e+02  |grad|_K:  6.758e-01  alpha:  1.000e+00  linmin: -5.940e-02  t[s]:      5.88
+WannierMinimize: Iter:  58  Omega:  2.026981659034491e+02  |grad|_K:  6.993e-01  alpha:  1.000e+00  linmin: -6.687e-02  t[s]:      5.90
+WannierMinimize: Iter:  59  Omega:  2.019729869587149e+02  |grad|_K:  6.670e-01  alpha:  1.000e+00  linmin: -1.234e-01  t[s]:      5.92
+WannierMinimize: Iter:  60  Omega:  2.010290997886479e+02  |grad|_K:  8.625e-01  alpha:  1.000e+00  linmin: -1.455e-02  t[s]:      5.94
+WannierMinimize: Iter:  61  Omega:  2.001632391628129e+02  |grad|_K:  9.112e-01  alpha:  1.000e+00  linmin: -2.912e-02  t[s]:      5.96
+WannierMinimize: Iter:  62  Omega:  1.992111567402568e+02  |grad|_K:  8.051e-01  alpha:  1.000e+00  linmin: -2.950e-01  t[s]:      5.97
+WannierMinimize: Iter:  63  Omega:  1.978209733896498e+02  |grad|_K:  1.329e+00  alpha:  1.000e+00  linmin:  2.549e-02  t[s]:      5.99
+WannierMinimize: 	Wolfe criterion not satisfied: alpha: 1  (E-E0)/|gdotd0|: 0.128512  gdotd/gdotd0: -1.49877 (taking cubic step)
+WannierMinimize: Iter:  64  Omega:  1.965606510695605e+02  |grad|_K:  1.282e+00  alpha:  4.725e-01  linmin: -3.513e-03  t[s]:      6.03
+WannierMinimize: Iter:  65  Omega:  1.948955245605190e+02  |grad|_K:  1.112e+00  alpha:  1.000e+00  linmin: -1.082e-01  t[s]:      6.05
+WannierMinimize: Iter:  66  Omega:  1.937010250618978e+02  |grad|_K:  7.079e-01  alpha:  1.000e+00  linmin: -1.777e-01  t[s]:      6.06
+WannierMinimize: Iter:  67  Omega:  1.928994664335609e+02  |grad|_K:  9.101e-01  alpha:  1.000e+00  linmin: -3.170e-02  t[s]:      6.08
+WannierMinimize: Iter:  68  Omega:  1.918418941479491e+02  |grad|_K:  1.160e+00  alpha:  1.000e+00  linmin: -6.458e-02  t[s]:      6.10
+WannierMinimize: Iter:  69  Omega:  1.906048071733649e+02  |grad|_K:  1.555e+00  alpha:  1.000e+00  linmin:  1.036e-01  t[s]:      6.12
+WannierMinimize: Iter:  70  Omega:  1.885825928616140e+02  |grad|_K:  1.366e+00  alpha:  1.000e+00  linmin:  4.646e-02  t[s]:      6.14
+WannierMinimize: Iter:  71  Omega:  1.874150106286401e+02  |grad|_K:  7.269e-01  alpha:  1.000e+00  linmin: -2.718e-01  t[s]:      6.16
+WannierMinimize: Iter:  72  Omega:  1.864737524470678e+02  |grad|_K:  7.400e-01  alpha:  1.000e+00  linmin: -1.957e-01  t[s]:      6.18
+WannierMinimize: Iter:  73  Omega:  1.849578101686381e+02  |grad|_K:  1.040e+00  alpha:  1.000e+00  linmin: -2.744e-02  t[s]:      6.20
+WannierMinimize: Iter:  74  Omega:  1.846236523030722e+02  |grad|_K:  1.889e+00  alpha:  1.000e+00  linmin:  1.680e-01  t[s]:      6.22
+WannierMinimize: Iter:  75  Omega:  1.833097603683799e+02  |grad|_K:  6.561e-01  alpha:  1.000e+00  linmin: -5.419e-01  t[s]:      6.24
+WannierMinimize: Iter:  76  Omega:  1.828100065590596e+02  |grad|_K:  4.941e-01  alpha:  1.000e+00  linmin: -4.073e-01  t[s]:      6.26
+WannierMinimize: Iter:  77  Omega:  1.822074764066656e+02  |grad|_K:  6.225e-01  alpha:  1.000e+00  linmin: -1.895e-01  t[s]:      6.27
+WannierMinimize: Iter:  78  Omega:  1.815310118731317e+02  |grad|_K:  8.488e-01  alpha:  1.000e+00  linmin: -3.264e-02  t[s]:      6.29
+WannierMinimize: Iter:  79  Omega:  1.810827673845263e+02  |grad|_K:  7.490e-01  alpha:  1.000e+00  linmin:  9.653e-02  t[s]:      6.32
+WannierMinimize: Iter:  80  Omega:  1.807091368297345e+02  |grad|_K:  3.585e-01  alpha:  1.000e+00  linmin: -5.054e-01  t[s]:      6.35
+WannierMinimize: Iter:  81  Omega:  1.804533292931544e+02  |grad|_K:  3.764e-01  alpha:  1.000e+00  linmin: -1.984e-01  t[s]:      6.37
+WannierMinimize: Iter:  82  Omega:  1.802064703608409e+02  |grad|_K:  5.373e-01  alpha:  1.000e+00  linmin: -6.912e-02  t[s]:      6.39
+WannierMinimize: Iter:  83  Omega:  1.798902197640392e+02  |grad|_K:  5.604e-01  alpha:  1.000e+00  linmin:  1.379e-02  t[s]:      6.41
+WannierMinimize: Iter:  84  Omega:  1.796458929098824e+02  |grad|_K:  3.815e-01  alpha:  1.000e+00  linmin: -1.036e-01  t[s]:      6.42
+WannierMinimize: Iter:  85  Omega:  1.794734566412114e+02  |grad|_K:  3.355e-01  alpha:  1.000e+00  linmin: -2.122e-01  t[s]:      6.44
+WannierMinimize: Iter:  86  Omega:  1.792763818457852e+02  |grad|_K:  3.833e-01  alpha:  1.000e+00  linmin: -1.354e-01  t[s]:      6.46
+WannierMinimize: Iter:  87  Omega:  1.791131285943363e+02  |grad|_K:  6.572e-01  alpha:  1.000e+00  linmin:  6.474e-02  t[s]:      6.48
+WannierMinimize: Iter:  88  Omega:  1.789122257568060e+02  |grad|_K:  2.786e-01  alpha:  1.000e+00  linmin: -4.494e-01  t[s]:      6.50
+WannierMinimize: Iter:  89  Omega:  1.788046163267475e+02  |grad|_K:  2.627e-01  alpha:  1.000e+00  linmin: -2.818e-01  t[s]:      6.52
+WannierMinimize: Iter:  90  Omega:  1.786790109915593e+02  |grad|_K:  3.038e-01  alpha:  1.000e+00  linmin: -1.684e-01  t[s]:      6.55
+WannierMinimize: Iter:  91  Omega:  1.785359820673219e+02  |grad|_K:  5.712e-01  alpha:  1.000e+00  linmin:  2.266e-02  t[s]:      6.57
+WannierMinimize: Iter:  92  Omega:  1.783729992916154e+02  |grad|_K:  2.513e-01  alpha:  1.000e+00  linmin: -7.677e-02  t[s]:      6.59
+WannierMinimize: Iter:  93  Omega:  1.782910452136797e+02  |grad|_K:  1.985e-01  alpha:  1.000e+00  linmin: -3.348e-01  t[s]:      6.61
+WannierMinimize: Iter:  94  Omega:  1.781853652621541e+02  |grad|_K:  2.504e-01  alpha:  1.000e+00  linmin: -1.108e-01  t[s]:      6.63
+WannierMinimize: Iter:  95  Omega:  1.781357060764307e+02  |grad|_K:  4.953e-01  alpha:  1.000e+00  linmin:  6.710e-02  t[s]:      6.64
+WannierMinimize: Iter:  96  Omega:  1.780457249497841e+02  |grad|_K:  2.183e-01  alpha:  1.000e+00  linmin: -4.793e-01  t[s]:      6.66
+WannierMinimize: Iter:  97  Omega:  1.779890073963529e+02  |grad|_K:  1.518e-01  alpha:  1.000e+00  linmin: -2.229e-01  t[s]:      6.68
+WannierMinimize: Iter:  98  Omega:  1.779483710650468e+02  |grad|_K:  1.731e-01  alpha:  1.000e+00  linmin: -1.601e-01  t[s]:      6.70
+WannierMinimize: Iter:  99  Omega:  1.778736375403874e+02  |grad|_K:  2.058e-01  alpha:  1.000e+00  linmin: -1.055e-01  t[s]:      6.72
+WannierMinimize: 	Wolfe criterion not satisfied: alpha: 1  (E-E0)/|gdotd0|: 0.221163  gdotd/gdotd0: -1.44274 (taking cubic step)
+WannierMinimize: Iter: 100  Omega:  1.778376183786914e+02  |grad|_K:  2.270e-01  alpha:  4.095e-01  linmin: -3.391e-08  t[s]:      6.76
+WannierMinimize: Iter: 101  Omega:  1.777954094193985e+02  |grad|_K:  1.269e-01  alpha:  1.000e+00  linmin: -1.682e-01  t[s]:      6.77
+WannierMinimize: Iter: 102  Omega:  1.777614678101654e+02  |grad|_K:  1.304e-01  alpha:  1.000e+00  linmin: -2.088e-01  t[s]:      6.79
+WannierMinimize: Iter: 103  Omega:  1.777189381330622e+02  |grad|_K:  1.970e-01  alpha:  1.000e+00  linmin: -6.761e-02  t[s]:      6.81
+WannierMinimize: Iter: 104  Omega:  1.776860949149634e+02  |grad|_K:  2.376e-01  alpha:  1.000e+00  linmin:  4.456e-02  t[s]:      6.83
+WannierMinimize: Iter: 105  Omega:  1.776523012379925e+02  |grad|_K:  1.245e-01  alpha:  1.000e+00  linmin: -4.926e-01  t[s]:      6.85
+WannierMinimize: Iter: 106  Omega:  1.776199710575953e+02  |grad|_K:  1.310e-01  alpha:  1.000e+00  linmin: -1.647e-01  t[s]:      6.87
+WannierMinimize: Iter: 107  Omega:  1.775927327630213e+02  |grad|_K:  1.550e-01  alpha:  1.000e+00  linmin: -1.437e-01  t[s]:      6.89
+WannierMinimize: Iter: 108  Omega:  1.775655980391593e+02  |grad|_K:  3.803e-01  alpha:  1.000e+00  linmin:  4.927e-02  t[s]:      6.91
+WannierMinimize: Iter: 109  Omega:  1.775090311495475e+02  |grad|_K:  1.398e-01  alpha:  1.000e+00  linmin: -1.687e-01  t[s]:      6.93
+WannierMinimize: Iter: 110  Omega:  1.774845615537087e+02  |grad|_K:  1.230e-01  alpha:  1.000e+00  linmin: -3.193e-01  t[s]:      6.95
+WannierMinimize: Iter: 111  Omega:  1.774452770898006e+02  |grad|_K:  1.667e-01  alpha:  1.000e+00  linmin: -1.120e-01  t[s]:      6.97
+WannierMinimize: Iter: 112  Omega:  1.773923987305857e+02  |grad|_K:  2.313e-01  alpha:  1.000e+00  linmin: -5.338e-02  t[s]:      6.99
+WannierMinimize: Iter: 113  Omega:  1.773319026158916e+02  |grad|_K:  2.631e-01  alpha:  1.000e+00  linmin:  1.156e-02  t[s]:      7.00
+WannierMinimize: Iter: 114  Omega:  1.772693024469368e+02  |grad|_K:  1.700e-01  alpha:  1.000e+00  linmin: -1.906e-01  t[s]:      7.02
+WannierMinimize: Iter: 115  Omega:  1.771930969107350e+02  |grad|_K:  2.183e-01  alpha:  1.000e+00  linmin: -8.739e-02  t[s]:      7.04
+WannierMinimize: Iter: 116  Omega:  1.771223736214028e+02  |grad|_K:  2.748e-01  alpha:  1.000e+00  linmin: -7.045e-02  t[s]:      7.06
+WannierMinimize: Iter: 117  Omega:  1.769983115205963e+02  |grad|_K:  3.693e-01  alpha:  1.000e+00  linmin: -1.182e-03  t[s]:      7.08
+WannierMinimize: Iter: 118  Omega:  1.768720297437023e+02  |grad|_K:  3.008e-01  alpha:  1.000e+00  linmin: -4.732e-02  t[s]:      7.10
+WannierMinimize: Iter: 119  Omega:  1.767374729763647e+02  |grad|_K:  2.903e-01  alpha:  1.000e+00  linmin: -1.044e-01  t[s]:      7.12
+WannierMinimize: Iter: 120  Omega:  1.765643457538283e+02  |grad|_K:  3.756e-01  alpha:  1.000e+00  linmin: -4.883e-02  t[s]:      7.14
+WannierMinimize: Iter: 121  Omega:  1.763830779030867e+02  |grad|_K:  5.481e-01  alpha:  1.000e+00  linmin:  1.284e-04  t[s]:      7.16
+WannierMinimize: Iter: 122  Omega:  1.761533960197112e+02  |grad|_K:  3.809e-01  alpha:  1.000e+00  linmin: -1.213e-01  t[s]:      7.18
+WannierMinimize: Iter: 123  Omega:  1.758535199988075e+02  |grad|_K:  3.631e-01  alpha:  1.000e+00  linmin: -7.660e-02  t[s]:      7.20
+WannierMinimize: Iter: 124  Omega:  1.756185182332365e+02  |grad|_K:  4.963e-01  alpha:  1.000e+00  linmin: -4.753e-02  t[s]:      7.22
+WannierMinimize: Iter: 125  Omega:  1.752812305035462e+02  |grad|_K:  5.094e-01  alpha:  1.000e+00  linmin: -3.583e-02  t[s]:      7.24
+WannierMinimize: Iter: 126  Omega:  1.749248502914604e+02  |grad|_K:  5.028e-01  alpha:  1.000e+00  linmin: -7.610e-02  t[s]:      7.26
+WannierMinimize: Iter: 127  Omega:  1.745663254961129e+02  |grad|_K:  4.621e-01  alpha:  1.000e+00  linmin: -2.634e-02  t[s]:      7.29
+WannierMinimize: Iter: 128  Omega:  1.742917929717150e+02  |grad|_K:  4.523e-01  alpha:  1.000e+00  linmin: -5.744e-02  t[s]:      7.31
+WannierMinimize: Iter: 129  Omega:  1.739849536592187e+02  |grad|_K:  4.143e-01  alpha:  1.000e+00  linmin: -8.389e-02  t[s]:      7.32
+WannierMinimize: Iter: 130  Omega:  1.736917972922473e+02  |grad|_K:  5.790e-01  alpha:  1.000e+00  linmin:  3.172e-02  t[s]:      7.34
+WannierMinimize: Iter: 131  Omega:  1.734605085183792e+02  |grad|_K:  3.778e-01  alpha:  1.000e+00  linmin: -9.485e-02  t[s]:      7.36
+WannierMinimize: Iter: 132  Omega:  1.733048883874652e+02  |grad|_K:  3.235e-01  alpha:  1.000e+00  linmin: -8.567e-02  t[s]:      7.38
+WannierMinimize: Iter: 133  Omega:  1.730637384861571e+02  |grad|_K:  4.404e-01  alpha:  1.000e+00  linmin: -1.307e-02  t[s]:      7.40
+WannierMinimize: Iter: 134  Omega:  1.728610001567265e+02  |grad|_K:  4.617e-01  alpha:  1.000e+00  linmin:  1.340e-02  t[s]:      7.43
+WannierMinimize: Iter: 135  Omega:  1.727159396336514e+02  |grad|_K:  2.879e-01  alpha:  1.000e+00  linmin: -9.430e-02  t[s]:      7.45
+WannierMinimize: Iter: 136  Omega:  1.726245132363615e+02  |grad|_K:  2.420e-01  alpha:  1.000e+00  linmin: -1.179e-01  t[s]:      7.46
+WannierMinimize: Iter: 137  Omega:  1.725041157303431e+02  |grad|_K:  3.622e-01  alpha:  1.000e+00  linmin: -3.069e-02  t[s]:      7.48
+WannierMinimize: Iter: 138  Omega:  1.723943357769544e+02  |grad|_K:  2.302e-01  alpha:  1.000e+00  linmin: -4.510e-02  t[s]:      7.50
+WannierMinimize: Iter: 139  Omega:  1.723304083818354e+02  |grad|_K:  1.906e-01  alpha:  1.000e+00  linmin: -1.890e-01  t[s]:      7.52
+WannierMinimize: Iter: 140  Omega:  1.722631401498987e+02  |grad|_K:  2.228e-01  alpha:  1.000e+00  linmin: -1.749e-02  t[s]:      7.54
+WannierMinimize: Iter: 141  Omega:  1.722143527767678e+02  |grad|_K:  2.133e-01  alpha:  1.000e+00  linmin: -4.060e-02  t[s]:      7.56
+WannierMinimize: Iter: 142  Omega:  1.721758917757668e+02  |grad|_K:  1.532e-01  alpha:  1.000e+00  linmin: -2.316e-01  t[s]:      7.58
+WannierMinimize: Iter: 143  Omega:  1.721343726680456e+02  |grad|_K:  1.563e-01  alpha:  1.000e+00  linmin: -4.704e-02  t[s]:      7.60
+WannierMinimize: Iter: 144  Omega:  1.721062136451305e+02  |grad|_K:  1.826e-01  alpha:  1.000e+00  linmin: -3.078e-02  t[s]:      7.62
+WannierMinimize: Iter: 145  Omega:  1.720793123604937e+02  |grad|_K:  1.337e-01  alpha:  1.000e+00  linmin: -2.466e-01  t[s]:      7.64
+WannierMinimize: Iter: 146  Omega:  1.720451916880162e+02  |grad|_K:  1.411e-01  alpha:  1.000e+00  linmin: -2.830e-02  t[s]:      7.66
+WannierMinimize: Iter: 147  Omega:  1.720275111795719e+02  |grad|_K:  1.450e-01  alpha:  1.000e+00  linmin: -1.270e-02  t[s]:      7.68
+WannierMinimize: Iter: 148  Omega:  1.720109875811724e+02  |grad|_K:  1.119e-01  alpha:  1.000e+00  linmin: -3.106e-01  t[s]:      7.70
+WannierMinimize: Iter: 149  Omega:  1.719818590957163e+02  |grad|_K:  1.112e-01  alpha:  1.000e+00  linmin: -2.518e-02  t[s]:      7.72
+WannierMinimize: Iter: 150  Omega:  1.719714979110669e+02  |grad|_K:  1.802e-01  alpha:  1.000e+00  linmin:  6.832e-02  t[s]:      7.73
+WannierMinimize: Iter: 151  Omega:  1.719587551856655e+02  |grad|_K:  1.000e-01  alpha:  1.000e+00  linmin: -5.923e-01  t[s]:      7.75
+WannierMinimize: Iter: 152  Omega:  1.719435236311699e+02  |grad|_K:  6.878e-02  alpha:  1.000e+00  linmin: -1.444e-01  t[s]:      7.77
+WannierMinimize: Iter: 153  Omega:  1.719359272157449e+02  |grad|_K:  7.263e-02  alpha:  1.000e+00  linmin: -1.835e-01  t[s]:      7.79
+WannierMinimize: Iter: 154  Omega:  1.719255587033399e+02  |grad|_K:  1.860e-01  alpha:  1.000e+00  linmin:  4.926e-02  t[s]:      7.81
+WannierMinimize: Iter: 155  Omega:  1.719120462881302e+02  |grad|_K:  6.772e-02  alpha:  1.000e+00  linmin:  1.322e-02  t[s]:      7.83
+WannierMinimize: Iter: 156  Omega:  1.719079620636311e+02  |grad|_K:  4.743e-02  alpha:  1.000e+00  linmin: -3.304e-01  t[s]:      7.85
+WannierMinimize: Iter: 157  Omega:  1.719019413584506e+02  |grad|_K:  5.141e-02  alpha:  1.000e+00  linmin: -2.395e-01  t[s]:      7.87
+WannierMinimize: Iter: 158  Omega:  1.718975286942277e+02  |grad|_K:  1.193e-01  alpha:  1.000e+00  linmin:  4.466e-02  t[s]:      7.89
+WannierMinimize: Iter: 159  Omega:  1.718919309425054e+02  |grad|_K:  5.407e-02  alpha:  1.000e+00  linmin: -2.406e-01  t[s]:      7.91
+WannierMinimize: Iter: 160  Omega:  1.718886273509544e+02  |grad|_K:  3.612e-02  alpha:  1.000e+00  linmin: -1.376e-01  t[s]:      7.93
+WannierMinimize: Iter: 161  Omega:  1.718864780509976e+02  |grad|_K:  3.918e-02  alpha:  1.000e+00  linmin: -1.478e-01  t[s]:      7.95
+WannierMinimize: Iter: 162  Omega:  1.718833449925331e+02  |grad|_K:  6.498e-02  alpha:  1.000e+00  linmin: -8.323e-03  t[s]:      7.96
+WannierMinimize: Iter: 163  Omega:  1.718811326718190e+02  |grad|_K:  4.102e-02  alpha:  1.000e+00  linmin:  7.961e-02  t[s]:      7.98
+WannierMinimize: Iter: 164  Omega:  1.718799636644779e+02  |grad|_K:  2.237e-02  alpha:  1.000e+00  linmin: -2.829e-01  t[s]:      8.00
+WannierMinimize: Iter: 165  Omega:  1.718789362173572e+02  |grad|_K:  2.310e-02  alpha:  1.000e+00  linmin: -1.874e-01  t[s]:      8.02
+WannierMinimize: Iter: 166  Omega:  1.718780448033810e+02  |grad|_K:  3.102e-02  alpha:  1.000e+00  linmin: -1.010e-01  t[s]:      8.04
+WannierMinimize: Iter: 167  Omega:  1.718770492194776e+02  |grad|_K:  2.354e-02  alpha:  1.000e+00  linmin: -2.337e-02  t[s]:      8.06
+WannierMinimize: Iter: 168  Omega:  1.718764636560345e+02  |grad|_K:  1.779e-02  alpha:  1.000e+00  linmin: -9.981e-02  t[s]:      8.08
+WannierMinimize: Iter: 169  Omega:  1.718760052698887e+02  |grad|_K:  1.629e-02  alpha:  1.000e+00  linmin: -8.877e-02  t[s]:      8.10
+WannierMinimize: Iter: 170  Omega:  1.718756198086082e+02  |grad|_K:  1.725e-02  alpha:  1.000e+00  linmin: -1.726e-01  t[s]:      8.12
+WannierMinimize: Iter: 171  Omega:  1.718752347407429e+02  |grad|_K:  1.924e-02  alpha:  1.000e+00  linmin:  2.227e-02  t[s]:      8.14
+WannierMinimize: Iter: 172  Omega:  1.718749541037266e+02  |grad|_K:  1.209e-02  alpha:  1.000e+00  linmin: -1.062e-01  t[s]:      8.16
+WannierMinimize: Iter: 173  Omega:  1.718747896783057e+02  |grad|_K:  1.105e-02  alpha:  1.000e+00  linmin: -2.880e-01  t[s]:      8.18
+WannierMinimize: Iter: 174  Omega:  1.718745438958451e+02  |grad|_K:  1.614e-02  alpha:  1.000e+00  linmin: -2.126e-02  t[s]:      8.19
+WannierMinimize: Iter: 175  Omega:  1.718743645168709e+02  |grad|_K:  1.424e-02  alpha:  1.000e+00  linmin:  4.495e-02  t[s]:      8.21
+WannierMinimize: Iter: 176  Omega:  1.718742445603486e+02  |grad|_K:  8.441e-03  alpha:  1.000e+00  linmin: -3.507e-01  t[s]:      8.23
+WannierMinimize: Iter: 177  Omega:  1.718741157696614e+02  |grad|_K:  7.221e-03  alpha:  1.000e+00  linmin: -1.506e-01  t[s]:      8.25
+WannierMinimize: Iter: 178  Omega:  1.718740146207594e+02  |grad|_K:  9.839e-03  alpha:  1.000e+00  linmin: -1.134e-01  t[s]:      8.28
+WannierMinimize: Iter: 179  Omega:  1.718738782047704e+02  |grad|_K:  8.665e-03  alpha:  1.000e+00  linmin: -4.431e-02  t[s]:      8.30
+WannierMinimize: Iter: 180  Omega:  1.718737889803662e+02  |grad|_K:  8.863e-03  alpha:  1.000e+00  linmin: -3.862e-02  t[s]:      8.34
+WannierMinimize: Iter: 181  Omega:  1.718737132860369e+02  |grad|_K:  6.134e-03  alpha:  1.000e+00  linmin: -1.958e-01  t[s]:      8.36
+WannierMinimize: Iter: 182  Omega:  1.718736424293861e+02  |grad|_K:  6.209e-03  alpha:  1.000e+00  linmin: -1.595e-01  t[s]:      8.38
+WannierMinimize: Iter: 183  Omega:  1.718735804959554e+02  |grad|_K:  8.909e-03  alpha:  1.000e+00  linmin: -1.991e-03  t[s]:      8.40
+WannierMinimize: Iter: 184  Omega:  1.718735196092783e+02  |grad|_K:  5.521e-03  alpha:  1.000e+00  linmin: -1.482e-01  t[s]:      8.42
+WannierMinimize: Iter: 185  Omega:  1.718734682257099e+02  |grad|_K:  4.955e-03  alpha:  1.000e+00  linmin: -1.250e-01  t[s]:      8.44
+WannierMinimize: Iter: 186  Omega:  1.718734260538553e+02  |grad|_K:  6.052e-03  alpha:  1.000e+00  linmin: -7.234e-02  t[s]:      8.46
+WannierMinimize: Iter: 187  Omega:  1.718733835136017e+02  |grad|_K:  5.671e-03  alpha:  1.000e+00  linmin: -3.243e-02  t[s]:      8.48
+WannierMinimize: Iter: 188  Omega:  1.718733517104057e+02  |grad|_K:  4.050e-03  alpha:  1.000e+00  linmin: -1.433e-01  t[s]:      8.51
+WannierMinimize: Iter: 189  Omega:  1.718733274185381e+02  |grad|_K:  3.482e-03  alpha:  1.000e+00  linmin: -1.655e-01  t[s]:      8.54
+WannierMinimize: Iter: 190  Omega:  1.718733086349428e+02  |grad|_K:  3.980e-03  alpha:  1.000e+00  linmin: -8.638e-02  t[s]:      8.56
+WannierMinimize: Iter: 191  Omega:  1.718732910586833e+02  |grad|_K:  3.329e-03  alpha:  1.000e+00  linmin: -2.659e-02  t[s]:      8.58
+WannierMinimize: Iter: 192  Omega:  1.718732793344886e+02  |grad|_K:  2.470e-03  alpha:  1.000e+00  linmin: -1.672e-01  t[s]:      8.60
+WannierMinimize: Iter: 193  Omega:  1.718732696233920e+02  |grad|_K:  2.232e-03  alpha:  1.000e+00  linmin: -1.285e-01  t[s]:      8.62
+WannierMinimize: Iter: 194  Omega:  1.718732617729394e+02  |grad|_K:  2.760e-03  alpha:  1.000e+00  linmin: -5.296e-02  t[s]:      8.64
+WannierMinimize: Iter: 195  Omega:  1.718732545022624e+02  |grad|_K:  1.875e-03  alpha:  1.000e+00  linmin: -9.963e-02  t[s]:      8.66
+WannierMinimize: Iter: 196  Omega:  1.718732496782933e+02  |grad|_K:  1.614e-03  alpha:  1.000e+00  linmin: -1.708e-01  t[s]:      8.68
+WannierMinimize: Iter: 197  Omega:  1.718732455145548e+02  |grad|_K:  1.619e-03  alpha:  1.000e+00  linmin: -1.350e-01  t[s]:      8.69
+WannierMinimize: Iter: 198  Omega:  1.718732417750135e+02  |grad|_K:  1.969e-03  alpha:  1.000e+00  linmin: -1.566e-03  t[s]:      8.71
+WannierMinimize: Iter: 199  Omega:  1.718732385568128e+02  |grad|_K:  1.244e-03  alpha:  1.000e+00  linmin: -1.954e-01  t[s]:      8.73
+WannierMinimize: Iter: 200  Omega:  1.718732360626099e+02  |grad|_K:  1.132e-03  alpha:  1.000e+00  linmin: -2.017e-01  t[s]:      8.75
+WannierMinimize: Iter: 201  Omega:  1.718732335423521e+02  |grad|_K:  1.474e-03  alpha:  1.000e+00  linmin: -8.806e-02  t[s]:      8.77
+WannierMinimize: Iter: 202  Omega:  1.718732312001877e+02  |grad|_K:  1.476e-03  alpha:  1.000e+00  linmin:  1.064e-02  t[s]:      8.79
+WannierMinimize: Iter: 203  Omega:  1.718732294640991e+02  |grad|_K:  9.312e-04  alpha:  1.000e+00  linmin: -2.275e-01  t[s]:      8.81
+WannierMinimize: Iter: 204  Omega:  1.718732280776577e+02  |grad|_K:  8.566e-04  alpha:  1.000e+00  linmin: -2.144e-01  t[s]:      8.83
+WannierMinimize: Iter: 205  Omega:  1.718732267217441e+02  |grad|_K:  1.147e-03  alpha:  1.000e+00  linmin: -6.869e-02  t[s]:      8.85
+WannierMinimize: Iter: 206  Omega:  1.718732254186179e+02  |grad|_K:  9.545e-04  alpha:  1.000e+00  linmin: -2.377e-03  t[s]:      8.87
+WannierMinimize: Iter: 207  Omega:  1.718732245788040e+02  |grad|_K:  6.613e-04  alpha:  1.000e+00  linmin: -2.507e-01  t[s]:      8.89
+WannierMinimize: Iter: 208  Omega:  1.718732237975034e+02  |grad|_K:  6.477e-04  alpha:  1.000e+00  linmin: -1.626e-01  t[s]:      8.91
+WannierMinimize: Iter: 209  Omega:  1.718732230658291e+02  |grad|_K:  8.529e-04  alpha:  1.000e+00  linmin: -7.767e-02  t[s]:      8.93
+WannierMinimize: Iter: 210  Omega:  1.718732222824933e+02  |grad|_K:  6.691e-04  alpha:  1.000e+00  linmin: -3.542e-02  t[s]:      8.95
+WannierMinimize: Iter: 211  Omega:  1.718732217622786e+02  |grad|_K:  5.369e-04  alpha:  1.000e+00  linmin: -1.451e-01  t[s]:      8.96
+WannierMinimize: Iter: 212  Omega:  1.718732213114455e+02  |grad|_K:  5.055e-04  alpha:  1.000e+00  linmin: -1.804e-01  t[s]:      8.98
+WannierMinimize: Iter: 213  Omega:  1.718732208672623e+02  |grad|_K:  6.538e-04  alpha:  1.000e+00  linmin: -2.865e-02  t[s]:      9.00
+WannierMinimize: Iter: 214  Omega:  1.718732204755373e+02  |grad|_K:  4.769e-04  alpha:  1.000e+00  linmin: -4.791e-02  t[s]:      9.02
+WannierMinimize: Iter: 215  Omega:  1.718732202227078e+02  |grad|_K:  3.630e-04  alpha:  1.000e+00  linmin: -2.188e-01  t[s]:      9.04
+WannierMinimize: Iter: 216  Omega:  1.718732199715234e+02  |grad|_K:  3.853e-04  alpha:  1.000e+00  linmin: -1.063e-01  t[s]:      9.06
+WannierMinimize: Iter: 217  Omega:  1.718732197800353e+02  |grad|_K:  5.291e-04  alpha:  1.000e+00  linmin:  1.211e-02  t[s]:      9.08
+WannierMinimize: Iter: 218  Omega:  1.718732195963211e+02  |grad|_K:  2.972e-04  alpha:  1.000e+00  linmin: -2.371e-01  t[s]:      9.10
+WannierMinimize: Iter: 219  Omega:  1.718732194547944e+02  |grad|_K:  2.460e-04  alpha:  1.000e+00  linmin: -1.731e-01  t[s]:      9.12
+WannierMinimize: Iter: 220  Omega:  1.718732193458414e+02  |grad|_K:  2.944e-04  alpha:  1.000e+00  linmin: -1.249e-01  t[s]:      9.14
+WannierMinimize: Iter: 221  Omega:  1.718732192223887e+02  |grad|_K:  3.161e-04  alpha:  1.000e+00  linmin: -4.629e-03  t[s]:      9.16
+WannierMinimize: Iter: 222  Omega:  1.718732191349319e+02  |grad|_K:  2.357e-04  alpha:  1.000e+00  linmin: -1.052e-01  t[s]:      9.18
+WannierMinimize: Iter: 223  Omega:  1.718732190691995e+02  |grad|_K:  1.964e-04  alpha:  1.000e+00  linmin: -2.560e-01  t[s]:      9.19
+WannierMinimize: Iter: 224  Omega:  1.718732189983864e+02  |grad|_K:  2.123e-04  alpha:  1.000e+00  linmin: -1.186e-01  t[s]:      9.21
+WannierMinimize: Iter: 225  Omega:  1.718732189562919e+02  |grad|_K:  3.434e-04  alpha:  1.000e+00  linmin:  7.753e-02  t[s]:      9.23
+WannierMinimize: Iter: 226  Omega:  1.718732189036098e+02  |grad|_K:  1.505e-04  alpha:  1.000e+00  linmin: -4.824e-01  t[s]:      9.25
+WannierMinimize: Iter: 227  Omega:  1.718732188726853e+02  |grad|_K:  1.279e-04  alpha:  1.000e+00  linmin: -2.660e-01  t[s]:      9.27
+WannierMinimize: Iter: 228  Omega:  1.718732188404291e+02  |grad|_K:  1.449e-04  alpha:  1.000e+00  linmin: -1.801e-01  t[s]:      9.29
+WannierMinimize: Iter: 229  Omega:  1.718732188151848e+02  |grad|_K:  3.300e-04  alpha:  1.000e+00  linmin:  6.164e-02  t[s]:      9.31
+WannierMinimize: Iter: 230  Omega:  1.718732187749540e+02  |grad|_K:  1.129e-04  alpha:  1.000e+00  linmin: -1.642e-01  t[s]:      9.33
+WannierMinimize: Iter: 231  Omega:  1.718732187604218e+02  |grad|_K:  8.673e-05  alpha:  1.000e+00  linmin: -4.543e-01  t[s]:      9.35
+WannierMinimize: Iter: 232  Omega:  1.718732187415189e+02  |grad|_K:  1.043e-04  alpha:  1.000e+00  linmin: -1.774e-01  t[s]:      9.37
+WannierMinimize: Iter: 233  Omega:  1.718732187232179e+02  |grad|_K:  1.561e-04  alpha:  1.000e+00  linmin: -3.109e-02  t[s]:      9.39
+WannierMinimize: Iter: 234  Omega:  1.718732187056624e+02  |grad|_K:  9.023e-05  alpha:  1.000e+00  linmin: -2.013e-02  t[s]:      9.41
+WannierMinimize: Iter: 235  Omega:  1.718732186959681e+02  |grad|_K:  6.353e-05  alpha:  1.000e+00  linmin: -3.964e-01  t[s]:      9.43
+WannierMinimize: Iter: 236  Omega:  1.718732186858857e+02  |grad|_K:  8.060e-05  alpha:  1.000e+00  linmin: -7.154e-02  t[s]:      9.44
+WannierMinimize: Iter: 237  Omega:  1.718732186793842e+02  |grad|_K:  1.055e-04  alpha:  1.000e+00  linmin: -3.641e-03  t[s]:      9.46
+WannierMinimize: Iter: 238  Omega:  1.718732186729748e+02  |grad|_K:  6.429e-05  alpha:  1.000e+00  linmin: -2.541e-01  t[s]:      9.48
+WannierMinimize: Iter: 239  Omega:  1.718732186666573e+02  |grad|_K:  5.296e-05  alpha:  1.000e+00  linmin: -6.543e-02  t[s]:      9.50
+WannierMinimize: Iter: 240  Omega:  1.718732186636355e+02  |grad|_K:  5.654e-05  alpha:  1.000e+00  linmin: -1.484e-01  t[s]:      9.52
+WannierMinimize: Iter: 241  Omega:  1.718732186589044e+02  |grad|_K:  4.790e-05  alpha:  1.000e+00  linmin: -1.453e-01  t[s]:      9.54
+WannierMinimize: Iter: 242  Omega:  1.718732186585549e+02  |grad|_K:  1.287e-04  alpha:  1.000e+00  linmin:  1.285e-01  t[s]:      9.56
+WannierMinimize: Iter: 243  Omega:  1.718732186533068e+02  |grad|_K:  3.528e-05  alpha:  1.000e+00  linmin: -4.717e-01  t[s]:      9.58
+WannierMinimize: Iter: 244  Omega:  1.718732186520408e+02  |grad|_K:  2.634e-05  alpha:  1.000e+00  linmin: -6.344e-01  t[s]:      9.60
+WannierMinimize: Iter: 245  Omega:  1.718732186499823e+02  |grad|_K:  3.257e-05  alpha:  1.000e+00  linmin: -1.866e-01  t[s]:      9.62
+WannierMinimize: Iter: 246  Omega:  1.718732186481105e+02  |grad|_K:  3.935e-05  alpha:  1.000e+00  linmin: -8.816e-02  t[s]:      9.64
+WannierMinimize: Iter: 247  Omega:  1.718732186472510e+02  |grad|_K:  5.117e-05  alpha:  1.000e+00  linmin:  1.033e-01  t[s]:      9.66
+WannierMinimize: Iter: 248  Omega:  1.718732186459909e+02  |grad|_K:  1.735e-05  alpha:  1.000e+00  linmin: -3.506e-01  t[s]:      9.67
+WannierMinimize: Iter: 249  Omega:  1.718732186455894e+02  |grad|_K:  1.677e-05  alpha:  1.000e+00  linmin: -4.107e-01  t[s]:      9.69
+WannierMinimize: Iter: 250  Omega:  1.718732186449356e+02  |grad|_K:  2.042e-05  alpha:  1.000e+00  linmin: -1.931e-01  t[s]:      9.71
+WannierMinimize: 	Wolfe criterion not satisfied: alpha: 1  (E-E0)/|gdotd0|: 0.0567499  gdotd/gdotd0: -1.11139 (taking cubic step)
+WannierMinimize: Iter: 251  Omega:  1.718732186445390e+02  |grad|_K:  2.535e-05  alpha:  4.729e-01  linmin: -5.260e-04  t[s]:      9.75
+WannierMinimize: Iter: 252  Omega:  1.718732186440952e+02  |grad|_K:  1.335e-05  alpha:  1.000e+00  linmin: -1.805e-01  t[s]:      9.77
+WannierMinimize: Iter: 253  Omega:  1.718732186437902e+02  |grad|_K:  1.118e-05  alpha:  1.000e+00  linmin: -1.704e-01  t[s]:      9.78
+WannierMinimize: Iter: 254  Omega:  1.718732186435335e+02  |grad|_K:  1.667e-05  alpha:  1.000e+00  linmin: -4.767e-02  t[s]:      9.80
+WannierMinimize: Iter: 255  Omega:  1.718732186432871e+02  |grad|_K:  1.269e-05  alpha:  1.000e+00  linmin: -6.821e-02  t[s]:      9.82
+WannierMinimize: Iter: 256  Omega:  1.718732186431100e+02  |grad|_K:  8.603e-06  alpha:  1.000e+00  linmin: -3.297e-01  t[s]:      9.84
+WannierMinimize: Iter: 257  Omega:  1.718732186429625e+02  |grad|_K:  1.203e-05  alpha:  1.000e+00  linmin:  2.400e-03  t[s]:      9.86
+WannierMinimize: Iter: 258  Omega:  1.718732186428535e+02  |grad|_K:  9.842e-06  alpha:  1.000e+00  linmin: -1.239e-01  t[s]:      9.88
+WannierMinimize: Iter: 259  Omega:  1.718732186427518e+02  |grad|_K:  8.401e-06  alpha:  1.000e+00  linmin: -2.403e-01  t[s]:      9.90
+WannierMinimize: Iter: 260  Omega:  1.718732186426142e+02  |grad|_K:  1.239e-05  alpha:  1.000e+00  linmin:  4.724e-03  t[s]:      9.92
+WannierMinimize: Iter: 261  Omega:  1.718732186425339e+02  |grad|_K:  1.164e-05  alpha:  1.000e+00  linmin:  7.812e-02  t[s]:      9.94
+WannierMinimize: Iter: 262  Omega:  1.718732186424712e+02  |grad|_K:  7.134e-06  alpha:  1.000e+00  linmin: -6.785e-01  t[s]:      9.96
+WannierMinimize: Iter: 263  Omega:  1.718732186423676e+02  |grad|_K:  5.741e-06  alpha:  1.000e+00  linmin: -2.195e-01  t[s]:      9.98
+WannierMinimize: Iter: 264  Omega:  1.718732186423024e+02  |grad|_K:  6.646e-06  alpha:  1.000e+00  linmin: -1.545e-01  t[s]:     10.00
+WannierMinimize: 	Wolfe criterion not satisfied: alpha: 1  (E-E0)/|gdotd0|: 0.0721574  gdotd/gdotd0: -1.13103 (taking cubic step)
+WannierMinimize: Iter: 265  Omega:  1.718732186422471e+02  |grad|_K:  1.075e-05  alpha:  4.646e-01  linmin: -1.812e-03  t[s]:     10.03
+WannierMinimize: Iter: 266  Omega:  1.718732186421695e+02  |grad|_K:  5.595e-06  alpha:  1.000e+00  linmin: -1.167e-01  t[s]:     10.05
+WannierMinimize: Iter: 267  Omega:  1.718732186421151e+02  |grad|_K:  4.686e-06  alpha:  1.000e+00  linmin: -1.845e-01  t[s]:     10.07
+WannierMinimize: Iter: 268  Omega:  1.718732186420599e+02  |grad|_K:  7.643e-06  alpha:  1.000e+00  linmin: -2.828e-02  t[s]:     10.09
+WannierMinimize: Iter: 269  Omega:  1.718732186420181e+02  |grad|_K:  6.948e-06  alpha:  1.000e+00  linmin:  2.251e-02  t[s]:     10.11
+WannierMinimize: Iter: 270  Omega:  1.718732186419876e+02  |grad|_K:  4.227e-06  alpha:  1.000e+00  linmin: -5.520e-01  t[s]:     10.12
+WannierMinimize: Iter: 271  Omega:  1.718732186419497e+02  |grad|_K:  4.153e-06  alpha:  1.000e+00  linmin: -1.212e-01  t[s]:     10.14
+WannierMinimize: Iter: 272  Omega:  1.718732186419293e+02  |grad|_K:  5.306e-06  alpha:  1.000e+00  linmin: -6.693e-02  t[s]:     10.16
+WannierMinimize: Iter: 273  Omega:  1.718732186419013e+02  |grad|_K:  3.803e-06  alpha:  1.000e+00  linmin: -1.181e-01  t[s]:     10.18
+WannierMinimize: Iter: 274  Omega:  1.718732186418819e+02  |grad|_K:  6.251e-06  alpha:  1.000e+00  linmin:  2.800e-02  t[s]:     10.20
+WannierMinimize: Iter: 275  Omega:  1.718732186418629e+02  |grad|_K:  2.985e-06  alpha:  1.000e+00  linmin: -1.052e-01  t[s]:     10.22
+WannierMinimize: Iter: 276  Omega:  1.718732186418542e+02  |grad|_K:  2.692e-06  alpha:  1.000e+00  linmin: -3.844e-01  t[s]:     10.24
+WannierMinimize: Iter: 277  Omega:  1.718732186418372e+02  |grad|_K:  3.918e-06  alpha:  1.000e+00  linmin: -3.043e-02  t[s]:     10.26
+WannierMinimize: Iter: 278  Omega:  1.718732186418360e+02  |grad|_K:  5.980e-06  alpha:  1.000e+00  linmin:  1.495e-01  t[s]:     10.28
+WannierMinimize: Iter: 279  Omega:  1.718732186418253e+02  |grad|_K:  2.003e-06  alpha:  1.000e+00  linmin: -3.454e-01  t[s]:     10.30
+WannierMinimize: Iter: 280  Omega:  1.718732186418227e+02  |grad|_K:  1.509e-06  alpha:  1.000e+00  linmin: -3.193e-01  t[s]:     10.32
+WannierMinimize: Iter: 281  Omega:  1.718732186418173e+02  |grad|_K:  1.865e-06  alpha:  1.000e+00  linmin: -1.309e-01  t[s]:     10.34
+WannierMinimize: Iter: 282  Omega:  1.718732186418121e+02  |grad|_K:  2.601e-06  alpha:  1.000e+00  linmin: -5.741e-02  t[s]:     10.36
+WannierMinimize: Iter: 283  Omega:  1.718732186418090e+02  |grad|_K:  2.317e-06  alpha:  1.000e+00  linmin:  7.647e-02  t[s]:     10.37
+WannierMinimize: Iter: 284  Omega:  1.718732186418077e+02  |grad|_K:  1.139e-06  alpha:  1.000e+00  linmin: -3.533e-01  t[s]:     10.39
+WannierMinimize: Iter: 285  Omega:  1.718732186418072e+02  |grad|_K:  1.279e-06  alpha:  1.000e+00  linmin: -2.100e-01  t[s]:     10.41
+WannierMinimize: Iter: 286  Omega:  1.718732186418064e+02  |grad|_K:  1.621e-06  alpha:  1.000e+00  linmin: -1.306e-01  t[s]:     10.43
+WannierMinimize: Converged (|Delta Omega|<1.000000e-12 for 2 iters).
+
+Optimum spread:
+	Omega:  1.718732186418064e+02
+	OmegaI: 1.500315453108054e+02
+
+Centers in lattice coords:
+	[ 0.00181159 0.332729 0.33273 ] spread: 10.7421 bohr^2
+	[ 0.00181159 0.332729 0.33273 ] spread: 10.7421 bohr^2
+	[ -0.0827295 0.248188 -0.0827295 ] spread: 10.7421 bohr^2
+	[ -0.0827295 0.248188 -0.0827295 ] spread: 10.7421 bohr^2
+	[ -0.0827295 -0.0827294 0.248188 ] spread: 10.7421 bohr^2
+	[ -0.0827295 -0.0827294 0.248188 ] spread: 10.7421 bohr^2
+	[ 0.248188 -0.0827295 -0.0827295 ] spread: 10.7421 bohr^2
+	[ 0.248188 -0.0827295 -0.0827295 ] spread: 10.7421 bohr^2
+	[ -0.66727 0.332729 0.332729 ] spread: 10.7421 bohr^2
+	[ -0.66727 0.332729 0.332729 ] spread: 10.7421 bohr^2
+	[ -0.667271 0.332729 0.00181166 ] spread: 10.7421 bohr^2
+	[ -0.667271 0.332729 0.00181166 ] spread: 10.7421 bohr^2
+	[ 0.332729 0.00181165 0.332729 ] spread: 10.7421 bohr^2
+	[ 0.332729 0.00181165 0.332729 ] spread: 10.7421 bohr^2
+	[ -0.0827295 -0.0827295 -0.0827294 ] spread: 10.7421 bohr^2
+	[ -0.0827295 -0.0827295 -0.0827294 ] spread: 10.7421 bohr^2
+Dumping 'wannier.mlwfU' ... done.
+Dumping 'wannier.mlwfBandContrib' ... done.
+Dumping 'wannier.mlwfCellMap' ... done.
+Dumping 'wannier.mlwfCellWeights'... done.
+Dumping 'wannier.mlwfH' ... done.
+Dumping 'wannier.mlwfP' ... done.
+Dumping 'wannier.mlwfS' ... done.
+Dumping 'wannier.mlwfD' ... done.
+Dumping 'wannier.mlwfCellMapPh' ... done.
+Dumping 'wannier.mlwfCellWeightsPh'... done.
+Reading 'totalE.phononHsub' ... done. Translation invariance correction: 2.003207e-02
+Applying Wannier rotations ... done.
+Dumping 'wannier.mlwfHePh' ... done.
+Dumping 'wannier.mlwfHePhSum' ... done.
+Dumping 'wannier.mlwfCellMapPhSum' ... done.
+End date and time: Sun Sep 27 08:04:47 2020  (Duration: 0-0:00:12.60)
+Done!
+
+PROFILER:                     diagouterI     0.095628 +/-     0.000000 s,    1 calls,      0.095628 s total
+PROFILER:              EdensityAndVscloc     0.017817 +/-     0.000000 s,    1 calls,      0.017817 s total
+PROFILER:            ExCorrCommunication     0.002252 +/-     0.001974 s,    5 calls,      0.011262 s total
+PROFILER:               ExCorrFunctional     0.001846 +/-     0.001739 s,    2 calls,      0.003692 s total
+PROFILER:                    ExCorrTotal     0.048198 +/-     0.035345 s,    2 calls,      0.096397 s total
+PROFILER:                    inv(matrix)     0.000833 +/-     0.001138 s,    3 calls,      0.002500 s total
+PROFILER:            matrix::diagonalize     0.000058 +/-     0.000198 s, 20594 calls,      1.199606 s total
+PROFILER:                    matrix::set     0.000000 +/-     0.000001 s, 41922 calls,      0.014467 s total
+PROFILER:                    matrix::svd     0.005380 +/-     0.000000 s,    1 calls,      0.005380 s total
+PROFILER:     RadialFunctionR::transform     0.001024 +/-     0.003019 s,   18 calls,      0.018428 s total
+PROFILER:                    reduceKmesh     0.001635 +/-     0.000000 s,    1 calls,      0.001635 s total
+PROFILER:     WannierMinimizer::axpyWfns     0.000743 +/-     0.000535 s,   53 calls,      0.039357 s total
+PROFILER:       WannierMinimizer::bcastU     0.001150 +/-     0.000356 s,  290 calls,      0.333358 s total
+PROFILER:      WannierMinimizer::compute     0.002583 +/-     0.000274 s,  291 calls,      0.751687 s total
+PROFILER:      WannierMinimizer::overlap     0.000338 +/-     0.000026 s,    4 calls,      0.001352 s total
+PROFILER:         WannierMinimizer::step     0.005255 +/-     0.000415 s,  290 calls,      1.523902 s total
+PROFILER:   WannierMinimizerFD::getOmega     0.004709 +/-     0.000654 s,  291 calls,      1.370463 s total
+PROFILER:  WannierMinimizerFD::getOmegaI     0.002257 +/-     0.000000 s,    1 calls,      0.002257 s total
+PROFILER:                            Y*M     0.001821 +/-     0.000000 s,    1 calls,      0.001821 s total
+PROFILER:                          Y1^Y2     0.000518 +/-     0.000547 s,   19 calls,      0.009851 s total
+
+MEMUSAGE:                   ColumnBundle     0.003698 GB
+MEMUSAGE:             complexScalarField     0.000654 GB
+MEMUSAGE:        complexScalarFieldTilde     0.000327 GB
+MEMUSAGE:                    IndexArrays     0.006382 GB
+MEMUSAGE:                         matrix     0.038270 GB
+MEMUSAGE:                           misc     0.012449 GB
+MEMUSAGE:                    ScalarField     0.001308 GB
+MEMUSAGE:               ScalarFieldTilde     0.001227 GB
+MEMUSAGE:                          Total     0.058567 GB
+TACC:  Shutdown complete. Exiting. 

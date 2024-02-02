@@ -1,0 +1,327 @@
+TACC:  Starting up job 6518618 
+TACC:  Starting parallel tasks... 
+
+*************** FeynWann 1.0.alpha  ***************
++++++++++++++++ Linked to JDFTx 1.6.0  +++++++++++++++
+
+Start date and time: Sun Sep 27 08:40:36 2020
+Executable /home1/06235/tg855346/jdftx_codes/jdftx-test/build-FeynWann-mod/ePhSpinRelax with command-line: -i ePhSpinRelax.in -G4
+Running on hosts (process indices):  c506-001.stampede2.tacc.utexas.edu (0-47)  c506-002.stampede2.tacc.utexas.edu (48-95)  c506-003.stampede2.tacc.utexas.edu (96-143)  c506-034.stampede2.tacc.utexas.edu (144-191)
+Divided in process groups (process indices):  0 (0-47)  1 (48-95)  2 (96-143)  3 (144-191)
+Resource initialization completed at t[s]:      0.02
+Run totals: 192 processes, 192 threads, 0 GPUs
+
+Inputs after conversion to atomic units:
+nOffsets = 1000
+seedStart = 0
+nBlocks = 4
+Tmin = 0.000316681
+Tmax = 0.000950043
+Tcount = 3
+EconserveWidth = 0.000367493
+dmuMin = 0
+dmuMax = 0.0418942
+dmuCount = 12
+omegaPhByTmin = 0.001
+nModesOverride = 0
+degeneracyThreshold = 1e-06
+nkBT = 7
+band_skipped = -1
+ePhEnable = 1
+Bext = [  0  0  0  ]
+EzExt = 0
+scissor = 0.0197572
+
+Reading 'Wannier/totalE.out' ... done.
+NOTE: mu unavailable; assuming semiconductor/insulator and setting to VBM.
+Reading 'Wannier/totalE.eigenvals' ... done.
+mu = 0.227048
+nElectrons = 8
+nBandsDFT = 24
+nSpins = 1
+nSpinor = 2
+spinSuffix = ''
+kfold = [  12  12  12  ]
+isTruncated = [  0  0  0  ]
+R:
+[  0  5.1315  5.1315  ]
+[  5.1315  0  5.1315  ]
+[  5.1315  5.1315  0  ]
+Atoms with fractional coordinates:
+	Si   0.000000000000000   0.000000000000000   0.000000000000000
+	Si   0.250000000000000   0.250000000000000   0.250000000000000
+
+Reading 'Wannier/totalE.sym' ... done. Read 48 symmetries.
+Reading 'Wannier/wannier.mlwfCellMap' ... done.
+Reading 'Wannier/wannier.mlwfBandContrib' ... done.
+nBands = 16
+
+Reading 'Wannier/wannier.mlwfCellWeights' ... done.
+Reading 'Wannier/wannier.mlwfH' ... done.
+
+Reading 'Wannier/phonon.out' ... done.
+nModes = 6
+phononSup = [  4  4  4  ]
+
+Reading 'Wannier/totalE.phononBasis' ... done.
+Reading 'Wannier/totalE.phononCellMap' ... done.
+Reading 'Wannier/totalE.phononOmegaSq' ... done.
+Reading 'Wannier/wannier.mlwfCellMapPh' ... done.
+Reading 'Wannier/wannier.mlwfCellMapPhSum' ... done.
+Reading 'Wannier/wannier.mlwfCellWeightsPh' ... done.
+Reading 'Wannier/wannier.mlwfHePh' ... done.
+Reading 'Wannier/wannier.mlwfHePhSum' ... done.
+Reading 'Wannier/wannier.mlwfD' ... done.
+
+Reading 'Wannier/wannier.out' ... done.
+polar = no
+
+Reading 'Wannier/wannier.mlwfP' ... done.
+Reading 'Wannier/wannier.mlwfS' ... done.
+
+Effectively sampled nKpairs: 2985984000
+|q|max = 1.015247
+
+EvMax = -3.73857e-13 eV
+EcMin = 1.13836 eV
+Emargin = 0.180964 eV
+Estart = -0.180964 eV
+Estop = 1.32096 eV
+Working on block 1 of 4: 2% 3% 5% 6% 8% 10% 11% 13% 15% 16% 18% 19% 21% 23% 24% 26% 27% 29% 31% 32% 34% 35% 37% 39% 40% 42% 44% 45% 47% 48% 50% 52% 53% 55% 56% 58% 60% 61% 63% 65% 66% 68% 69% 71% 73% 74% 76% 77% 79% 81% 82% 84% 85% 87% 89% 90% 92% 94% 95% 97% 98% 100% done.
+Working on block 2 of 4: 2% 3% 5% 6% 8% 10% 11% 13% 15% 16% 18% 19% 21% 23% 24% 26% 27% 29% 31% 32% 34% 35% 37% 39% 40% 42% 44% 45% 47% 48% 50% 52% 53% 55% 56% 58% 60% 61% 63% 65% 66% 68% 69% 71% 73% 74% 76% 77% 79% 81% 82% 84% 85% 87% 89% 90% 92% 94% 95% 97% 98% 100% done.
+Working on block 3 of 4: 2% 3% 5% 6% 8% 10% 11% 13% 15% 16% 18% 19% 21% 23% 24% 26% 27% 29% 31% 32% 34% 35% 37% 39% 40% 42% 44% 45% 47% 48% 50% 52% 53% 55% 56% 58% 60% 61% 63% 65% 66% 68% 69% 71% 73% 74% 76% 77% 79% 81% 82% 84% 85% 87% 89% 90% 92% 94% 95% 97% 98% 100% done.
+Working on block 4 of 4: 2% 3% 5% 6% 8% 10% 11% 13% 15% 16% 18% 19% 21% 23% 24% 26% 27% 29% 31% 32% 34% 35% 37% 39% 40% 42% 44% 45% 47% 48% 50% 52% 53% 55% 56% 58% 60% 61% 63% 65% 66% 68% 69% 71% 73% 74% 76% 77% 79% 81% 82% 84% 85% 87% 89% 90% 92% 94% 95% 97% 98% 100% done.
+nKpairs contributing to Gamma: 843049 (2985984000)
+
+Results for T = 100 K and dmu = 0 eV:
+                    /      1.96131            0            0 \     /    0.0915592            0            0 \ 
+            T1sym = |            0      1.96131            0 | +/- |            0    0.0915592            0 | ps
+                    \            0            0      1.96131 /     \            0            0    0.0915592 / 
+
+
+Results for T = 100 K and dmu = 0.103636 eV:
+                    /      2.09491            0            0 \     /    0.0899171            0            0 \ 
+            T1sym = |            0      2.09491            0 | +/- |            0    0.0899171            0 | ps
+                    \            0            0      2.09491 /     \            0            0    0.0899171 / 
+
+
+Results for T = 100 K and dmu = 0.207273 eV:
+                    /      2.09534            0            0 \     /    0.0899462            0            0 \ 
+            T1sym = |            0      2.09534            0 | +/- |            0    0.0899462            0 | ps
+                    \            0            0      2.09534 /     \            0            0    0.0899462 / 
+
+
+Results for T = 100 K and dmu = 0.310909 eV:
+                    /         -nan         -nan         -nan \     /          nan          nan          nan \ 
+            T1sym = |         -nan         -nan         -nan | +/- |          nan          nan          nan | ps
+                    \         -nan         -nan         -nan /     \          nan          nan          nan / 
+
+
+Results for T = 100 K and dmu = 0.414545 eV:
+                    /         -nan         -nan         -nan \     /          nan          nan          nan \ 
+            T1sym = |         -nan         -nan         -nan | +/- |          nan          nan          nan | ps
+                    \         -nan         -nan         -nan /     \          nan          nan          nan / 
+
+
+Results for T = 100 K and dmu = 0.518182 eV:
+                    /         -nan         -nan         -nan \     /          nan          nan          nan \ 
+            T1sym = |         -nan         -nan         -nan | +/- |          nan          nan          nan | ps
+                    \         -nan         -nan         -nan /     \          nan          nan          nan / 
+
+
+Results for T = 100 K and dmu = 0.621818 eV:
+                    /         -nan         -nan         -nan \     /          nan          nan          nan \ 
+            T1sym = |         -nan         -nan         -nan | +/- |          nan          nan          nan | ps
+                    \         -nan         -nan         -nan /     \          nan          nan          nan / 
+
+
+Results for T = 100 K and dmu = 0.725455 eV:
+                    /         -nan         -nan         -nan \     /          nan          nan          nan \ 
+            T1sym = |         -nan         -nan         -nan | +/- |          nan          nan          nan | ps
+                    \         -nan         -nan         -nan /     \          nan          nan          nan / 
+
+
+Results for T = 100 K and dmu = 0.829091 eV:
+                    /       944681            0            0 \     /       417472            0            0 \ 
+            T1sym = |            0       944681            0 | +/- |            0       417472            0 | ps
+                    \            0            0       944681 /     \            0            0       417472 / 
+
+
+Results for T = 100 K and dmu = 0.932727 eV:
+                    /       232618            0            0 \     /      52712.3            0            0 \ 
+            T1sym = |            0       232618            0 | +/- |            0      52712.3            0 | ps
+                    \            0            0       232618 /     \            0            0      52712.3 / 
+
+
+Results for T = 100 K and dmu = 1.03636 eV:
+                    /       232262            0            0 \     /        52555            0            0 \ 
+            T1sym = |            0       232262            0 | +/- |            0        52555            0 | ps
+                    \            0            0       232262 /     \            0            0        52555 / 
+
+
+Results for T = 100 K and dmu = 1.14 eV:
+                    /       166034            0            0 \     /      35257.7            0            0 \ 
+            T1sym = |            0       166034            0 | +/- |            0      35257.7            0 | ps
+                    \            0            0       166034 /     \            0            0      35257.7 / 
+
+
+Results for T = 200 K and dmu = 0 eV:
+                    /     0.695905            0            0 \     /    0.0135127            0            0 \ 
+            T1sym = |            0     0.695905            0 | +/- |            0    0.0135127            0 | ps
+                    \            0            0     0.695905 /     \            0            0    0.0135127 / 
+
+
+Results for T = 200 K and dmu = 0.103636 eV:
+                    /     0.740975            0            0 \     /     0.014986            0            0 \ 
+            T1sym = |            0     0.740975            0 | +/- |            0     0.014986            0 | ps
+                    \            0            0     0.740975 /     \            0            0     0.014986 / 
+
+
+Results for T = 200 K and dmu = 0.207273 eV:
+                    /     0.741148            0            0 \     /    0.0149884            0            0 \ 
+            T1sym = |            0     0.741148            0 | +/- |            0    0.0149884            0 | ps
+                    \            0            0     0.741148 /     \            0            0    0.0149884 / 
+
+
+Results for T = 200 K and dmu = 0.310909 eV:
+                    /     0.741148            0            0 \     /    0.0149885            0            0 \ 
+            T1sym = |            0     0.741148            0 | +/- |            0    0.0149885            0 | ps
+                    \            0            0     0.741148 /     \            0            0    0.0149885 / 
+
+
+Results for T = 200 K and dmu = 0.414545 eV:
+                    /     0.741148            0            0 \     /    0.0149885            0            0 \ 
+            T1sym = |            0     0.741148            0 | +/- |            0    0.0149885            0 | ps
+                    \            0            0     0.741148 /     \            0            0    0.0149885 / 
+
+
+Results for T = 200 K and dmu = 0.518182 eV:
+                    /     0.746319            0            0 \     /    0.0150355            0            0 \ 
+            T1sym = |            0     0.746319            0 | +/- |            0    0.0150355            0 | ps
+                    \            0            0     0.746319 /     \            0            0    0.0150355 / 
+
+
+Results for T = 200 K and dmu = 0.621818 eV:
+                    /      27222.7            0            0 \     /      2942.05            0            0 \ 
+            T1sym = |            0      27222.7            0 | +/- |            0      2942.05            0 | ps
+                    \            0            0      27222.7 /     \            0            0      2942.05 / 
+
+
+Results for T = 200 K and dmu = 0.725455 eV:
+                    /      24076.1            0            0 \     /      2228.71            0            0 \ 
+            T1sym = |            0      24076.1            0 | +/- |            0      2228.71            0 | ps
+                    \            0            0      24076.1 /     \            0            0      2228.71 / 
+
+
+Results for T = 200 K and dmu = 0.829091 eV:
+                    /      24076.1            0            0 \     /      2228.71            0            0 \ 
+            T1sym = |            0      24076.1            0 | +/- |            0      2228.71            0 | ps
+                    \            0            0      24076.1 /     \            0            0      2228.71 / 
+
+
+Results for T = 200 K and dmu = 0.932727 eV:
+                    /      24076.1            0            0 \     /       2228.7            0            0 \ 
+            T1sym = |            0      24076.1            0 | +/- |            0       2228.7            0 | ps
+                    \            0            0      24076.1 /     \            0            0       2228.7 / 
+
+
+Results for T = 200 K and dmu = 1.03636 eV:
+                    /      24045.2            0            0 \     /      2222.98            0            0 \ 
+            T1sym = |            0      24045.2            0 | +/- |            0      2222.98            0 | ps
+                    \            0            0      24045.2 /     \            0            0      2222.98 / 
+
+
+Results for T = 200 K and dmu = 1.14 eV:
+                    /      17137.9            0            0 \     /       1029.5            0            0 \ 
+            T1sym = |            0      17137.9            0 | +/- |            0       1029.5            0 | ps
+                    \            0            0      17137.9 /     \            0            0       1029.5 / 
+
+
+Results for T = 300 K and dmu = 0 eV:
+                    /     0.389501            0            0 \     /   0.00802293            0            0 \ 
+            T1sym = |            0     0.389501            0 | +/- |            0   0.00802293            0 | ps
+                    \            0            0     0.389501 /     \            0            0   0.00802293 / 
+
+
+Results for T = 300 K and dmu = 0.103636 eV:
+                    /     0.407613            0            0 \     /   0.00797178            0            0 \ 
+            T1sym = |            0     0.407613            0 | +/- |            0   0.00797178            0 | ps
+                    \            0            0     0.407613 /     \            0            0   0.00797178 / 
+
+
+Results for T = 300 K and dmu = 0.207273 eV:
+                    /     0.408165            0            0 \     /   0.00796775            0            0 \ 
+            T1sym = |            0     0.408165            0 | +/- |            0   0.00796775            0 | ps
+                    \            0            0     0.408165 /     \            0            0   0.00796775 / 
+
+
+Results for T = 300 K and dmu = 0.310909 eV:
+                    /     0.408175            0            0 \     /   0.00796768            0            0 \ 
+            T1sym = |            0     0.408175            0 | +/- |            0   0.00796768            0 | ps
+                    \            0            0     0.408175 /     \            0            0   0.00796768 / 
+
+
+Results for T = 300 K and dmu = 0.414545 eV:
+                    /     0.408179            0            0 \     /   0.00796775            0            0 \ 
+            T1sym = |            0     0.408179            0 | +/- |            0   0.00796775            0 | ps
+                    \            0            0     0.408179 /     \            0            0   0.00796775 / 
+
+
+Results for T = 300 K and dmu = 0.518182 eV:
+                    /      0.42029            0            0 \     /   0.00820416            0            0 \ 
+            T1sym = |            0      0.42029            0 | +/- |            0   0.00820416            0 | ps
+                    \            0            0      0.42029 /     \            0            0   0.00820416 / 
+
+
+Results for T = 300 K and dmu = 0.621818 eV:
+                    /      36.9613            0            0 \     /     0.719308            0            0 \ 
+            T1sym = |            0      36.9613            0 | +/- |            0     0.719308            0 | ps
+                    \            0            0      36.9613 /     \            0            0     0.719308 / 
+
+
+Results for T = 300 K and dmu = 0.725455 eV:
+                    /      6169.95            0            0 \     /      173.115            0            0 \ 
+            T1sym = |            0      6169.95            0 | +/- |            0      173.115            0 | ps
+                    \            0            0      6169.95 /     \            0            0      173.115 / 
+
+
+Results for T = 300 K and dmu = 0.829091 eV:
+                    /      6531.09            0            0 \     /      191.544            0            0 \ 
+            T1sym = |            0      6531.09            0 | +/- |            0      191.544            0 | ps
+                    \            0            0      6531.09 /     \            0            0      191.544 / 
+
+
+Results for T = 300 K and dmu = 0.932727 eV:
+                    /      6530.09            0            0 \     /       191.46            0            0 \ 
+            T1sym = |            0      6530.09            0 | +/- |            0       191.46            0 | ps
+                    \            0            0      6530.09 /     \            0            0       191.46 / 
+
+
+Results for T = 300 K and dmu = 1.03636 eV:
+                    /       6469.7            0            0 \     /      186.596            0            0 \ 
+            T1sym = |            0       6469.7            0 | +/- |            0      186.596            0 | ps
+                    \            0            0       6469.7 /     \            0            0      186.596 / 
+
+
+Results for T = 300 K and dmu = 1.14 eV:
+                    /      4613.06            0            0 \     /      79.1224            0            0 \ 
+            T1sym = |            0      4613.06            0 | +/- |            0      79.1224            0 | ps
+                    \            0            0      4613.06 /     \            0            0      79.1224 / 
+
+End date and time: Sun Sep 27 08:52:40 2020  (Duration: 0-0:12:04.66)
+Done!
+
+PROFILER:  DistributedMatrix::transform1     0.001889 +/-     0.001533 s, 10668 calls,     20.152750 s total
+PROFILER:  DistributedMatrix::transform2     0.007085 +/-     0.001158 s, 91923 calls,    651.274112 s total
+PROFILER:       FeynWann::eLoop:callback     0.000002 +/-     0.000017 s, 17892 calls,      0.036565 s total
+PROFILER:        FeynWann::ePhLoop:bcast     0.002089 +/-     0.003881 s, 7192 calls,     15.022328 s total
+PROFILER:     FeynWann::ePhLoop:callback     0.000936 +/-     0.001235 s, 4891 calls,      4.577906 s total
+PROFILER:      FeynWann::phLoop:callback     0.000000 +/-     0.000000 s,    2 calls,      0.000000 s total
+PROFILER:            FeynWann::setMatrix     0.000159 +/-     0.000058 s, 4891 calls,      0.779170 s total
+PROFILER:   FeynWann::setState:rotations     0.000045 +/-     0.000041 s, 18163 calls,      0.819584 s total
+PROFILER:            matrix::diagonalize     0.000106 +/-     0.000206 s, 49142 calls,      5.187289 s total
+
+MEMUSAGE:                         matrix     0.018634 GB
+MEMUSAGE:                           misc     0.007341 GB
+MEMUSAGE:                          Total     0.025842 GB
+TACC:  Shutdown complete. Exiting. 

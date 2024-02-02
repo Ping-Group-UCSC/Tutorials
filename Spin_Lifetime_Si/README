@@ -1,0 +1,73 @@
+I. How to run:
+
+step 1: DFT electronic
+
+run jdftx.sh to get wavefunctions and bandstructure
+you can check the bandstructure by using gnuplot
+
+
+step 2: Phonon
+
+run jdftx-ph.sh to do phonon supercell calculation
+to get delta v_q and electron-phonon matrix elements
+
+you can check phonon bandstructure by using PhononDispersion.py
+and then run phonon_bs.plot
+
+
+step 3: Wannier
+
+enter folder Wann and run jdftx-wann.sh
+to do wannier fitting and wannierization of quantities.
+
+to check the wannier interpolated bandstructure,
+you can firstly run WannierBandstruct.py and then
+use bandstruct_full.plot and bandstruct.plot in folder Wann to plot both DFT and Wannier bandstructures
+
+The resulting wannier centers and spreads can be found after
+"Centers in lattice coords" in output file wannier.out.
+For Silicon (not for arbitrary systems), a good wannier fitting must require
+the the spreads of 16 wannier orbitals used must be very close.
+
+Moreover, a good wannier fitting should ensure that degeneracy errors are tiny,
+i.e., energy differences between two degenerate bands are tiny.
+After running WannierBandstruct.py, run de.py, it will print
+energy differences between two lowest conduction bands (degenerate in DFT),
+which are < 1e-9 hartree in this example.
+
+!!! Notice that 
+in this example, the wannier fitting quality will not be good for states around CBM, 
+probably due to too coarse DFT k meshes 12^3.
+But fortunately, the energy degeneracy accuracy is still ok 
+and the resulting spin lifetime T1 are not far from more accurate results 
+
+
+step 4: Spin lifetime by Fermi's Golder Rule like formula
+
+enter folder ePhSpin and run jdftx.sh
+(read the comments in the input file ePhSpinRelax.in)
+
+
+step 5: Real-time dynamics
+
+5.1: initionalization
+enter folder lindblad-Shankar/T300_NkMult5
+first run Lindblad Initialization to get data file containing energies and electron-phonono matrix elements.
+
+5.2: spectrum mode calculation
+then run jdftx-ld.sh in folder "lindblad-Shankar/T300_NkMult5/spectrum".
+the results of LindbladSpectrum can be further analysed by analyzeSpectrum.py
+
+5.3: real-time dynamics (linearized)
+run jdftx-ld.sh in folder "lindblad-Shankar/T300_NkMult5/rt-linear".
+run extract_spin.sh to extract time evolution of total conduction electron spin.
+run fit.py to get spin lifetime.
+
+
+
+II. Results
+
+Some reference output files are in folder "Ref/".
+Please check whether you obtain similar results
+The final spin lifetime T1 for chemical potential at CBM (or dmu=1.14 eV) is about 3.3 ns at 300 K
+(see more converged results in paper "Spin-phonon relaxation from a universal ab initio density-matrix approach")

@@ -1,0 +1,500 @@
+TACC:  Starting up job 6518512 
+TACC:  Starting parallel tasks... 
+
+*************** JDFTx 1.6.0  ***************
+
+Start date and time: Sun Sep 27 08:15:28 2020
+Executable /home1/06235/tg855346/jdftx_codes/jdftx-20191025/build/jdftx with command-line: -i totalE.in
+Running on hosts (process indices):  c506-062.stampede2.tacc.utexas.edu (0-7)  c506-063.stampede2.tacc.utexas.edu (8-15)
+Divided in process groups (process indices):  0 (0)  1 (1)  2 (2)  3 (3)  4 (4)  5 (5)  6 (6)  7 (7)  8 (8)  9 (9)  10 (10)  11 (11)  12 (12)  13 (13)  14 (14)  15 (15)
+Resource initialization completed at t[s]:      0.00
+Run totals: 16 processes, 96 threads, 0 GPUs
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+converge-empty-states yes
+coords-type Lattice
+core-overlap-check vector
+coulomb-interaction Periodic
+davidson-band-ratio 1.1
+dump End State Vscloc BandEigs EigStats
+dump Init Symmetries
+dump-name totalE.$VAR
+elec-cutoff 14
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBE
+elec-n-bands 24
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-12 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+exchange-regularization WignerSeitzTruncated
+fluid None
+fluid-ex-corr  lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42 \
+	tauNuc 343133 \
+	poleEl 15 7 1
+forces-output-coords Positions
+initial-state totalE.$VAR
+ion Si   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Si   0.250000000000000   0.250000000000000   0.250000000000000 0
+ion-species Si.upf
+ion-width 0
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0.0001 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+kpoint   0.000000000000   0.000000000000   0.000000000000  1.00000000000000
+kpoint-folding 12 12 12 
+latt-move-scale 1 1 1
+latt-scale 1 1 1 
+lattice Face-Centered Cubic 10.263
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+lcao-params -1 1e-06 0.001
+pcm-variant GLSSA13
+spintype spin-orbit
+subspace-rotation-factor 1 yes
+symmetries automatic
+symmetry-threshold 0.0001
+
+
+
+---------- Setting up symmetries ----------
+
+Found 48 point-group symmetries of the bravais lattice
+Found 48 space-group symmetries with basis
+Applied RMS atom displacement 0 bohrs to make symmetries exact.
+
+---------- Initializing the Grid ----------
+R = 
+[            0       5.1315       5.1315  ]
+[       5.1315            0       5.1315  ]
+[       5.1315       5.1315            0  ]
+unit cell volume = 270.248
+G =
+[  -0.612217   0.612217   0.612217  ]
+[   0.612217  -0.612217   0.612217  ]
+[   0.612217   0.612217  -0.612217  ]
+Minimum fftbox size, Smin = [  28  28  28  ]
+Chosen fftbox size, S = [  28  28  28  ]
+
+---------- Exchange Correlation functional ----------
+Initalized PBE GGA exchange.
+Initalized PBE GGA correlation.
+
+---------- Setting up pseudopotentials ----------
+Width of ionic core gaussian charges (only for fluid interactions / plotting) set to 0
+
+Reading pseudopotential file 'Si.upf':
+  'Si' pseudopotential, 'PBE' functional
+  Generated using ONCVPSP code by D. R. Hamann
+  Author: anonymous  Date: 180423.
+  4 valence electrons, 3 orbitals, 10 projectors, 1528 radial grid points, with lMax = 2
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1427 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 363 points.
+    3S    l: 0   occupation:  2.0   eigenvalue: -0.397349
+    3P    l: 1   occupation:  1.3   eigenvalue: -0.149589
+    3P    l: 1   occupation:  0.7   eigenvalue: -0.150748
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 363 points.
+  Transforming core density to a uniform radial grid of dG=0.02 with 1427 points.
+  Core radius for overlap checks: 1.86 bohrs.
+
+Initialized 1 species with 2 total atoms.
+
+Folded 1 k-points by 12x12x12 to 1728 k-points.
+
+---------- Setting up k-points, bands, fillings ----------
+Reduced to 72 k-points under symmetry. 
+Computing the number of bands and number of electrons
+Calculating initial fillings.
+Turning on subspace rotations due to non-scalar fillings.
+nElectrons:   8.000000   nBands: 24   nStates: 72
+
+----- Setting up reduced wavefunction bases (one per k-point) -----
+average nbasis = 675.895 , ideal nbasis = 676.159
+
+---------- Setting up ewald sum ----------
+Optimum gaussian width for ewald sums = 2.330638 bohr.
+Real space sum over 1331 unit cells with max indices [  5  5  5  ]
+Reciprocal space sum over 2197 terms with max indices [  6  6  6  ]
+
+---------- Allocating electronic variables ----------
+Initializing wave functions:  linear combination of atomic orbitals
+Note: number of bands (24) exceeds available atomic orbitals (16)
+Si pseudo-atom occupations:   s ( 2 )  p- ( 2 )  p+ ( 0 )
+	FillingsUpdate:  mu: +0.260482762  nElectrons: 8.000000
+LCAOMinimize: Iter:   0  Etot: -7.8594313453839462  |grad|_K:  4.373e-05  alpha:  1.000e+00
+	FillingsUpdate:  mu: +0.260142062  nElectrons: 8.000000
+LCAOMinimize: Iter:   1  Etot: -7.8594674315471940  |grad|_K:  1.565e-06  alpha:  9.096e-01  linmin:  2.169e-02  cgtest: -3.649e-02  t[s]:      3.64
+	FillingsUpdate:  mu: +0.260148606  nElectrons: 8.000000
+LCAOMinimize: Iter:   2  Etot: -7.8594674821599719  |grad|_K:  5.934e-08  alpha:  9.991e-01  linmin: -1.249e-03  cgtest:  7.397e-02  t[s]:      3.89
+LCAOMinimize: Encountered beta<0, resetting CG.
+	FillingsUpdate:  mu: +0.260149278  nElectrons: 8.000000
+LCAOMinimize: Iter:   3  Etot: -7.8594674822265986  |grad|_K:  2.329e-09  alpha:  9.126e-01  linmin: -1.108e-04  cgtest:  1.823e-04  t[s]:      4.13
+LCAOMinimize: Converged (|Delta Etot|<1.000000e-06 for 2 iters).
+
+
+Dumping 'totalE.sym' ... done
+
+---- Citations for features of the code used in this run ----
+
+   Software package:
+      R. Sundararaman, K. Letchworth-Weaver, K.A. Schwarz, D. Gunceler, Y. Ozhabes and T.A. Arias, 'JDFTx: software for joint density-functional theory', SoftwareX 6, 278 (2017)
+
+   gga-PBE exchange-correlation functional:
+      J.P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996)
+
+   Total energy minimization:
+      T.A. Arias, M.C. Payne and J.D. Joannopoulos, Phys. Rev. Lett. 69, 1077 (1992)
+
+This list may not be complete. Please suggest additional citations or
+report any other bugs at https://github.com/shankar1729/jdftx/issues
+
+Initialization completed successfully at t[s]:      4.17
+
+
+-------- Electronic minimization -----------
+ElecMinimize: Iter:   0  Etot: -7.859467482226590  |grad|_K:  1.661e-04  alpha:  1.000e+00
+	SubspaceRotationAdjust: set factor to 0.567
+ElecMinimize: Iter:   1  Etot: -7.897687673174836  |grad|_K:  2.888e-04  alpha:  1.177e+00  linmin: -2.910e-04  t[s]:      4.55
+ElecMinimize: 	Step increased Etot by 1.003395e-02, reducing alpha to 3.032016e-02.
+	SubspaceRotationAdjust: set factor to 0.373
+ElecMinimize: Iter:   2  Etot: -7.898393101053330  |grad|_K:  2.055e-04  alpha:  3.032e-02  linmin: -1.242e-01  t[s]:      4.92
+	SubspaceRotationAdjust: set factor to 0.279
+ElecMinimize: Iter:   3  Etot: -7.898983992940272  |grad|_K:  1.732e-04  alpha:  1.836e-02  linmin: -2.372e-01  t[s]:      5.14
+	SubspaceRotationAdjust: set factor to 0.228
+ElecMinimize: Iter:   4  Etot: -7.899527540634379  |grad|_K:  1.568e-04  alpha:  1.196e-02  linmin: -2.792e-01  t[s]:      5.37
+	SubspaceRotationAdjust: set factor to 0.198
+ElecMinimize: Iter:   5  Etot: -7.900013124677394  |grad|_K:  1.474e-04  alpha:  8.216e-03  linmin: -2.734e-01  t[s]:      5.59
+	SubspaceRotationAdjust: set factor to 0.177
+ElecMinimize: Iter:   6  Etot: -7.900441129166786  |grad|_K:  1.414e-04  alpha:  5.870e-03  linmin: -2.574e-01  t[s]:      5.81
+	SubspaceRotationAdjust: set factor to 0.162
+ElecMinimize: Iter:   7  Etot: -7.900814955925350  |grad|_K:  1.370e-04  alpha:  4.317e-03  linmin: -2.426e-01  t[s]:      6.02
+	SubspaceRotationAdjust: set factor to 0.15
+ElecMinimize: Iter:   8  Etot: -7.901139082421649  |grad|_K:  1.335e-04  alpha:  3.244e-03  linmin: -2.305e-01  t[s]:      6.24
+	SubspaceRotationAdjust: set factor to 0.14
+ElecMinimize: Iter:   9  Etot: -7.901418636344435  |grad|_K:  1.306e-04  alpha:  2.480e-03  linmin: -2.207e-01  t[s]:      6.45
+	SubspaceRotationAdjust: set factor to 0.132
+	SubspaceRotationAdjust: resetting CG because factor has changed by 0.132033
+ElecMinimize: 	State modified externally: resetting search direction.
+ElecMinimize: Iter:  10  Etot: -7.901659018631114  |grad|_K:  1.261e-04  alpha:  1.922e-03
+	SubspaceRotationAdjust: set factor to 0.127
+ElecMinimize: Iter:  11  Etot: -7.901693334852890  |grad|_K:  1.261e-04  alpha:  1.885e-03  linmin: -1.469e-01  t[s]:      7.01
+	SubspaceRotationAdjust: set factor to 0.124
+ElecMinimize: Iter:  12  Etot: -7.901760106067442  |grad|_K:  1.249e-04  alpha:  1.842e-03  linmin: -1.472e-01  t[s]:      7.22
+	SubspaceRotationAdjust: set factor to 0.121
+ElecMinimize: Iter:  13  Etot: -7.901855999356870  |grad|_K:  1.241e-04  alpha:  1.799e-03  linmin: -1.468e-01  t[s]:      7.45
+	SubspaceRotationAdjust: set factor to 0.118
+ElecMinimize: Iter:  14  Etot: -7.901978368284945  |grad|_K:  1.232e-04  alpha:  1.752e-03  linmin: -1.465e-01  t[s]:      7.66
+	SubspaceRotationAdjust: set factor to 0.114
+ElecMinimize: Iter:  15  Etot: -7.902123774006981  |grad|_K:  1.223e-04  alpha:  1.697e-03  linmin: -1.463e-01  t[s]:      7.88
+	SubspaceRotationAdjust: set factor to 0.11
+ElecMinimize: Iter:  16  Etot: -7.902288000412542  |grad|_K:  1.212e-04  alpha:  1.634e-03  linmin: -1.461e-01  t[s]:      8.10
+	SubspaceRotationAdjust: set factor to 0.106
+ElecMinimize: Iter:  17  Etot: -7.902466288564464  |grad|_K:  1.199e-04  alpha:  1.561e-03  linmin: -1.460e-01  t[s]:      8.31
+	SubspaceRotationAdjust: set factor to 0.101
+ElecMinimize: Iter:  18  Etot: -7.902653675696501  |grad|_K:  1.185e-04  alpha:  1.480e-03  linmin: -1.458e-01  t[s]:      8.53
+	SubspaceRotationAdjust: set factor to 0.0963
+ElecMinimize: Iter:  19  Etot: -7.902845351758172  |grad|_K:  1.170e-04  alpha:  1.391e-03  linmin: -1.455e-01  t[s]:      8.74
+	SubspaceRotationAdjust: set factor to 0.0917
+ElecMinimize: Iter:  20  Etot: -7.903036966421633  |grad|_K:  1.154e-04  alpha:  1.297e-03  linmin: -1.452e-01  t[s]:      8.97
+	SubspaceRotationAdjust: set factor to 0.0873
+ElecMinimize: Iter:  21  Etot: -7.903224843975502  |grad|_K:  1.137e-04  alpha:  1.200e-03  linmin: -1.447e-01  t[s]:      9.18
+	SubspaceRotationAdjust: set factor to 0.0831
+ElecMinimize: Iter:  22  Etot: -7.903406091114085  |grad|_K:  1.121e-04  alpha:  1.102e-03  linmin: -1.441e-01  t[s]:      9.40
+	SubspaceRotationAdjust: set factor to 0.0792
+ElecMinimize: Iter:  23  Etot: -7.903578606701041  |grad|_K:  1.105e-04  alpha:  1.006e-03  linmin: -1.435e-01  t[s]:      9.63
+	SubspaceRotationAdjust: set factor to 0.0756
+ElecMinimize: Iter:  24  Etot: -7.903741017830291  |grad|_K:  1.089e-04  alpha:  9.128e-04  linmin: -1.427e-01  t[s]:      9.85
+	SubspaceRotationAdjust: set factor to 0.0723
+ElecMinimize: Iter:  25  Etot: -7.903892571622305  |grad|_K:  1.074e-04  alpha:  8.241e-04  linmin: -1.419e-01  t[s]:     10.06
+	SubspaceRotationAdjust: set factor to 0.0694
+ElecMinimize: Iter:  26  Etot: -7.904033009407458  |grad|_K:  1.059e-04  alpha:  7.409e-04  linmin: -1.410e-01  t[s]:     10.28
+	SubspaceRotationAdjust: set factor to 0.0667
+ElecMinimize: Iter:  27  Etot: -7.904162442981616  |grad|_K:  1.046e-04  alpha:  6.638e-04  linmin: -1.400e-01  t[s]:     10.50
+	SubspaceRotationAdjust: set factor to 0.0643
+ElecMinimize: Iter:  28  Etot: -7.904281244821118  |grad|_K:  1.033e-04  alpha:  5.931e-04  linmin: -1.391e-01  t[s]:     10.72
+	SubspaceRotationAdjust: set factor to 0.0622
+ElecMinimize: Iter:  29  Etot: -7.904389957581239  |grad|_K:  1.021e-04  alpha:  5.287e-04  linmin: -1.381e-01  t[s]:     10.93
+	SubspaceRotationAdjust: set factor to 0.0603
+ElecMinimize: Iter:  30  Etot: -7.904489223652994  |grad|_K:  1.011e-04  alpha:  4.705e-04  linmin: -1.371e-01  t[s]:     11.16
+	SubspaceRotationAdjust: set factor to 0.0586
+ElecMinimize: Iter:  31  Etot: -7.904579732934746  |grad|_K:  1.001e-04  alpha:  4.182e-04  linmin: -1.361e-01  t[s]:     11.37
+	SubspaceRotationAdjust: set factor to 0.057
+ElecMinimize: Iter:  32  Etot: -7.904662185818706  |grad|_K:  9.918e-05  alpha:  3.715e-04  linmin: -1.351e-01  t[s]:     11.59
+	SubspaceRotationAdjust: set factor to 0.0557
+ElecMinimize: Iter:  33  Etot: -7.904737268168681  |grad|_K:  9.836e-05  alpha:  3.298e-04  linmin: -1.341e-01  t[s]:     11.81
+	SubspaceRotationAdjust: set factor to 0.0544
+ElecMinimize: Iter:  34  Etot: -7.904805635341930  |grad|_K:  9.761e-05  alpha:  2.928e-04  linmin: -1.332e-01  t[s]:     12.04
+	SubspaceRotationAdjust: set factor to 0.0534
+ElecMinimize: Iter:  35  Etot: -7.904867902792402  |grad|_K:  9.693e-05  alpha:  2.600e-04  linmin: -1.322e-01  t[s]:     12.26
+	SubspaceRotationAdjust: set factor to 0.0524
+ElecMinimize: Iter:  36  Etot: -7.904924641312930  |grad|_K:  9.630e-05  alpha:  2.310e-04  linmin: -1.313e-01  t[s]:     12.49
+	SubspaceRotationAdjust: set factor to 0.0515
+ElecMinimize: Iter:  37  Etot: -7.904976375445809  |grad|_K:  9.574e-05  alpha:  2.054e-04  linmin: -1.305e-01  t[s]:     12.72
+	SubspaceRotationAdjust: set factor to 0.0507
+ElecMinimize: Iter:  38  Etot: -7.905023583981909  |grad|_K:  9.522e-05  alpha:  1.828e-04  linmin: -1.296e-01  t[s]:     12.93
+	SubspaceRotationAdjust: set factor to 0.05
+ElecMinimize: Iter:  39  Etot: -7.905066701774770  |grad|_K:  9.475e-05  alpha:  1.628e-04  linmin: -1.288e-01  t[s]:     13.15
+	SubspaceRotationAdjust: set factor to 0.0494
+ElecMinimize: Iter:  40  Etot: -7.905106122327600  |grad|_K:  9.431e-05  alpha:  1.451e-04  linmin: -1.280e-01  t[s]:     13.36
+	SubspaceRotationAdjust: set factor to 0.0488
+ElecMinimize: Iter:  41  Etot: -7.905142200781044  |grad|_K:  9.392e-05  alpha:  1.295e-04  linmin: -1.273e-01  t[s]:     13.58
+	SubspaceRotationAdjust: set factor to 0.0482
+ElecMinimize: Iter:  42  Etot: -7.905175257052282  |grad|_K:  9.356e-05  alpha:  1.158e-04  linmin: -1.265e-01  t[s]:     13.81
+	SubspaceRotationAdjust: set factor to 0.0478
+ElecMinimize: Iter:  43  Etot: -7.905205578962924  |grad|_K:  9.323e-05  alpha:  1.036e-04  linmin: -1.259e-01  t[s]:     14.03
+	SubspaceRotationAdjust: set factor to 0.0473
+ElecMinimize: Iter:  44  Etot: -7.905233425253853  |grad|_K:  9.293e-05  alpha:  9.287e-05  linmin: -1.252e-01  t[s]:     14.24
+	SubspaceRotationAdjust: set factor to 0.0469
+ElecMinimize: Iter:  45  Etot: -7.905259028426947  |grad|_K:  9.265e-05  alpha:  8.335e-05  linmin: -1.245e-01  t[s]:     14.46
+	SubspaceRotationAdjust: set factor to 0.0466
+ElecMinimize: Iter:  46  Etot: -7.905282597382197  |grad|_K:  9.240e-05  alpha:  7.491e-05  linmin: -1.239e-01  t[s]:     14.68
+	SubspaceRotationAdjust: set factor to 0.0462
+ElecMinimize: Iter:  47  Etot: -7.905304319837413  |grad|_K:  9.216e-05  alpha:  6.742e-05  linmin: -1.233e-01  t[s]:     14.90
+	SubspaceRotationAdjust: set factor to 0.0459
+ElecMinimize: Iter:  48  Etot: -7.905324364530132  |grad|_K:  9.195e-05  alpha:  6.078e-05  linmin: -1.228e-01  t[s]:     15.12
+	SubspaceRotationAdjust: set factor to 0.0457
+ElecMinimize: Iter:  49  Etot: -7.905342883209022  |grad|_K:  9.175e-05  alpha:  5.487e-05  linmin: -1.222e-01  t[s]:     15.35
+	SubspaceRotationAdjust: set factor to 0.0454
+ElecMinimize: Iter:  50  Etot: -7.905360012426571  |grad|_K:  9.157e-05  alpha:  4.960e-05  linmin: -1.217e-01  t[s]:     15.56
+	SubspaceRotationAdjust: set factor to 0.0452
+ElecMinimize: Iter:  51  Etot: -7.905375875147322  |grad|_K:  9.140e-05  alpha:  4.491e-05  linmin: -1.212e-01  t[s]:     15.78
+	SubspaceRotationAdjust: set factor to 0.045
+ElecMinimize: Iter:  52  Etot: -7.905390582186974  |grad|_K:  9.124e-05  alpha:  4.072e-05  linmin: -1.208e-01  t[s]:     16.00
+	SubspaceRotationAdjust: set factor to 0.0448
+ElecMinimize: Iter:  53  Etot: -7.905404233497666  |grad|_K:  9.109e-05  alpha:  3.698e-05  linmin: -1.203e-01  t[s]:     16.22
+	SubspaceRotationAdjust: set factor to 0.0446
+ElecMinimize: Iter:  54  Etot: -7.905416919314407  |grad|_K:  9.096e-05  alpha:  3.363e-05  linmin: -1.199e-01  t[s]:     16.44
+	SubspaceRotationAdjust: set factor to 0.0444
+ElecMinimize: Iter:  55  Etot: -7.905428721176710  |grad|_K:  9.084e-05  alpha:  3.062e-05  linmin: -1.194e-01  t[s]:     16.66
+	SubspaceRotationAdjust: set factor to 0.0442
+ElecMinimize: Iter:  56  Etot: -7.905439712838456  |grad|_K:  9.072e-05  alpha:  2.793e-05  linmin: -1.190e-01  t[s]:     16.89
+	SubspaceRotationAdjust: set factor to 0.0441
+ElecMinimize: Iter:  57  Etot: -7.905449961078141  |grad|_K:  9.061e-05  alpha:  2.550e-05  linmin: -1.186e-01  t[s]:     17.11
+	SubspaceRotationAdjust: set factor to 0.044
+ElecMinimize: Iter:  58  Etot: -7.905459526420181  |grad|_K:  9.051e-05  alpha:  2.332e-05  linmin: -1.183e-01  t[s]:     17.32
+	SubspaceRotationAdjust: set factor to 0.0438
+ElecMinimize: Iter:  59  Etot: -7.905468463777277  |grad|_K:  9.042e-05  alpha:  2.136e-05  linmin: -1.179e-01  t[s]:     17.54
+	SubspaceRotationAdjust: set factor to 0.0437
+ElecMinimize: Iter:  60  Etot: -7.905476823022589  |grad|_K:  9.033e-05  alpha:  1.958e-05  linmin: -1.175e-01  t[s]:     17.75
+	SubspaceRotationAdjust: set factor to 0.0436
+ElecMinimize: Iter:  61  Etot: -7.905484649499570  |grad|_K:  9.025e-05  alpha:  1.798e-05  linmin: -1.172e-01  t[s]:     17.97
+	SubspaceRotationAdjust: set factor to 0.0435
+ElecMinimize: Iter:  62  Etot: -7.905491984476569  |grad|_K:  9.017e-05  alpha:  1.653e-05  linmin: -1.169e-01  t[s]:     18.19
+	SubspaceRotationAdjust: set factor to 0.0434
+ElecMinimize: Iter:  63  Etot: -7.905498865552365  |grad|_K:  9.010e-05  alpha:  1.521e-05  linmin: -1.166e-01  t[s]:     18.41
+	SubspaceRotationAdjust: set factor to 0.0433
+ElecMinimize: Iter:  64  Etot: -7.905505327018155  |grad|_K:  9.003e-05  alpha:  1.402e-05  linmin: -1.163e-01  t[s]:     18.62
+	SubspaceRotationAdjust: set factor to 0.0432
+ElecMinimize: Iter:  65  Etot: -7.905511400181000  |grad|_K:  8.997e-05  alpha:  1.294e-05  linmin: -1.160e-01  t[s]:     18.84
+	SubspaceRotationAdjust: set factor to 0.0432
+ElecMinimize: Iter:  66  Etot: -7.905517113652983  |grad|_K:  8.991e-05  alpha:  1.195e-05  linmin: -1.157e-01  t[s]:     19.06
+	SubspaceRotationAdjust: set factor to 0.0431
+ElecMinimize: Iter:  67  Etot: -7.905522493609922  |grad|_K:  8.986e-05  alpha:  1.106e-05  linmin: -1.154e-01  t[s]:     19.28
+	SubspaceRotationAdjust: set factor to 0.043
+ElecMinimize: Iter:  68  Etot: -7.905527564023132  |grad|_K:  8.980e-05  alpha:  1.024e-05  linmin: -1.152e-01  t[s]:     19.50
+	SubspaceRotationAdjust: set factor to 0.0429
+ElecMinimize: Iter:  69  Etot: -7.905532346867064  |grad|_K:  8.976e-05  alpha:  9.491e-06  linmin: -1.149e-01  t[s]:     19.71
+	SubspaceRotationAdjust: set factor to 0.0429
+ElecMinimize: Iter:  70  Etot: -7.905536862305683  |grad|_K:  8.971e-05  alpha:  8.808e-06  linmin: -1.147e-01  t[s]:     19.93
+	SubspaceRotationAdjust: set factor to 0.0428
+ElecMinimize: Iter:  71  Etot: -7.905541128859769  |grad|_K:  8.967e-05  alpha:  8.183e-06  linmin: -1.144e-01  t[s]:     20.16
+	SubspaceRotationAdjust: set factor to 0.0428
+ElecMinimize: Iter:  72  Etot: -7.905545163557336  |grad|_K:  8.962e-05  alpha:  7.611e-06  linmin: -1.142e-01  t[s]:     20.37
+	SubspaceRotationAdjust: set factor to 0.0427
+ElecMinimize: Iter:  73  Etot: -7.905548982068908  |grad|_K:  8.958e-05  alpha:  7.085e-06  linmin: -1.140e-01  t[s]:     20.59
+	SubspaceRotationAdjust: set factor to 0.0427
+ElecMinimize: Iter:  74  Etot: -7.905552598829349  |grad|_K:  8.955e-05  alpha:  6.603e-06  linmin: -1.138e-01  t[s]:     20.81
+	SubspaceRotationAdjust: set factor to 0.0426
+ElecMinimize: Iter:  75  Etot: -7.905556027147712  |grad|_K:  8.951e-05  alpha:  6.160e-06  linmin: -1.136e-01  t[s]:     21.02
+	SubspaceRotationAdjust: set factor to 0.0426
+ElecMinimize: Iter:  76  Etot: -7.905559279306276  |grad|_K:  8.948e-05  alpha:  5.752e-06  linmin: -1.133e-01  t[s]:     21.24
+	SubspaceRotationAdjust: set factor to 0.0425
+ElecMinimize: Iter:  77  Etot: -7.905562366650035  |grad|_K:  8.945e-05  alpha:  5.377e-06  linmin: -1.132e-01  t[s]:     21.45
+	SubspaceRotationAdjust: set factor to 0.0425
+ElecMinimize: Iter:  78  Etot: -7.905565299667559  |grad|_K:  8.942e-05  alpha:  5.030e-06  linmin: -1.130e-01  t[s]:     21.67
+	SubspaceRotationAdjust: set factor to 0.0425
+ElecMinimize: Iter:  79  Etot: -7.905568088064182  |grad|_K:  8.939e-05  alpha:  4.711e-06  linmin: -1.128e-01  t[s]:     21.89
+	SubspaceRotationAdjust: set factor to 0.0424
+ElecMinimize: Iter:  80  Etot: -7.905570740828222  |grad|_K:  8.936e-05  alpha:  4.415e-06  linmin: -1.126e-01  t[s]:     22.11
+	SubspaceRotationAdjust: set factor to 0.0424
+ElecMinimize: Iter:  81  Etot: -7.905573266291070  |grad|_K:  8.934e-05  alpha:  4.142e-06  linmin: -1.124e-01  t[s]:     22.33
+	SubspaceRotationAdjust: set factor to 0.0424
+ElecMinimize: Iter:  82  Etot: -7.905575672181667  |grad|_K:  8.931e-05  alpha:  3.889e-06  linmin: -1.122e-01  t[s]:     22.55
+	SubspaceRotationAdjust: set factor to 0.0423
+ElecMinimize: Iter:  83  Etot: -7.905577965675990  |grad|_K:  8.929e-05  alpha:  3.654e-06  linmin: -1.121e-01  t[s]:     22.77
+	SubspaceRotationAdjust: set factor to 0.0423
+ElecMinimize: Iter:  84  Etot: -7.905580153442007  |grad|_K:  8.927e-05  alpha:  3.437e-06  linmin: -1.119e-01  t[s]:     22.99
+	SubspaceRotationAdjust: set factor to 0.0423
+ElecMinimize: Iter:  85  Etot: -7.905582241680625  |grad|_K:  8.925e-05  alpha:  3.235e-06  linmin: -1.118e-01  t[s]:     23.21
+	SubspaceRotationAdjust: set factor to 0.0422
+ElecMinimize: Iter:  86  Etot: -7.905584236162916  |grad|_K:  8.923e-05  alpha:  3.047e-06  linmin: -1.116e-01  t[s]:     23.43
+	SubspaceRotationAdjust: set factor to 0.0422
+ElecMinimize: Iter:  87  Etot: -7.905586142264069  |grad|_K:  8.921e-05  alpha:  2.873e-06  linmin: -1.115e-01  t[s]:     23.65
+	SubspaceRotationAdjust: set factor to 0.0422
+ElecMinimize: Iter:  88  Etot: -7.905587964994374  |grad|_K:  8.919e-05  alpha:  2.711e-06  linmin: -1.113e-01  t[s]:     23.87
+	SubspaceRotationAdjust: set factor to 0.0422
+ElecMinimize: Iter:  89  Etot: -7.905589709027499  |grad|_K:  8.917e-05  alpha:  2.559e-06  linmin: -1.112e-01  t[s]:     24.09
+	SubspaceRotationAdjust: set factor to 0.0421
+ElecMinimize: Iter:  90  Etot: -7.905591378726280  |grad|_K:  8.916e-05  alpha:  2.418e-06  linmin: -1.110e-01  t[s]:     24.32
+	SubspaceRotationAdjust: set factor to 0.0421
+ElecMinimize: Iter:  91  Etot: -7.905592978166391  |grad|_K:  8.914e-05  alpha:  2.287e-06  linmin: -1.109e-01  t[s]:     24.54
+	SubspaceRotationAdjust: set factor to 0.0421
+ElecMinimize: Iter:  92  Etot: -7.905594511157925  |grad|_K:  8.913e-05  alpha:  2.164e-06  linmin: -1.108e-01  t[s]:     24.76
+	SubspaceRotationAdjust: set factor to 0.0421
+ElecMinimize: Iter:  93  Etot: -7.905595981265240  |grad|_K:  8.911e-05  alpha:  2.049e-06  linmin: -1.106e-01  t[s]:     24.98
+	SubspaceRotationAdjust: set factor to 0.0421
+ElecMinimize: Iter:  94  Etot: -7.905597391825074  |grad|_K:  8.910e-05  alpha:  1.941e-06  linmin: -1.105e-01  t[s]:     25.20
+	SubspaceRotationAdjust: set factor to 0.042
+ElecMinimize: Iter:  95  Etot: -7.905598745963221  |grad|_K:  8.908e-05  alpha:  1.841e-06  linmin: -1.104e-01  t[s]:     25.42
+	SubspaceRotationAdjust: set factor to 0.042
+ElecMinimize: Iter:  96  Etot: -7.905600046609822  |grad|_K:  8.907e-05  alpha:  1.747e-06  linmin: -1.103e-01  t[s]:     25.63
+	SubspaceRotationAdjust: set factor to 0.042
+ElecMinimize: Iter:  97  Etot: -7.905601296513412  |grad|_K:  8.906e-05  alpha:  1.658e-06  linmin: -1.102e-01  t[s]:     25.85
+	SubspaceRotationAdjust: set factor to 0.042
+ElecMinimize: Iter:  98  Etot: -7.905602498253847  |grad|_K:  8.905e-05  alpha:  1.576e-06  linmin: -1.100e-01  t[s]:     26.06
+	SubspaceRotationAdjust: set factor to 0.042
+ElecMinimize: Iter:  99  Etot: -7.905603654254194  |grad|_K:  8.904e-05  alpha:  1.498e-06  linmin: -1.099e-01  t[s]:     26.28
+	SubspaceRotationAdjust: set factor to 0.042
+ElecMinimize: Iter: 100  Etot: -7.905604766791706  |grad|_K:  8.902e-05  alpha:  1.425e-06  linmin: -1.098e-01  t[s]:     26.50
+ElecMinimize: None of the convergence criteria satisfied after 100 iterations.
+Setting wave functions to eigenvectors of Hamiltonian
+Converging empty states (this may take a while): |deigs|: 7.787e-02
+
+# Ionic positions in lattice coordinates:
+ion Si   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Si   0.250000000000000   0.250000000000000   0.250000000000000 0
+
+# Forces in Lattice coordinates:
+force Si  -0.000000000000000  -0.000000000000000  -0.000000000000000 0
+force Si   0.000000000000000  -0.000000000000000  -0.000000000000000 0
+
+# Energy components:
+   Eewald =       -8.3980092279323220
+       EH =        0.5293110050198990
+     Eloc =       -1.7057590779792586
+      Enl =        1.1494409683706568
+      Exc =       -3.0834760628865263
+ Exc_core =        0.5447707188098243
+       KE =        3.0581169098060212
+-------------------------------------
+     Etot =       -7.9056047667917060
+
+IonicMinimize: Iter:   0  Etot: -7.905604766791706  |grad|_K:  0.000e+00  t[s]:     32.64
+IonicMinimize: Converged (|grad|_K<1.000000e-04).
+
+#--- Lowdin population analysis ---
+# oxidation-state Si +0.036 +0.036
+
+
+Dumping 'totalE.wfns' ... done
+Dumping 'totalE.Vscloc' ... done
+Dumping 'totalE.eigenvals' ... done
+Dumping 'totalE.eigStats' ... 
+	eMin: -0.212728 at state 0 ( [ +0.000000 +0.000000 +0.000000 ] spin 0 )
+	HOMO: +0.226939 at state 0 ( [ +0.000000 +0.000000 +0.000000 ] spin 0 )
+	mu  : +0.237524
+	LUMO: +0.249076 at state 39 ( [ +0.000000 +0.416667 +0.416667 ] spin 0 )
+	eMax: +0.778539 at state 38 ( [ +0.000000 +0.333333 -0.333333 ] spin 0 )
+	HOMO-LUMO gap: +0.022137
+	Optical gap  : +0.093496 at state 0 ( [ +0.000000 +0.000000 +0.000000 ] spin 0 )
+End date and time: Sun Sep 27 08:16:01 2020  (Duration: 0-0:00:32.92)
+Done!
+
+PROFILER:        ColumnBundle::randomize     0.001788 +/-     0.000017 s,    4 calls,      0.007153 s total
+PROFILER:                     diagouterI     0.004873 +/-     0.000561 s,  844 calls,      4.113204 s total
+PROFILER:              EdensityAndVscloc     0.012700 +/-     0.114857 s,  212 calls,      2.692459 s total
+PROFILER:                     EnlAndGrad     0.000197 +/-     0.000169 s, 1068 calls,      0.210736 s total
+PROFILER:            ExCorrCommunication     0.000633 +/-     0.000451 s,  646 calls,      0.408807 s total
+PROFILER:               ExCorrFunctional     0.000379 +/-     0.000217 s,  216 calls,      0.081847 s total
+PROFILER:                    ExCorrTotal     0.005710 +/-     0.041377 s,  216 calls,      1.233462 s total
+PROFILER:                   Idag_DiagV_I     0.007276 +/-     0.006807 s,  676 calls,      4.918485 s total
+PROFILER:                    inv(matrix)     0.000281 +/-     0.000218 s,  804 calls,      0.225857 s total
+PROFILER:            matrix::diagonalize     0.000242 +/-     0.000402 s, 2848 calls,      0.688363 s total
+PROFILER:                    matrix::set     0.000003 +/-     0.000003 s, 7652 calls,      0.021429 s total
+PROFILER:     RadialFunctionR::transform     0.001175 +/-     0.003561 s,   19 calls,      0.022322 s total
+PROFILER:                    reduceKmesh     0.007192 +/-     0.000000 s,    1 calls,      0.007192 s total
+PROFILER:               WavefunctionDrag     0.011752 +/-     0.000000 s,    1 calls,      0.011752 s total
+PROFILER:                            Y*M     0.000156 +/-     0.000157 s, 4927 calls,      0.768202 s total
+PROFILER:                          Y1^Y2     0.000184 +/-     0.000206 s, 3692 calls,      0.680421 s total
+
+MEMUSAGE:                   ColumnBundle     0.008542 GB
+MEMUSAGE:             complexScalarField     0.000654 GB
+MEMUSAGE:        complexScalarFieldTilde     0.001963 GB
+MEMUSAGE:                    IndexArrays     0.000838 GB
+MEMUSAGE:                         matrix     0.000905 GB
+MEMUSAGE:                           misc     0.001104 GB
+MEMUSAGE:                    ScalarField     0.001799 GB
+MEMUSAGE:               ScalarFieldTilde     0.001577 GB
+MEMUSAGE:                          Total     0.013661 GB
+TACC:  Shutdown complete. Exiting. 

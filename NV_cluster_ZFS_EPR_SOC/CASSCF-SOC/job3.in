@@ -1,0 +1,20 @@
+### compare casscf with results from GAMESS before nevpt2 ###
+
+! cc-pVDZ-DK AutoAux tightscf moread  DKH
+ %MaxCore 20000
+ %moinp "job1.gbw"
+ %pal nprocs 64 end
+ %casscf
+  nel 4
+  norb 6
+  mult 3,1
+  nroots = 5,5
+  actorbs CanonOrbs
+  weights[0] = 1,1,1,1,1
+  weights[1] = 1,1,1,1,1
+  rel
+     dosoc true
+     printlevel 4
+  end
+end
+* xyzFile -1 1 nv_cluster.xyz

@@ -1,0 +1,7 @@
+! UKS PBE cc-pVDZ-DK AutoAux TightSCF DKH
+
+ %MaxCore 20000
+
+ %pal nprocs 32 end
+
+* xyzFile -1 1 nv_cluster.xyz
